@@ -1,0 +1,3808 @@
+{
+  "schema": "fantasy-sports/board@1",
+  "_sample": true,
+  "generated_at": "2026-08-29T15:46:21.598Z",
+  "format": {
+    "id": "ppr-1qb-12",
+    "label": "Full PPR / 1QB / 12-team",
+    "ppr": 1,
+    "qb": 1,
+    "teams": 12
+  },
+  "sources": [
+    "panel-a",
+    "panel-b",
+    "panel-c"
+  ],
+  "captured_at": {
+    "first": "2026-08-29T12:00:00Z",
+    "last": "2026-08-29T12:00:00Z"
+  },
+  "provenance": "Illustrative sample. The ordering was generated for demonstration and perturbed into three synthetic panelists so the spread and tier machinery is visible. It is not sourced from any rankings provider and it is not draft advice.",
+  "positions": {
+    "QB": {
+      "players": [
+        {
+          "id": "josh-allen-qb-buf",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 1,
+            "panel-b": 1,
+            "panel-c": 1
+          },
+          "mean": 1,
+          "sd": 0,
+          "sources": 3,
+          "min": 1,
+          "max": 1,
+          "tier": 1,
+          "rank_position": 1
+        },
+        {
+          "id": "lamar-jackson-qb-bal",
+          "name": "Lamar Jackson",
+          "team": "BAL",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 3,
+            "panel-b": 2,
+            "panel-c": 2
+          },
+          "mean": 2.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 2,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 2
+        },
+        {
+          "id": "jayden-daniels-qb-was",
+          "name": "Jayden Daniels",
+          "team": "WAS",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 2,
+            "panel-b": 3,
+            "panel-c": 3
+          },
+          "mean": 2.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 2,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 3
+        },
+        {
+          "id": "jalen-hurts-qb-phi",
+          "name": "Jalen Hurts",
+          "team": "PHI",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 5,
+            "panel-b": 4,
+            "panel-c": 4
+          },
+          "mean": 4.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 4,
+          "max": 5,
+          "tier": 2,
+          "rank_position": 4
+        },
+        {
+          "id": "joe-burrow-qb-cin",
+          "name": "Joe Burrow",
+          "team": "CIN",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 4,
+            "panel-b": 5,
+            "panel-c": 6
+          },
+          "mean": 5,
+          "sd": 1,
+          "sources": 3,
+          "min": 4,
+          "max": 6,
+          "tier": 2,
+          "rank_position": 5
+        },
+        {
+          "id": "bo-nix-qb-den",
+          "name": "Bo Nix",
+          "team": "DEN",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 8,
+            "panel-b": 6,
+            "panel-c": 5
+          },
+          "mean": 6.333,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 5,
+          "max": 8,
+          "tier": 2,
+          "rank_position": 6
+        },
+        {
+          "id": "baker-mayfield-qb-tb",
+          "name": "Baker Mayfield",
+          "team": "TB",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 7,
+            "panel-b": 7,
+            "panel-c": 7
+          },
+          "mean": 7,
+          "sd": 0,
+          "sources": 3,
+          "min": 7,
+          "max": 7,
+          "tier": 2,
+          "rank_position": 7
+        },
+        {
+          "id": "patrick-mahomes-qb-kc",
+          "name": "Patrick Mahomes",
+          "team": "KC",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 6,
+            "panel-b": 8,
+            "panel-c": 9
+          },
+          "mean": 7.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 6,
+          "max": 9,
+          "tier": 2,
+          "rank_position": 8
+        },
+        {
+          "id": "cj-stroud-qb-hou",
+          "name": "C.J. Stroud",
+          "team": "HOU",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 9,
+            "panel-b": 10,
+            "panel-c": 10
+          },
+          "mean": 9.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 9,
+          "max": 10,
+          "tier": 3,
+          "rank_position": 9
+        },
+        {
+          "id": "justin-herbert-qb-lac",
+          "name": "Justin Herbert",
+          "team": "LAC",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 12,
+            "panel-b": 9,
+            "panel-c": 8
+          },
+          "mean": 9.667,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 8,
+          "max": 12,
+          "tier": 3,
+          "rank_position": 10
+        },
+        {
+          "id": "caleb-williams-qb-chi",
+          "name": "Caleb Williams",
+          "team": "CHI",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 10,
+            "panel-b": 11,
+            "panel-c": 11
+          },
+          "mean": 10.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 10,
+          "max": 11,
+          "tier": 3,
+          "rank_position": 11
+        },
+        {
+          "id": "kyler-murray-qb-ari",
+          "name": "Kyler Murray",
+          "team": "ARI",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 11,
+            "panel-b": 12,
+            "panel-c": 15
+          },
+          "mean": 12.667,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 11,
+          "max": 15,
+          "tier": 4,
+          "rank_position": 12
+        },
+        {
+          "id": "drake-maye-qb-ne",
+          "name": "Drake Maye",
+          "team": "NE",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 14,
+            "panel-b": 14,
+            "panel-c": 12
+          },
+          "mean": 13.333,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 12,
+          "max": 14,
+          "tier": 4,
+          "rank_position": 13
+        },
+        {
+          "id": "trevor-lawrence-qb-jax",
+          "name": "Trevor Lawrence",
+          "team": "JAX",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 13,
+            "panel-b": 15,
+            "panel-c": 13
+          },
+          "mean": 13.667,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 13,
+          "max": 15,
+          "tier": 4,
+          "rank_position": 14
+        },
+        {
+          "id": "brock-purdy-qb-sf",
+          "name": "Brock Purdy",
+          "team": "SF",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 16,
+            "panel-b": 16,
+            "panel-c": 16
+          },
+          "mean": 16,
+          "sd": 0,
+          "sources": 3,
+          "min": 16,
+          "max": 16,
+          "tier": 5,
+          "rank_position": 15
+        },
+        {
+          "id": "dak-prescott-qb-dal",
+          "name": "Dak Prescott",
+          "team": "DAL",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 17,
+            "panel-b": 13,
+            "panel-c": 18
+          },
+          "mean": 16,
+          "sd": 2.646,
+          "sources": 3,
+          "min": 13,
+          "max": 18,
+          "tier": 5,
+          "rank_position": 16
+        },
+        {
+          "id": "jared-goff-qb-det",
+          "name": "Jared Goff",
+          "team": "DET",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 15,
+            "panel-b": 18,
+            "panel-c": 20
+          },
+          "mean": 17.667,
+          "sd": 2.517,
+          "sources": 3,
+          "min": 15,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 17
+        },
+        {
+          "id": "tua-tagovailoa-qb-mia",
+          "name": "Tua Tagovailoa",
+          "team": "MIA",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 21,
+            "panel-b": 19,
+            "panel-c": 14
+          },
+          "mean": 18,
+          "sd": 3.606,
+          "sources": 3,
+          "min": 14,
+          "max": 21,
+          "tier": 5,
+          "rank_position": 18
+        },
+        {
+          "id": "jj-mccarthy-qb-min",
+          "name": "J.J. McCarthy",
+          "team": "MIN",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 19,
+            "panel-b": 20,
+            "panel-c": 17
+          },
+          "mean": 18.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 17,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 19
+        },
+        {
+          "id": "michael-penix-qb-atl",
+          "name": "Michael Penix Jr.",
+          "team": "ATL",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 22,
+            "panel-b": 17,
+            "panel-c": 19
+          },
+          "mean": 19.333,
+          "sd": 2.517,
+          "sources": 3,
+          "min": 17,
+          "max": 22,
+          "tier": 5,
+          "rank_position": 20
+        },
+        {
+          "id": "matthew-stafford-qb-lar",
+          "name": "Matthew Stafford",
+          "team": "LAR",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 18,
+            "panel-b": 22,
+            "panel-c": 21
+          },
+          "mean": 20.333,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 18,
+          "max": 22,
+          "tier": 5,
+          "rank_position": 21
+        },
+        {
+          "id": "geno-smith-qb-lv",
+          "name": "Geno Smith",
+          "team": "LV",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 23,
+            "panel-b": 21,
+            "panel-c": 22
+          },
+          "mean": 22,
+          "sd": 1,
+          "sources": 3,
+          "min": 21,
+          "max": 23,
+          "tier": 5,
+          "rank_position": 22
+        },
+        {
+          "id": "bryce-young-qb-car",
+          "name": "Bryce Young",
+          "team": "CAR",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 20,
+            "panel-b": 24,
+            "panel-c": 24
+          },
+          "mean": 22.667,
+          "sd": 2.309,
+          "sources": 3,
+          "min": 20,
+          "max": 24,
+          "tier": 6,
+          "rank_position": 23
+        },
+        {
+          "id": "cam-ward-qb-ten",
+          "name": "Cam Ward",
+          "team": "TEN",
+          "position": "QB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 24,
+            "panel-b": 23,
+            "panel-c": 23
+          },
+          "mean": 23.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 23,
+          "max": 24,
+          "tier": 6,
+          "rank_position": 24
+        }
+      ],
+      "computed_breaks": [
+        3,
+        8,
+        11,
+        14,
+        22
+      ],
+      "accepted_breaks": null,
+      "override_note": null,
+      "threshold": 1.0741,
+      "separations": [
+        2.786,
+        0.531,
+        2.649,
+        0.781,
+        1.013,
+        0.601,
+        0.601,
+        1.693,
+        0,
+        0.646,
+        1.292,
+        0.391,
+        0.283,
+        2.731,
+        0,
+        0.643,
+        0.107,
+        0.24,
+        0.318,
+        0.43,
+        1.009,
+        0.371,
+        0.391
+      ],
+      "method": "separation (mean gap / pooled sd)"
+    },
+    "RB": {
+      "players": [
+        {
+          "id": "bijan-robinson-rb-atl",
+          "name": "Bijan Robinson",
+          "team": "ATL",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 1,
+            "panel-b": 2,
+            "panel-c": 1
+          },
+          "mean": 1.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 1,
+          "max": 2,
+          "tier": 1,
+          "rank_position": 1
+        },
+        {
+          "id": "saquon-barkley-rb-phi",
+          "name": "Saquon Barkley",
+          "team": "PHI",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 3,
+            "panel-b": 1,
+            "panel-c": 2
+          },
+          "mean": 2,
+          "sd": 1,
+          "sources": 3,
+          "min": 1,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 2
+        },
+        {
+          "id": "ashton-jeanty-rb-lv",
+          "name": "Ashton Jeanty",
+          "team": "LV",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 4,
+            "panel-b": 3,
+            "panel-c": 3
+          },
+          "mean": 3.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 3,
+          "max": 4,
+          "tier": 2,
+          "rank_position": 3
+        },
+        {
+          "id": "jahmyr-gibbs-rb-det",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 2,
+            "panel-b": 4,
+            "panel-c": 5
+          },
+          "mean": 3.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 2,
+          "max": 5,
+          "tier": 2,
+          "rank_position": 4
+        },
+        {
+          "id": "devon-achane-rb-mia",
+          "name": "De'Von Achane",
+          "team": "MIA",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 6,
+            "panel-b": 6,
+            "panel-c": 4
+          },
+          "mean": 5.333,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 4,
+          "max": 6,
+          "tier": 3,
+          "rank_position": 5
+        },
+        {
+          "id": "christian-mccaffrey-rb-sf",
+          "name": "Christian McCaffrey",
+          "team": "SF",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 5,
+            "panel-b": 5,
+            "panel-c": 7
+          },
+          "mean": 5.667,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 5,
+          "max": 7,
+          "tier": 3,
+          "rank_position": 6
+        },
+        {
+          "id": "derrick-henry-rb-bal",
+          "name": "Derrick Henry",
+          "team": "BAL",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 7,
+            "panel-b": 8,
+            "panel-c": 6
+          },
+          "mean": 7,
+          "sd": 1,
+          "sources": 3,
+          "min": 6,
+          "max": 8,
+          "tier": 4,
+          "rank_position": 7
+        },
+        {
+          "id": "josh-jacobs-rb-gb",
+          "name": "Josh Jacobs",
+          "team": "GB",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 8,
+            "panel-b": 7,
+            "panel-c": 9
+          },
+          "mean": 8,
+          "sd": 1,
+          "sources": 3,
+          "min": 7,
+          "max": 9,
+          "tier": 4,
+          "rank_position": 8
+        },
+        {
+          "id": "bucky-irving-rb-tb",
+          "name": "Bucky Irving",
+          "team": "TB",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 9,
+            "panel-b": 10,
+            "panel-c": 8
+          },
+          "mean": 9,
+          "sd": 1,
+          "sources": 3,
+          "min": 8,
+          "max": 10,
+          "tier": 5,
+          "rank_position": 9
+        },
+        {
+          "id": "jonathan-taylor-rb-ind",
+          "name": "Jonathan Taylor",
+          "team": "IND",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 10,
+            "panel-b": 12,
+            "panel-c": 10
+          },
+          "mean": 10.667,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 10,
+          "max": 12,
+          "tier": 5,
+          "rank_position": 10
+        },
+        {
+          "id": "chase-brown-rb-cin",
+          "name": "Chase Brown",
+          "team": "CIN",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 11,
+            "panel-b": 9,
+            "panel-c": 14
+          },
+          "mean": 11.333,
+          "sd": 2.517,
+          "sources": 3,
+          "min": 9,
+          "max": 14,
+          "tier": 5,
+          "rank_position": 11
+        },
+        {
+          "id": "kenneth-walker-rb-sea",
+          "name": "Kenneth Walker III",
+          "team": "SEA",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 12,
+            "panel-b": 11,
+            "panel-c": 15
+          },
+          "mean": 12.667,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 11,
+          "max": 15,
+          "tier": 5,
+          "rank_position": 12
+        },
+        {
+          "id": "james-cook-rb-buf",
+          "name": "James Cook",
+          "team": "BUF",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 13,
+            "panel-b": 13,
+            "panel-c": 13
+          },
+          "mean": 13,
+          "sd": 0,
+          "sources": 3,
+          "min": 13,
+          "max": 13,
+          "tier": 5,
+          "rank_position": 13
+        },
+        {
+          "id": "kyren-williams-rb-lar",
+          "name": "Kyren Williams",
+          "team": "LAR",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 14,
+            "panel-b": 14,
+            "panel-c": 11
+          },
+          "mean": 13,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 11,
+          "max": 14,
+          "tier": 5,
+          "rank_position": 14
+        },
+        {
+          "id": "breece-hall-rb-nyj",
+          "name": "Breece Hall",
+          "team": "NYJ",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 18,
+            "panel-b": 15,
+            "panel-c": 12
+          },
+          "mean": 15,
+          "sd": 3,
+          "sources": 3,
+          "min": 12,
+          "max": 18,
+          "tier": 6,
+          "rank_position": 15
+        },
+        {
+          "id": "chuba-hubbard-rb-car",
+          "name": "Chuba Hubbard",
+          "team": "CAR",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 15,
+            "panel-b": 16,
+            "panel-c": 17
+          },
+          "mean": 16,
+          "sd": 1,
+          "sources": 3,
+          "min": 15,
+          "max": 17,
+          "tier": 6,
+          "rank_position": 16
+        },
+        {
+          "id": "omarion-hampton-rb-lac",
+          "name": "Omarion Hampton",
+          "team": "LAC",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 16,
+            "panel-b": 17,
+            "panel-c": 16
+          },
+          "mean": 16.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 16,
+          "max": 17,
+          "tier": 6,
+          "rank_position": 17
+        },
+        {
+          "id": "alvin-kamara-rb-no",
+          "name": "Alvin Kamara",
+          "team": "NO",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 17,
+            "panel-b": 20,
+            "panel-c": 19
+          },
+          "mean": 18.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 17,
+          "max": 20,
+          "tier": 7,
+          "rank_position": 18
+        },
+        {
+          "id": "treveyon-henderson-rb-ne",
+          "name": "TreVeyon Henderson",
+          "team": "NE",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 22,
+            "panel-b": 18,
+            "panel-c": 21
+          },
+          "mean": 20.333,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 18,
+          "max": 22,
+          "tier": 7,
+          "rank_position": 19
+        },
+        {
+          "id": "david-montgomery-rb-det",
+          "name": "David Montgomery",
+          "team": "DET",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 24,
+            "panel-b": 19,
+            "panel-c": 23
+          },
+          "mean": 22,
+          "sd": 2.646,
+          "sources": 3,
+          "min": 19,
+          "max": 24,
+          "tier": 7,
+          "rank_position": 20
+        },
+        {
+          "id": "quinshon-judkins-rb-cle",
+          "name": "Quinshon Judkins",
+          "team": "CLE",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 27,
+            "panel-b": 21,
+            "panel-c": 18
+          },
+          "mean": 22,
+          "sd": 4.583,
+          "sources": 3,
+          "min": 18,
+          "max": 27,
+          "tier": 7,
+          "rank_position": 21
+        },
+        {
+          "id": "tony-pollard-rb-ten",
+          "name": "Tony Pollard",
+          "team": "TEN",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 19,
+            "panel-b": 24,
+            "panel-c": 25
+          },
+          "mean": 22.667,
+          "sd": 3.215,
+          "sources": 3,
+          "min": 19,
+          "max": 25,
+          "tier": 7,
+          "rank_position": 22
+        },
+        {
+          "id": "aaron-jones-rb-min",
+          "name": "Aaron Jones",
+          "team": "MIN",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 20,
+            "panel-b": 23,
+            "panel-c": 27
+          },
+          "mean": 23.333,
+          "sd": 3.512,
+          "sources": 3,
+          "min": 20,
+          "max": 27,
+          "tier": 7,
+          "rank_position": 23
+        },
+        {
+          "id": "isiah-pacheco-rb-kc",
+          "name": "Isiah Pacheco",
+          "team": "KC",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 28,
+            "panel-b": 27,
+            "panel-c": 20
+          },
+          "mean": 25,
+          "sd": 4.359,
+          "sources": 3,
+          "min": 20,
+          "max": 28,
+          "tier": 7,
+          "rank_position": 24
+        },
+        {
+          "id": "jaylen-warren-rb-pit",
+          "name": "Jaylen Warren",
+          "team": "PIT",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 25,
+            "panel-b": 25,
+            "panel-c": 26
+          },
+          "mean": 25.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 25,
+          "max": 26,
+          "tier": 7,
+          "rank_position": 25
+        },
+        {
+          "id": "rj-harvey-rb-den",
+          "name": "RJ Harvey",
+          "team": "DEN",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 23,
+            "panel-b": 26,
+            "panel-c": 30
+          },
+          "mean": 26.333,
+          "sd": 3.512,
+          "sources": 3,
+          "min": 23,
+          "max": 30,
+          "tier": 8,
+          "rank_position": 26
+        },
+        {
+          "id": "tyrone-tracy-rb-nyg",
+          "name": "Tyrone Tracy Jr.",
+          "team": "NYG",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 21,
+            "panel-b": 32,
+            "panel-c": 28
+          },
+          "mean": 27,
+          "sd": 5.568,
+          "sources": 3,
+          "min": 21,
+          "max": 32,
+          "tier": 8,
+          "rank_position": 27
+        },
+        {
+          "id": "rhamondre-stevenson-rb-ne",
+          "name": "Rhamondre Stevenson",
+          "team": "NE",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 31,
+            "panel-b": 28,
+            "panel-c": 22
+          },
+          "mean": 27,
+          "sd": 4.583,
+          "sources": 3,
+          "min": 22,
+          "max": 31,
+          "tier": 8,
+          "rank_position": 28
+        },
+        {
+          "id": "cam-skattebo-rb-nyg",
+          "name": "Cam Skattebo",
+          "team": "NYG",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 26,
+            "panel-b": 34,
+            "panel-c": 24
+          },
+          "mean": 28,
+          "sd": 5.292,
+          "sources": 3,
+          "min": 24,
+          "max": 34,
+          "tier": 8,
+          "rank_position": 29
+        },
+        {
+          "id": "brian-robinson-rb-was",
+          "name": "Brian Robinson Jr.",
+          "team": "WAS",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 33,
+            "panel-b": 22,
+            "panel-c": 33
+          },
+          "mean": 29.333,
+          "sd": 6.351,
+          "sources": 3,
+          "min": 22,
+          "max": 33,
+          "tier": 8,
+          "rank_position": 30
+        },
+        {
+          "id": "travis-etienne-rb-jax",
+          "name": "Travis Etienne Jr.",
+          "team": "JAX",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 29,
+            "panel-b": 30,
+            "panel-c": 34
+          },
+          "mean": 31,
+          "sd": 2.646,
+          "sources": 3,
+          "min": 29,
+          "max": 34,
+          "tier": 8,
+          "rank_position": 31
+        },
+        {
+          "id": "kaleb-johnson-rb-pit",
+          "name": "Kaleb Johnson",
+          "team": "PIT",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 32,
+            "panel-b": 37,
+            "panel-c": 29
+          },
+          "mean": 32.667,
+          "sd": 4.041,
+          "sources": 3,
+          "min": 29,
+          "max": 37,
+          "tier": 8,
+          "rank_position": 32
+        },
+        {
+          "id": "trey-benson-rb-ari",
+          "name": "Trey Benson",
+          "team": "ARI",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 39,
+            "panel-b": 33,
+            "panel-c": 31
+          },
+          "mean": 34.333,
+          "sd": 4.163,
+          "sources": 3,
+          "min": 31,
+          "max": 39,
+          "tier": 8,
+          "rank_position": 33
+        },
+        {
+          "id": "austin-ekeler-rb-was",
+          "name": "Austin Ekeler",
+          "team": "WAS",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 40,
+            "panel-b": 31,
+            "panel-c": 32
+          },
+          "mean": 34.333,
+          "sd": 4.933,
+          "sources": 3,
+          "min": 31,
+          "max": 40,
+          "tier": 9,
+          "rank_position": 34
+        },
+        {
+          "id": "rachaad-white-rb-tb",
+          "name": "Rachaad White",
+          "team": "TB",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 41,
+            "panel-b": 29,
+            "panel-c": 35
+          },
+          "mean": 35,
+          "sd": 6,
+          "sources": 3,
+          "min": 29,
+          "max": 41,
+          "tier": 9,
+          "rank_position": 35
+        },
+        {
+          "id": "tyjae-spears-rb-ten",
+          "name": "Tyjae Spears",
+          "team": "TEN",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 30,
+            "panel-b": 35,
+            "panel-c": 42
+          },
+          "mean": 35.667,
+          "sd": 6.028,
+          "sources": 3,
+          "min": 30,
+          "max": 42,
+          "tier": 9,
+          "rank_position": 36
+        },
+        {
+          "id": "najee-harris-rb-lac",
+          "name": "Najee Harris",
+          "team": "LAC",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 35,
+            "panel-b": 36,
+            "panel-c": 37
+          },
+          "mean": 36,
+          "sd": 1,
+          "sources": 3,
+          "min": 35,
+          "max": 37,
+          "tier": 9,
+          "rank_position": 37
+        },
+        {
+          "id": "jordan-mason-rb-min",
+          "name": "Jordan Mason",
+          "team": "MIN",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 34,
+            "panel-b": 38,
+            "panel-c": 39
+          },
+          "mean": 37,
+          "sd": 2.646,
+          "sources": 3,
+          "min": 34,
+          "max": 39,
+          "tier": 9,
+          "rank_position": 38
+        },
+        {
+          "id": "zach-charbonnet-rb-sea",
+          "name": "Zach Charbonnet",
+          "team": "SEA",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 37,
+            "panel-b": 41,
+            "panel-c": 36
+          },
+          "mean": 38,
+          "sd": 2.646,
+          "sources": 3,
+          "min": 36,
+          "max": 41,
+          "tier": 9,
+          "rank_position": 39
+        },
+        {
+          "id": "braelon-allen-rb-nyj",
+          "name": "Braelon Allen",
+          "team": "NYJ",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 36,
+            "panel-b": 43,
+            "panel-c": 38
+          },
+          "mean": 39,
+          "sd": 3.606,
+          "sources": 3,
+          "min": 36,
+          "max": 43,
+          "tier": 9,
+          "rank_position": 40
+        },
+        {
+          "id": "jerome-ford-rb-cle",
+          "name": "Jerome Ford",
+          "team": "CLE",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 38,
+            "panel-b": 39,
+            "panel-c": 40
+          },
+          "mean": 39,
+          "sd": 1,
+          "sources": 3,
+          "min": 38,
+          "max": 40,
+          "tier": 9,
+          "rank_position": 41
+        },
+        {
+          "id": "bhayshul-tuten-rb-jax",
+          "name": "Bhayshul Tuten",
+          "team": "JAX",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 43,
+            "panel-b": 40,
+            "panel-c": 41
+          },
+          "mean": 41.333,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 40,
+          "max": 43,
+          "tier": 10,
+          "rank_position": 42
+        },
+        {
+          "id": "ray-davis-rb-buf",
+          "name": "Ray Davis",
+          "team": "BUF",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 42,
+            "panel-b": 42,
+            "panel-c": 45
+          },
+          "mean": 43,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 42,
+          "max": 45,
+          "tier": 10,
+          "rank_position": 43
+        },
+        {
+          "id": "blake-corum-rb-lar",
+          "name": "Blake Corum",
+          "team": "LAR",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 44,
+            "panel-b": 45,
+            "panel-c": 43
+          },
+          "mean": 44,
+          "sd": 1,
+          "sources": 3,
+          "min": 43,
+          "max": 45,
+          "tier": 10,
+          "rank_position": 44
+        },
+        {
+          "id": "roschon-johnson-rb-chi",
+          "name": "Roschon Johnson",
+          "team": "CHI",
+          "position": "RB",
+          "bye": null,
+          "ranks": {
+            "panel-a": 45,
+            "panel-b": 44,
+            "panel-c": 44
+          },
+          "mean": 44.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 44,
+          "max": 45,
+          "tier": 10,
+          "rank_position": 45
+        }
+      ],
+      "computed_breaks": [
+        2,
+        4,
+        6,
+        8,
+        14,
+        17,
+        25,
+        33,
+        41
+      ],
+      "accepted_breaks": null,
+      "override_note": null,
+      "threshold": 0.7962,
+      "separations": [
+        0.781,
+        1.561,
+        0.283,
+        1.21,
+        0.283,
+        1.202,
+        0.97,
+        0.97,
+        1.503,
+        0.337,
+        0.574,
+        0.223,
+        0,
+        0.812,
+        0.444,
+        0.39,
+        1.975,
+        0.904,
+        0.696,
+        0,
+        0.168,
+        0.197,
+        0.42,
+        0.107,
+        0.395,
+        0.143,
+        0,
+        0.202,
+        0.228,
+        0.342,
+        0.487,
+        0.405,
+        0,
+        0.121,
+        0.111,
+        0.077,
+        0.496,
+        0.376,
+        0.315,
+        0,
+        1.774,
+        1.009,
+        0.696,
+        0.39
+      ],
+      "method": "separation (mean gap / pooled sd)"
+    },
+    "WR": {
+      "players": [
+        {
+          "id": "jamarr-chase-wr-cin",
+          "name": "Ja'Marr Chase",
+          "team": "CIN",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 1,
+            "panel-b": 1,
+            "panel-c": 1
+          },
+          "mean": 1,
+          "sd": 0,
+          "sources": 3,
+          "min": 1,
+          "max": 1,
+          "tier": 1,
+          "rank_position": 1
+        },
+        {
+          "id": "justin-jefferson-wr-min",
+          "name": "Justin Jefferson",
+          "team": "MIN",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 2,
+            "panel-b": 2,
+            "panel-c": 2
+          },
+          "mean": 2,
+          "sd": 0,
+          "sources": 3,
+          "min": 2,
+          "max": 2,
+          "tier": 1,
+          "rank_position": 2
+        },
+        {
+          "id": "ceedee-lamb-wr-dal",
+          "name": "CeeDee Lamb",
+          "team": "DAL",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 3,
+            "panel-b": 3,
+            "panel-c": 4
+          },
+          "mean": 3.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 3,
+          "max": 4,
+          "tier": 2,
+          "rank_position": 3
+        },
+        {
+          "id": "puka-nacua-wr-lar",
+          "name": "Puka Nacua",
+          "team": "LAR",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 4,
+            "panel-b": 4,
+            "panel-c": 3
+          },
+          "mean": 3.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 3,
+          "max": 4,
+          "tier": 2,
+          "rank_position": 4
+        },
+        {
+          "id": "malik-nabers-wr-nyg",
+          "name": "Malik Nabers",
+          "team": "NYG",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 7,
+            "panel-b": 6,
+            "panel-c": 5
+          },
+          "mean": 6,
+          "sd": 1,
+          "sources": 3,
+          "min": 5,
+          "max": 7,
+          "tier": 3,
+          "rank_position": 5
+        },
+        {
+          "id": "nico-collins-wr-hou",
+          "name": "Nico Collins",
+          "team": "HOU",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 6,
+            "panel-b": 8,
+            "panel-c": 6
+          },
+          "mean": 6.667,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 6,
+          "max": 8,
+          "tier": 3,
+          "rank_position": 6
+        },
+        {
+          "id": "amon-ra-st-brown-wr-det",
+          "name": "Amon-Ra St. Brown",
+          "team": "DET",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 5,
+            "panel-b": 7,
+            "panel-c": 9
+          },
+          "mean": 7,
+          "sd": 2,
+          "sources": 3,
+          "min": 5,
+          "max": 9,
+          "tier": 3,
+          "rank_position": 7
+        },
+        {
+          "id": "aj-brown-wr-phi",
+          "name": "A.J. Brown",
+          "team": "PHI",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 8,
+            "panel-b": 5,
+            "panel-c": 8
+          },
+          "mean": 7,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 5,
+          "max": 8,
+          "tier": 3,
+          "rank_position": 8
+        },
+        {
+          "id": "brian-thomas-wr-jax",
+          "name": "Brian Thomas Jr.",
+          "team": "JAX",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 10,
+            "panel-b": 10,
+            "panel-c": 7
+          },
+          "mean": 9,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 7,
+          "max": 10,
+          "tier": 4,
+          "rank_position": 9
+        },
+        {
+          "id": "drake-london-wr-atl",
+          "name": "Drake London",
+          "team": "ATL",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 9,
+            "panel-b": 9,
+            "panel-c": 10
+          },
+          "mean": 9.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 9,
+          "max": 10,
+          "tier": 4,
+          "rank_position": 10
+        },
+        {
+          "id": "tyreek-hill-wr-mia",
+          "name": "Tyreek Hill",
+          "team": "MIA",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 11,
+            "panel-b": 11,
+            "panel-c": 14
+          },
+          "mean": 12,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 11,
+          "max": 14,
+          "tier": 5,
+          "rank_position": 11
+        },
+        {
+          "id": "tee-higgins-wr-cin",
+          "name": "Tee Higgins",
+          "team": "CIN",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 12,
+            "panel-b": 14,
+            "panel-c": 11
+          },
+          "mean": 12.333,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 11,
+          "max": 14,
+          "tier": 5,
+          "rank_position": 12
+        },
+        {
+          "id": "ladd-mcconkey-wr-lac",
+          "name": "Ladd McConkey",
+          "team": "LAC",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 13,
+            "panel-b": 13,
+            "panel-c": 13
+          },
+          "mean": 13,
+          "sd": 0,
+          "sources": 3,
+          "min": 13,
+          "max": 13,
+          "tier": 6,
+          "rank_position": 13
+        },
+        {
+          "id": "rashee-rice-wr-kc",
+          "name": "Rashee Rice",
+          "team": "KC",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 15,
+            "panel-b": 12,
+            "panel-c": 16
+          },
+          "mean": 14.333,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 12,
+          "max": 16,
+          "tier": 6,
+          "rank_position": 14
+        },
+        {
+          "id": "garrett-wilson-wr-nyj",
+          "name": "Garrett Wilson",
+          "team": "NYJ",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 16,
+            "panel-b": 18,
+            "panel-c": 12
+          },
+          "mean": 15.333,
+          "sd": 3.055,
+          "sources": 3,
+          "min": 12,
+          "max": 18,
+          "tier": 6,
+          "rank_position": 15
+        },
+        {
+          "id": "marvin-harrison-wr-ari",
+          "name": "Marvin Harrison Jr.",
+          "team": "ARI",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 20,
+            "panel-b": 15,
+            "panel-c": 15
+          },
+          "mean": 16.667,
+          "sd": 2.887,
+          "sources": 3,
+          "min": 15,
+          "max": 20,
+          "tier": 6,
+          "rank_position": 16
+        },
+        {
+          "id": "mike-evans-wr-tb",
+          "name": "Mike Evans",
+          "team": "TB",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 14,
+            "panel-b": 16,
+            "panel-c": 21
+          },
+          "mean": 17,
+          "sd": 3.606,
+          "sources": 3,
+          "min": 14,
+          "max": 21,
+          "tier": 6,
+          "rank_position": 17
+        },
+        {
+          "id": "terry-mclaurin-wr-was",
+          "name": "Terry McLaurin",
+          "team": "WAS",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 19,
+            "panel-b": 17,
+            "panel-c": 18
+          },
+          "mean": 18,
+          "sd": 1,
+          "sources": 3,
+          "min": 17,
+          "max": 19,
+          "tier": 6,
+          "rank_position": 18
+        },
+        {
+          "id": "dk-metcalf-wr-pit",
+          "name": "DK Metcalf",
+          "team": "PIT",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 17,
+            "panel-b": 19,
+            "panel-c": 23
+          },
+          "mean": 19.667,
+          "sd": 3.055,
+          "sources": 3,
+          "min": 17,
+          "max": 23,
+          "tier": 7,
+          "rank_position": 19
+        },
+        {
+          "id": "jaxon-smith-njigba-wr-sea",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 22,
+            "panel-b": 22,
+            "panel-c": 17
+          },
+          "mean": 20.333,
+          "sd": 2.887,
+          "sources": 3,
+          "min": 17,
+          "max": 22,
+          "tier": 7,
+          "rank_position": 20
+        },
+        {
+          "id": "davante-adams-wr-lar",
+          "name": "Davante Adams",
+          "team": "LAR",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 24,
+            "panel-b": 21,
+            "panel-c": 19
+          },
+          "mean": 21.333,
+          "sd": 2.517,
+          "sources": 3,
+          "min": 19,
+          "max": 24,
+          "tier": 7,
+          "rank_position": 21
+        },
+        {
+          "id": "courtland-sutton-wr-den",
+          "name": "Courtland Sutton",
+          "team": "DEN",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 18,
+            "panel-b": 27,
+            "panel-c": 20
+          },
+          "mean": 21.667,
+          "sd": 4.726,
+          "sources": 3,
+          "min": 18,
+          "max": 27,
+          "tier": 7,
+          "rank_position": 22
+        },
+        {
+          "id": "dj-moore-wr-chi",
+          "name": "DJ Moore",
+          "team": "CHI",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 21,
+            "panel-b": 30,
+            "panel-c": 22
+          },
+          "mean": 24.333,
+          "sd": 4.933,
+          "sources": 3,
+          "min": 21,
+          "max": 30,
+          "tier": 8,
+          "rank_position": 23
+        },
+        {
+          "id": "zay-flowers-wr-bal",
+          "name": "Zay Flowers",
+          "team": "BAL",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 25,
+            "panel-b": 24,
+            "panel-c": 24
+          },
+          "mean": 24.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 24,
+          "max": 25,
+          "tier": 8,
+          "rank_position": 24
+        },
+        {
+          "id": "xavier-worthy-wr-kc",
+          "name": "Xavier Worthy",
+          "team": "KC",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 28,
+            "panel-b": 20,
+            "panel-c": 26
+          },
+          "mean": 24.667,
+          "sd": 4.163,
+          "sources": 3,
+          "min": 20,
+          "max": 28,
+          "tier": 8,
+          "rank_position": 25
+        },
+        {
+          "id": "chris-olave-wr-no",
+          "name": "Chris Olave",
+          "team": "NO",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 23,
+            "panel-b": 28,
+            "panel-c": 29
+          },
+          "mean": 26.667,
+          "sd": 3.215,
+          "sources": 3,
+          "min": 23,
+          "max": 29,
+          "tier": 9,
+          "rank_position": 26
+        },
+        {
+          "id": "jameson-williams-wr-det",
+          "name": "Jameson Williams",
+          "team": "DET",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 26,
+            "panel-b": 26,
+            "panel-c": 30
+          },
+          "mean": 27.333,
+          "sd": 2.309,
+          "sources": 3,
+          "min": 26,
+          "max": 30,
+          "tier": 9,
+          "rank_position": 27
+        },
+        {
+          "id": "jaylen-waddle-wr-mia",
+          "name": "Jaylen Waddle",
+          "team": "MIA",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 32,
+            "panel-b": 25,
+            "panel-c": 27
+          },
+          "mean": 28,
+          "sd": 3.606,
+          "sources": 3,
+          "min": 25,
+          "max": 32,
+          "tier": 9,
+          "rank_position": 28
+        },
+        {
+          "id": "rome-odunze-wr-chi",
+          "name": "Rome Odunze",
+          "team": "CHI",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 33,
+            "panel-b": 23,
+            "panel-c": 34
+          },
+          "mean": 30,
+          "sd": 6.083,
+          "sources": 3,
+          "min": 23,
+          "max": 34,
+          "tier": 9,
+          "rank_position": 29
+        },
+        {
+          "id": "jerry-jeudy-wr-cle",
+          "name": "Jerry Jeudy",
+          "team": "CLE",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 36,
+            "panel-b": 31,
+            "panel-c": 25
+          },
+          "mean": 30.667,
+          "sd": 5.508,
+          "sources": 3,
+          "min": 25,
+          "max": 36,
+          "tier": 9,
+          "rank_position": 30
+        },
+        {
+          "id": "ricky-pearsall-wr-sf",
+          "name": "Ricky Pearsall",
+          "team": "SF",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 27,
+            "panel-b": 29,
+            "panel-c": 37
+          },
+          "mean": 31,
+          "sd": 5.292,
+          "sources": 3,
+          "min": 27,
+          "max": 37,
+          "tier": 9,
+          "rank_position": 31
+        },
+        {
+          "id": "travis-hunter-wr-jax",
+          "name": "Travis Hunter",
+          "team": "JAX",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 34,
+            "panel-b": 36,
+            "panel-c": 28
+          },
+          "mean": 32.667,
+          "sd": 4.163,
+          "sources": 3,
+          "min": 28,
+          "max": 36,
+          "tier": 9,
+          "rank_position": 32
+        },
+        {
+          "id": "tetairoa-mcmillan-wr-car",
+          "name": "Tetairoa McMillan",
+          "team": "CAR",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 29,
+            "panel-b": 40,
+            "panel-c": 31
+          },
+          "mean": 33.333,
+          "sd": 5.859,
+          "sources": 3,
+          "min": 29,
+          "max": 40,
+          "tier": 9,
+          "rank_position": 33
+        },
+        {
+          "id": "george-pickens-wr-dal",
+          "name": "George Pickens",
+          "team": "DAL",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 35,
+            "panel-b": 35,
+            "panel-c": 32
+          },
+          "mean": 34,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 32,
+          "max": 35,
+          "tier": 10,
+          "rank_position": 34
+        },
+        {
+          "id": "chris-godwin-wr-tb",
+          "name": "Chris Godwin",
+          "team": "TB",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 31,
+            "panel-b": 38,
+            "panel-c": 36
+          },
+          "mean": 35,
+          "sd": 3.606,
+          "sources": 3,
+          "min": 31,
+          "max": 38,
+          "tier": 10,
+          "rank_position": 35
+        },
+        {
+          "id": "jordan-addison-wr-min",
+          "name": "Jordan Addison",
+          "team": "MIN",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 43,
+            "panel-b": 32,
+            "panel-c": 35
+          },
+          "mean": 36.667,
+          "sd": 5.686,
+          "sources": 3,
+          "min": 32,
+          "max": 43,
+          "tier": 10,
+          "rank_position": 36
+        },
+        {
+          "id": "khalil-shakir-wr-buf",
+          "name": "Khalil Shakir",
+          "team": "BUF",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 30,
+            "panel-b": 44,
+            "panel-c": 39
+          },
+          "mean": 37.667,
+          "sd": 7.095,
+          "sources": 3,
+          "min": 30,
+          "max": 44,
+          "tier": 10,
+          "rank_position": 37
+        },
+        {
+          "id": "deebo-samuel-wr-was",
+          "name": "Deebo Samuel",
+          "team": "WAS",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 42,
+            "panel-b": 33,
+            "panel-c": 38
+          },
+          "mean": 37.667,
+          "sd": 4.509,
+          "sources": 3,
+          "min": 33,
+          "max": 42,
+          "tier": 10,
+          "rank_position": 38
+        },
+        {
+          "id": "keon-coleman-wr-buf",
+          "name": "Keon Coleman",
+          "team": "BUF",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 39,
+            "panel-b": 37,
+            "panel-c": 41
+          },
+          "mean": 39,
+          "sd": 2,
+          "sources": 3,
+          "min": 37,
+          "max": 41,
+          "tier": 10,
+          "rank_position": 39
+        },
+        {
+          "id": "calvin-ridley-wr-ten",
+          "name": "Calvin Ridley",
+          "team": "TEN",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 40,
+            "panel-b": 46,
+            "panel-c": 33
+          },
+          "mean": 39.667,
+          "sd": 6.506,
+          "sources": 3,
+          "min": 33,
+          "max": 46,
+          "tier": 10,
+          "rank_position": 40
+        },
+        {
+          "id": "josh-downs-wr-ind",
+          "name": "Josh Downs",
+          "team": "IND",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 37,
+            "panel-b": 43,
+            "panel-c": 48
+          },
+          "mean": 42.667,
+          "sd": 5.508,
+          "sources": 3,
+          "min": 37,
+          "max": 48,
+          "tier": 11,
+          "rank_position": 41
+        },
+        {
+          "id": "jakobi-meyers-wr-lv",
+          "name": "Jakobi Meyers",
+          "team": "LV",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 50,
+            "panel-b": 34,
+            "panel-c": 44
+          },
+          "mean": 42.667,
+          "sd": 8.083,
+          "sources": 3,
+          "min": 34,
+          "max": 50,
+          "tier": 11,
+          "rank_position": 42
+        },
+        {
+          "id": "luther-burden-wr-chi",
+          "name": "Luther Burden III",
+          "team": "CHI",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 41,
+            "panel-b": 48,
+            "panel-c": 42
+          },
+          "mean": 43.667,
+          "sd": 3.786,
+          "sources": 3,
+          "min": 41,
+          "max": 48,
+          "tier": 11,
+          "rank_position": 43
+        },
+        {
+          "id": "matthew-golden-wr-gb",
+          "name": "Matthew Golden",
+          "team": "GB",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 46,
+            "panel-b": 39,
+            "panel-c": 47
+          },
+          "mean": 44,
+          "sd": 4.359,
+          "sources": 3,
+          "min": 39,
+          "max": 47,
+          "tier": 11,
+          "rank_position": 44
+        },
+        {
+          "id": "jayden-reed-wr-gb",
+          "name": "Jayden Reed",
+          "team": "GB",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 48,
+            "panel-b": 41,
+            "panel-c": 43
+          },
+          "mean": 44,
+          "sd": 3.606,
+          "sources": 3,
+          "min": 41,
+          "max": 48,
+          "tier": 11,
+          "rank_position": 45
+        },
+        {
+          "id": "stefon-diggs-wr-ne",
+          "name": "Stefon Diggs",
+          "team": "NE",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 45,
+            "panel-b": 42,
+            "panel-c": 46
+          },
+          "mean": 44.333,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 42,
+          "max": 46,
+          "tier": 11,
+          "rank_position": 46
+        },
+        {
+          "id": "emeka-egbuka-wr-tb",
+          "name": "Emeka Egbuka",
+          "team": "TB",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 38,
+            "panel-b": 49,
+            "panel-c": 49
+          },
+          "mean": 45.333,
+          "sd": 6.351,
+          "sources": 3,
+          "min": 38,
+          "max": 49,
+          "tier": 11,
+          "rank_position": 47
+        },
+        {
+          "id": "christian-kirk-wr-hou",
+          "name": "Christian Kirk",
+          "team": "HOU",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 44,
+            "panel-b": 52,
+            "panel-c": 45
+          },
+          "mean": 47,
+          "sd": 4.359,
+          "sources": 3,
+          "min": 44,
+          "max": 52,
+          "tier": 11,
+          "rank_position": 48
+        },
+        {
+          "id": "marvin-mims-wr-den",
+          "name": "Marvin Mims Jr.",
+          "team": "DEN",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 55,
+            "panel-b": 53,
+            "panel-c": 40
+          },
+          "mean": 49.333,
+          "sd": 8.145,
+          "sources": 3,
+          "min": 40,
+          "max": 55,
+          "tier": 12,
+          "rank_position": 49
+        },
+        {
+          "id": "michael-pittman-wr-ind",
+          "name": "Michael Pittman Jr.",
+          "team": "IND",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 49,
+            "panel-b": 50,
+            "panel-c": 50
+          },
+          "mean": 49.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 49,
+          "max": 50,
+          "tier": 12,
+          "rank_position": 50
+        },
+        {
+          "id": "cooper-kupp-wr-sea",
+          "name": "Cooper Kupp",
+          "team": "SEA",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 52,
+            "panel-b": 47,
+            "panel-c": 51
+          },
+          "mean": 50,
+          "sd": 2.646,
+          "sources": 3,
+          "min": 47,
+          "max": 52,
+          "tier": 12,
+          "rank_position": 51
+        },
+        {
+          "id": "darnell-mooney-wr-atl",
+          "name": "Darnell Mooney",
+          "team": "ATL",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 54,
+            "panel-b": 45,
+            "panel-c": 53
+          },
+          "mean": 50.667,
+          "sd": 4.933,
+          "sources": 3,
+          "min": 45,
+          "max": 54,
+          "tier": 12,
+          "rank_position": 52
+        },
+        {
+          "id": "wandale-robinson-wr-nyg",
+          "name": "Wan'Dale Robinson",
+          "team": "NYG",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 47,
+            "panel-b": 55,
+            "panel-c": 54
+          },
+          "mean": 52,
+          "sd": 4.359,
+          "sources": 3,
+          "min": 47,
+          "max": 55,
+          "tier": 12,
+          "rank_position": 53
+        },
+        {
+          "id": "rashid-shaheed-wr-no",
+          "name": "Rashid Shaheed",
+          "team": "NO",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 53,
+            "panel-b": 51,
+            "panel-c": 52
+          },
+          "mean": 52,
+          "sd": 1,
+          "sources": 3,
+          "min": 51,
+          "max": 53,
+          "tier": 12,
+          "rank_position": 54
+        },
+        {
+          "id": "quentin-johnston-wr-lac",
+          "name": "Quentin Johnston",
+          "team": "LAC",
+          "position": "WR",
+          "bye": null,
+          "ranks": {
+            "panel-a": 51,
+            "panel-b": 54,
+            "panel-c": 55
+          },
+          "mean": 53.333,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 51,
+          "max": 55,
+          "tier": 13,
+          "rank_position": 55
+        }
+      ],
+      "computed_breaks": [
+        2,
+        4,
+        8,
+        10,
+        12,
+        18,
+        22,
+        25,
+        33,
+        40,
+        48,
+        54
+      ],
+      "accepted_breaks": null,
+      "override_note": null,
+      "threshold": 0.4524,
+      "separations": [
+        4,
+        2.786,
+        0.531,
+        2.733,
+        0.602,
+        0.202,
+        0,
+        1.143,
+        0.253,
+        2.028,
+        0.202,
+        0.601,
+        0.893,
+        0.381,
+        0.447,
+        0.102,
+        0.376,
+        0.729,
+        0.223,
+        0.368,
+        0.088,
+        0.551,
+        0,
+        0.112,
+        0.537,
+        0.237,
+        0.22,
+        0.399,
+        0.115,
+        0.062,
+        0.35,
+        0.131,
+        0.154,
+        0.352,
+        0.35,
+        0.155,
+        0,
+        0.381,
+        0.138,
+        0.497,
+        0,
+        0.158,
+        0.081,
+        0,
+        0.113,
+        0.211,
+        0.306,
+        0.357,
+        0.058,
+        0.172,
+        0.168,
+        0.286,
+        0,
+        0.807
+      ],
+      "method": "separation (mean gap / pooled sd)"
+    },
+    "TE": {
+      "players": [
+        {
+          "id": "brock-bowers-te-lv",
+          "name": "Brock Bowers",
+          "team": "LV",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 1,
+            "panel-b": 1,
+            "panel-c": 1
+          },
+          "mean": 1,
+          "sd": 0,
+          "sources": 3,
+          "min": 1,
+          "max": 1,
+          "tier": 1,
+          "rank_position": 1
+        },
+        {
+          "id": "george-kittle-te-sf",
+          "name": "George Kittle",
+          "team": "SF",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 2,
+            "panel-b": 3,
+            "panel-c": 2
+          },
+          "mean": 2.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 2,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 2
+        },
+        {
+          "id": "trey-mcbride-te-ari",
+          "name": "Trey McBride",
+          "team": "ARI",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 3,
+            "panel-b": 2,
+            "panel-c": 3
+          },
+          "mean": 2.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 2,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 3
+        },
+        {
+          "id": "sam-laporta-te-det",
+          "name": "Sam LaPorta",
+          "team": "DET",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 5,
+            "panel-b": 4,
+            "panel-c": 4
+          },
+          "mean": 4.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 4,
+          "max": 5,
+          "tier": 2,
+          "rank_position": 4
+        },
+        {
+          "id": "travis-kelce-te-kc",
+          "name": "Travis Kelce",
+          "team": "KC",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 6,
+            "panel-b": 5,
+            "panel-c": 5
+          },
+          "mean": 5.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 5,
+          "max": 6,
+          "tier": 2,
+          "rank_position": 5
+        },
+        {
+          "id": "tj-hockenson-te-min",
+          "name": "T.J. Hockenson",
+          "team": "MIN",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 4,
+            "panel-b": 6,
+            "panel-c": 7
+          },
+          "mean": 5.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 4,
+          "max": 7,
+          "tier": 2,
+          "rank_position": 6
+        },
+        {
+          "id": "mark-andrews-te-bal",
+          "name": "Mark Andrews",
+          "team": "BAL",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 8,
+            "panel-b": 7,
+            "panel-c": 9
+          },
+          "mean": 8,
+          "sd": 1,
+          "sources": 3,
+          "min": 7,
+          "max": 9,
+          "tier": 3,
+          "rank_position": 7
+        },
+        {
+          "id": "david-njoku-te-cle",
+          "name": "David Njoku",
+          "team": "CLE",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 11,
+            "panel-b": 8,
+            "panel-c": 6
+          },
+          "mean": 8.333,
+          "sd": 2.517,
+          "sources": 3,
+          "min": 6,
+          "max": 11,
+          "tier": 3,
+          "rank_position": 8
+        },
+        {
+          "id": "tucker-kraft-te-gb",
+          "name": "Tucker Kraft",
+          "team": "GB",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 7,
+            "panel-b": 10,
+            "panel-c": 12
+          },
+          "mean": 9.667,
+          "sd": 2.517,
+          "sources": 3,
+          "min": 7,
+          "max": 12,
+          "tier": 3,
+          "rank_position": 9
+        },
+        {
+          "id": "evan-engram-te-den",
+          "name": "Evan Engram",
+          "team": "DEN",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 12,
+            "panel-b": 9,
+            "panel-c": 8
+          },
+          "mean": 9.667,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 8,
+          "max": 12,
+          "tier": 3,
+          "rank_position": 10
+        },
+        {
+          "id": "colston-loveland-te-chi",
+          "name": "Colston Loveland",
+          "team": "CHI",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 9,
+            "panel-b": 11,
+            "panel-c": 10
+          },
+          "mean": 10,
+          "sd": 1,
+          "sources": 3,
+          "min": 9,
+          "max": 11,
+          "tier": 3,
+          "rank_position": 11
+        },
+        {
+          "id": "dalton-kincaid-te-buf",
+          "name": "Dalton Kincaid",
+          "team": "BUF",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 10,
+            "panel-b": 14,
+            "panel-c": 16
+          },
+          "mean": 13.333,
+          "sd": 3.055,
+          "sources": 3,
+          "min": 10,
+          "max": 16,
+          "tier": 4,
+          "rank_position": 12
+        },
+        {
+          "id": "tyler-warren-te-ind",
+          "name": "Tyler Warren",
+          "team": "IND",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 14,
+            "panel-b": 13,
+            "panel-c": 13
+          },
+          "mean": 13.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 13,
+          "max": 14,
+          "tier": 4,
+          "rank_position": 13
+        },
+        {
+          "id": "jonnu-smith-te-pit",
+          "name": "Jonnu Smith",
+          "team": "PIT",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 15,
+            "panel-b": 15,
+            "panel-c": 11
+          },
+          "mean": 13.667,
+          "sd": 2.309,
+          "sources": 3,
+          "min": 11,
+          "max": 15,
+          "tier": 4,
+          "rank_position": 14
+        },
+        {
+          "id": "dallas-goedert-te-phi",
+          "name": "Dallas Goedert",
+          "team": "PHI",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 13,
+            "panel-b": 17,
+            "panel-c": 15
+          },
+          "mean": 15,
+          "sd": 2,
+          "sources": 3,
+          "min": 13,
+          "max": 17,
+          "tier": 4,
+          "rank_position": 15
+        },
+        {
+          "id": "cade-otton-te-tb",
+          "name": "Cade Otton",
+          "team": "TB",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 16,
+            "panel-b": 16,
+            "panel-c": 17
+          },
+          "mean": 16.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 16,
+          "max": 17,
+          "tier": 4,
+          "rank_position": 16
+        },
+        {
+          "id": "zach-ertz-te-was",
+          "name": "Zach Ertz",
+          "team": "WAS",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 19,
+            "panel-b": 12,
+            "panel-c": 18
+          },
+          "mean": 16.333,
+          "sd": 3.786,
+          "sources": 3,
+          "min": 12,
+          "max": 19,
+          "tier": 4,
+          "rank_position": 17
+        },
+        {
+          "id": "hunter-henry-te-ne",
+          "name": "Hunter Henry",
+          "team": "NE",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 18,
+            "panel-b": 18,
+            "panel-c": 14
+          },
+          "mean": 16.667,
+          "sd": 2.309,
+          "sources": 3,
+          "min": 14,
+          "max": 18,
+          "tier": 4,
+          "rank_position": 18
+        },
+        {
+          "id": "isaiah-likely-te-bal",
+          "name": "Isaiah Likely",
+          "team": "BAL",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 17,
+            "panel-b": 19,
+            "panel-c": 20
+          },
+          "mean": 18.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 17,
+          "max": 20,
+          "tier": 4,
+          "rank_position": 19
+        },
+        {
+          "id": "kyle-pitts-te-atl",
+          "name": "Kyle Pitts",
+          "team": "ATL",
+          "position": "TE",
+          "bye": null,
+          "ranks": {
+            "panel-a": 20,
+            "panel-b": 20,
+            "panel-c": 19
+          },
+          "mean": 19.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 19,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 20
+        }
+      ],
+      "computed_breaks": [
+        3,
+        6,
+        11,
+        19
+      ],
+      "accepted_breaks": null,
+      "override_note": null,
+      "threshold": 1.1612,
+      "separations": [
+        2.786,
+        0.531,
+        2.649,
+        1.59,
+        0.283,
+        1.774,
+        0.172,
+        0.527,
+        0,
+        0.202,
+        1.458,
+        0,
+        0.196,
+        0.613,
+        0.893,
+        0,
+        0.106,
+        1.013,
+        0.846
+      ],
+      "method": "separation (mean gap / pooled sd)"
+    },
+    "K": {
+      "players": [
+        {
+          "id": "brandon-aubrey-k-dal",
+          "name": "Brandon Aubrey",
+          "team": "DAL",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 1,
+            "panel-b": 1,
+            "panel-c": 1
+          },
+          "mean": 1,
+          "sd": 0,
+          "sources": 3,
+          "min": 1,
+          "max": 1,
+          "tier": 1,
+          "rank_position": 1
+        },
+        {
+          "id": "cameron-dicker-k-lac",
+          "name": "Cameron Dicker",
+          "team": "LAC",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 2,
+            "panel-b": 2,
+            "panel-c": 2
+          },
+          "mean": 2,
+          "sd": 0,
+          "sources": 3,
+          "min": 2,
+          "max": 2,
+          "tier": 1,
+          "rank_position": 2
+        },
+        {
+          "id": "chris-boswell-k-pit",
+          "name": "Chris Boswell",
+          "team": "PIT",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 3,
+            "panel-b": 3,
+            "panel-c": 4
+          },
+          "mean": 3.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 3,
+          "max": 4,
+          "tier": 2,
+          "rank_position": 3
+        },
+        {
+          "id": "jake-bates-k-det",
+          "name": "Jake Bates",
+          "team": "DET",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 4,
+            "panel-b": 4,
+            "panel-c": 3
+          },
+          "mean": 3.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 3,
+          "max": 4,
+          "tier": 2,
+          "rank_position": 4
+        },
+        {
+          "id": "kaimi-fairbairn-k-hou",
+          "name": "Ka'imi Fairbairn",
+          "team": "HOU",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 5,
+            "panel-b": 6,
+            "panel-c": 5
+          },
+          "mean": 5.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 5,
+          "max": 6,
+          "tier": 3,
+          "rank_position": 5
+        },
+        {
+          "id": "tyler-bass-k-buf",
+          "name": "Tyler Bass",
+          "team": "BUF",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 7,
+            "panel-b": 7,
+            "panel-c": 6
+          },
+          "mean": 6.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 6,
+          "max": 7,
+          "tier": 3,
+          "rank_position": 6
+        },
+        {
+          "id": "harrison-butker-k-kc",
+          "name": "Harrison Butker",
+          "team": "KC",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 8,
+            "panel-b": 5,
+            "panel-c": 7
+          },
+          "mean": 6.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 5,
+          "max": 8,
+          "tier": 3,
+          "rank_position": 7
+        },
+        {
+          "id": "chase-mclaughlin-k-tb",
+          "name": "Chase McLaughlin",
+          "team": "TB",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 6,
+            "panel-b": 10,
+            "panel-c": 9
+          },
+          "mean": 8.333,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 6,
+          "max": 10,
+          "tier": 3,
+          "rank_position": 8
+        },
+        {
+          "id": "jason-sanders-k-mia",
+          "name": "Jason Sanders",
+          "team": "MIA",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 10,
+            "panel-b": 8,
+            "panel-c": 8
+          },
+          "mean": 8.667,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 8,
+          "max": 10,
+          "tier": 3,
+          "rank_position": 9
+        },
+        {
+          "id": "wil-lutz-k-den",
+          "name": "Wil Lutz",
+          "team": "DEN",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 9,
+            "panel-b": 9,
+            "panel-c": 10
+          },
+          "mean": 9.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 9,
+          "max": 10,
+          "tier": 3,
+          "rank_position": 10
+        },
+        {
+          "id": "jake-elliott-k-phi",
+          "name": "Jake Elliott",
+          "team": "PHI",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 12,
+            "panel-b": 11,
+            "panel-c": 13
+          },
+          "mean": 12,
+          "sd": 1,
+          "sources": 3,
+          "min": 11,
+          "max": 13,
+          "tier": 4,
+          "rank_position": 11
+        },
+        {
+          "id": "evan-mcpherson-k-cin",
+          "name": "Evan McPherson",
+          "team": "CIN",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 14,
+            "panel-b": 12,
+            "panel-c": 11
+          },
+          "mean": 12.333,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 11,
+          "max": 14,
+          "tier": 4,
+          "rank_position": 12
+        },
+        {
+          "id": "younghoe-koo-k-atl",
+          "name": "Younghoe Koo",
+          "team": "ATL",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 11,
+            "panel-b": 13,
+            "panel-c": 14
+          },
+          "mean": 12.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 11,
+          "max": 14,
+          "tier": 4,
+          "rank_position": 13
+        },
+        {
+          "id": "cairo-santos-k-chi",
+          "name": "Cairo Santos",
+          "team": "CHI",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 13,
+            "panel-b": 15,
+            "panel-c": 12
+          },
+          "mean": 13.333,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 12,
+          "max": 15,
+          "tier": 4,
+          "rank_position": 14
+        },
+        {
+          "id": "tyler-loop-k-bal",
+          "name": "Tyler Loop",
+          "team": "BAL",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 16,
+            "panel-b": 16,
+            "panel-c": 15
+          },
+          "mean": 15.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 15,
+          "max": 16,
+          "tier": 5,
+          "rank_position": 15
+        },
+        {
+          "id": "will-reichard-k-min",
+          "name": "Will Reichard",
+          "team": "MIN",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 19,
+            "panel-b": 14,
+            "panel-c": 16
+          },
+          "mean": 16.333,
+          "sd": 2.517,
+          "sources": 3,
+          "min": 14,
+          "max": 19,
+          "tier": 5,
+          "rank_position": 16
+        },
+        {
+          "id": "matt-gay-k-was",
+          "name": "Matt Gay",
+          "team": "WAS",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 15,
+            "panel-b": 17,
+            "panel-c": 18
+          },
+          "mean": 16.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 15,
+          "max": 18,
+          "tier": 5,
+          "rank_position": 17
+        },
+        {
+          "id": "joshua-karty-k-lar",
+          "name": "Joshua Karty",
+          "team": "LAR",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 18,
+            "panel-b": 19,
+            "panel-c": 17
+          },
+          "mean": 18,
+          "sd": 1,
+          "sources": 3,
+          "min": 17,
+          "max": 19,
+          "tier": 5,
+          "rank_position": 18
+        },
+        {
+          "id": "jake-moody-k-sf",
+          "name": "Jake Moody",
+          "team": "SF",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 17,
+            "panel-b": 20,
+            "panel-c": 20
+          },
+          "mean": 19,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 17,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 19
+        },
+        {
+          "id": "nick-folk-k-nyj",
+          "name": "Nick Folk",
+          "team": "NYJ",
+          "position": "K",
+          "bye": null,
+          "ranks": {
+            "panel-a": 20,
+            "panel-b": 18,
+            "panel-c": 19
+          },
+          "mean": 19,
+          "sd": 1,
+          "sources": 3,
+          "min": 18,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 20
+        }
+      ],
+      "computed_breaks": [
+        2,
+        4,
+        10,
+        14
+      ],
+      "accepted_breaks": null,
+      "override_note": null,
+      "threshold": 1.4378,
+      "separations": [
+        4,
+        2.786,
+        0.531,
+        2.649,
+        2.121,
+        0,
+        0.904,
+        0.196,
+        0.704,
+        3.124,
+        0.253,
+        0.216,
+        0.43,
+        1.975,
+        0.361,
+        0.159,
+        1.013,
+        0.696,
+        0
+      ],
+      "method": "separation (mean gap / pooled sd)"
+    },
+    "DST": {
+      "players": [
+        {
+          "id": "denver-broncos-dst-den",
+          "name": "Denver Broncos",
+          "team": "DEN",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 1,
+            "panel-b": 3,
+            "panel-c": 1
+          },
+          "mean": 1.667,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 1,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 1
+        },
+        {
+          "id": "philadelphia-eagles-dst-phi",
+          "name": "Philadelphia Eagles",
+          "team": "PHI",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 2,
+            "panel-b": 1,
+            "panel-c": 3
+          },
+          "mean": 2,
+          "sd": 1,
+          "sources": 3,
+          "min": 1,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 2
+        },
+        {
+          "id": "baltimore-ravens-dst-bal",
+          "name": "Baltimore Ravens",
+          "team": "BAL",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 3,
+            "panel-b": 2,
+            "panel-c": 2
+          },
+          "mean": 2.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 2,
+          "max": 3,
+          "tier": 1,
+          "rank_position": 3
+        },
+        {
+          "id": "buffalo-bills-dst-buf",
+          "name": "Buffalo Bills",
+          "team": "BUF",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 5,
+            "panel-b": 4,
+            "panel-c": 4
+          },
+          "mean": 4.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 4,
+          "max": 5,
+          "tier": 2,
+          "rank_position": 4
+        },
+        {
+          "id": "houston-texans-dst-hou",
+          "name": "Houston Texans",
+          "team": "HOU",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 4,
+            "panel-b": 6,
+            "panel-c": 7
+          },
+          "mean": 5.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 4,
+          "max": 7,
+          "tier": 2,
+          "rank_position": 5
+        },
+        {
+          "id": "pittsburgh-steelers-dst-pit",
+          "name": "Pittsburgh Steelers",
+          "team": "PIT",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 9,
+            "panel-b": 5,
+            "panel-c": 5
+          },
+          "mean": 6.333,
+          "sd": 2.309,
+          "sources": 3,
+          "min": 5,
+          "max": 9,
+          "tier": 2,
+          "rank_position": 6
+        },
+        {
+          "id": "minnesota-vikings-dst-min",
+          "name": "Minnesota Vikings",
+          "team": "MIN",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 6,
+            "panel-b": 9,
+            "panel-c": 6
+          },
+          "mean": 7,
+          "sd": 1.732,
+          "sources": 3,
+          "min": 6,
+          "max": 9,
+          "tier": 2,
+          "rank_position": 7
+        },
+        {
+          "id": "detroit-lions-dst-det",
+          "name": "Detroit Lions",
+          "team": "DET",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 7,
+            "panel-b": 7,
+            "panel-c": 9
+          },
+          "mean": 7.667,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 7,
+          "max": 9,
+          "tier": 2,
+          "rank_position": 8
+        },
+        {
+          "id": "kansas-city-chiefs-dst-kc",
+          "name": "Kansas City Chiefs",
+          "team": "KC",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 8,
+            "panel-b": 12,
+            "panel-c": 8
+          },
+          "mean": 9.333,
+          "sd": 2.309,
+          "sources": 3,
+          "min": 8,
+          "max": 12,
+          "tier": 3,
+          "rank_position": 9
+        },
+        {
+          "id": "green-bay-packers-dst-gb",
+          "name": "Green Bay Packers",
+          "team": "GB",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 10,
+            "panel-b": 8,
+            "panel-c": 10
+          },
+          "mean": 9.333,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 8,
+          "max": 10,
+          "tier": 3,
+          "rank_position": 10
+        },
+        {
+          "id": "seattle-seahawks-dst-sea",
+          "name": "Seattle Seahawks",
+          "team": "SEA",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 12,
+            "panel-b": 11,
+            "panel-c": 12
+          },
+          "mean": 11.667,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 11,
+          "max": 12,
+          "tier": 4,
+          "rank_position": 11
+        },
+        {
+          "id": "los-angeles-chargers-dst-lac",
+          "name": "Los Angeles Chargers",
+          "team": "LAC",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 14,
+            "panel-b": 10,
+            "panel-c": 11
+          },
+          "mean": 11.667,
+          "sd": 2.082,
+          "sources": 3,
+          "min": 10,
+          "max": 14,
+          "tier": 4,
+          "rank_position": 12
+        },
+        {
+          "id": "arizona-cardinals-dst-ari",
+          "name": "Arizona Cardinals",
+          "team": "ARI",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 11,
+            "panel-b": 13,
+            "panel-c": 13
+          },
+          "mean": 12.333,
+          "sd": 1.155,
+          "sources": 3,
+          "min": 11,
+          "max": 13,
+          "tier": 4,
+          "rank_position": 13
+        },
+        {
+          "id": "san-francisco-49ers-dst-sf",
+          "name": "San Francisco 49ers",
+          "team": "SF",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 13,
+            "panel-b": 15,
+            "panel-c": 17
+          },
+          "mean": 15,
+          "sd": 2,
+          "sources": 3,
+          "min": 13,
+          "max": 17,
+          "tier": 5,
+          "rank_position": 14
+        },
+        {
+          "id": "washington-commanders-dst-was",
+          "name": "Washington Commanders",
+          "team": "WAS",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 16,
+            "panel-b": 17,
+            "panel-c": 16
+          },
+          "mean": 16.333,
+          "sd": 0.577,
+          "sources": 3,
+          "min": 16,
+          "max": 17,
+          "tier": 5,
+          "rank_position": 15
+        },
+        {
+          "id": "new-york-jets-dst-nyj",
+          "name": "New York Jets",
+          "team": "NYJ",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 17,
+            "panel-b": 18,
+            "panel-c": 15
+          },
+          "mean": 16.667,
+          "sd": 1.528,
+          "sources": 3,
+          "min": 15,
+          "max": 18,
+          "tier": 5,
+          "rank_position": 16
+        },
+        {
+          "id": "tampa-bay-buccaneers-dst-tb",
+          "name": "Tampa Bay Buccaneers",
+          "team": "TB",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 18,
+            "panel-b": 14,
+            "panel-c": 20
+          },
+          "mean": 17.333,
+          "sd": 3.055,
+          "sources": 3,
+          "min": 14,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 17
+        },
+        {
+          "id": "los-angeles-rams-dst-lar",
+          "name": "Los Angeles Rams",
+          "team": "LAR",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 19,
+            "panel-b": 19,
+            "panel-c": 14
+          },
+          "mean": 17.333,
+          "sd": 2.887,
+          "sources": 3,
+          "min": 14,
+          "max": 19,
+          "tier": 5,
+          "rank_position": 18
+        },
+        {
+          "id": "chicago-bears-dst-chi",
+          "name": "Chicago Bears",
+          "team": "CHI",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 15,
+            "panel-b": 20,
+            "panel-c": 19
+          },
+          "mean": 18,
+          "sd": 2.646,
+          "sources": 3,
+          "min": 15,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 19
+        },
+        {
+          "id": "indianapolis-colts-dst-ind",
+          "name": "Indianapolis Colts",
+          "team": "IND",
+          "position": "DST",
+          "bye": null,
+          "ranks": {
+            "panel-a": 20,
+            "panel-b": 16,
+            "panel-c": 18
+          },
+          "mean": 18,
+          "sd": 2,
+          "sources": 3,
+          "min": 16,
+          "max": 20,
+          "tier": 5,
+          "rank_position": 20
+        }
+      ],
+      "computed_breaks": [
+        3,
+        8,
+        10,
+        13
+      ],
+      "accepted_breaks": null,
+      "override_note": null,
+      "threshold": 0.8377,
+      "separations": [
+        0.3,
+        0.39,
+        3.181,
+        1.129,
+        0.337,
+        0.324,
+        0.447,
+        0.904,
+        0,
+        2.466,
+        0,
+        0.391,
+        1.614,
+        0.893,
+        0.283,
+        0.274,
+        0,
+        0.24,
+        0
+      ],
+      "method": "separation (mean gap / pooled sd)"
+    }
+  }
+}
