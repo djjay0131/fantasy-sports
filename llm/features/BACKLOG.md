@@ -14,7 +14,7 @@ are L0-eligible; changing an item's text is semantic.
 - [x] ADR-0002 rankings, not projections
 - [x] Design authority document
 - [x] GitHub Pages site skeleton with tiered board
-- [ ] Branch protection on `main` applied and reality recorded in the delta
+- [x] Branch protection on `main` applied and reality recorded in the delta
 - [ ] Governance checks green in CI
 
 ## Phase 1 — Ingestion
