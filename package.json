@@ -1,0 +1,16 @@
+{
+  "name": "fantasy-sports",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Rankings-and-tiers decision support for fantasy football drafts. Public method, private source data.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "sample": "node scripts/make-sample.mjs",
+    "tier": "node scripts/tier.mjs",
+    "ingest": "node scripts/ingest.mjs",
+    "serve": "python3 -m http.server -d docs 8080"
+  },
+  "engines": { "node": ">=20" }
+}

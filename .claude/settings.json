@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "enabledPlugins": {
+    "constellize-craft@marketplace": true,
+    "constellize-deliver@marketplace": true,
+    "constellize-design@marketplace": true,
+    "constellize-memory@marketplace": true,
+    "constellize-grow@marketplace": true,
+    "constellize-harness@marketplace": true,
+    "superpowers@superpowers-marketplace": true,
+    "governance@agentic-governance": true
+  },
+  "extraKnownMarketplaces": {
+    "marketplace": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/constellize/marketplace.git"
+      },
+      "autoUpdate": true
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/obra/superpowers-marketplace.git"
+      },
+      "autoUpdate": true
+    },
+    "agentic-governance": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/djjay0131/agentic-governance.git"
+      },
+      "autoUpdate": true
+    }
+  }
+}

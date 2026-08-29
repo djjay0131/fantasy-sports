@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method — how the tiers are built</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">fantasy<span class="dot">.</span>sports</a></div>
+    <nav class="site">
+      <a href="index.html">Home</a>
+      <a href="cheatsheets/index.html">Cheat sheet</a>
+      <a href="methodology.html" aria-current="page">Method</a>
+      <a href="https://github.com/djjay0131/fantasy-sports">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap prose">
+    <div class="hero" style="padding-bottom:8px">
+      <div class="kicker">Method</div>
+      <h1>How the tiers are built</h1>
+      <p class="lede">This page is a derived view of
+        <code>llm/specs/2026-08-29-fantasy-sports-platform-design.md</code> in the repository, which is
+        the design authority. Where the two disagree, that document wins.</p>
+    </div>
+
+    <h2 id="ranks">Why ranks and not projections</h2>
+    <p>Sources publish two things that are easy to conflate. A <b>projection</b> estimates points; a
+      <b>ranking</b> orders players against each other. Most sites publish both, and many derive one
+      from the other.</p>
+    <p>Projections carry a precision they do not have. A projection of 214.6 points invites
+      arithmetic — differences, sums, replacement-level math — on a number whose real uncertainty band
+      is tens of points wide. Draft rooms then act on differences that are noise.</p>
+    <p>The decision a drafter actually makes is ordinal: <em>given what is on the board, who do I take,
+      and can I wait?</em> That is answered by an ordering and by the gaps in it.</p>
+    <p>So where a source publishes only projections, the pipeline sorts, assigns a within-position
+      rank, and <b>discards the projected value</b>. Discarding rather than hiding is the point: a
+      number kept "for reference" gets used — it leaks into tie-breaks, into value-over-replacement,
+      and into the UI the moment someone wants one more column.</p>
+
+    <h2 id="tiers">Where a tier break comes from</h2>
+    <p>A naive tiering cuts wherever the gap between adjacent ranks is large. That over-reacts to noise
+      at positions where sources disagree wildly, and under-reacts where they agree closely.</p>
+    <p>Instead, the step between two adjacent players is measured <em>in units of how much the sources
+      disagree about them</em>:</p>
+    <pre>separation(i) = (mean[i+1] − mean[i]) / sqrt((sd[i]² + sd[i+1]²) / 2 + ε)</pre>
+    <p>A new tier opens where separation exceeds a threshold derived from that position's own
+      separation distribution — median + k·MAD, not a global constant. The RB curve is nothing like the
+      QB curve, and one threshold would mis-tier both.</p>
+    <p>The consequence worth stating plainly: <b>disagreement narrows a break.</b> If the sources cannot
+      agree which of two players goes first, they are interchangeable and stay in one tier. A break
+      survives only where the sources agree there is a real step down. On the board, the
+      <code>±</code> column is that spread.</p>
+    <p>With a single source every spread is zero and the formula degenerates, so the fallback is the raw
+      gap normalized by the position's median gap — and the board says "single source" rather than
+      "consensus", because it is not one.</p>
+
+    <h3>Computed, then overridden — never replaced</h3>
+    <p>The algorithm proposes breaks; a human accepts or overrides them. An override is recorded
+      <em>alongside</em> the computed value, not in place of it, so the algorithm's error stays
+      inspectable:</p>
+    <pre>{ "position": "RB",
+  "computed_breaks": [5, 12, 18],
+  "accepted_breaks": [5, 14, 18],
+  "note": "RB13 gap is a bye-week artifact" }</pre>
+
+    <h2 id="identity">Player identity</h2>
+    <p>Reconciling several sources is mostly an identity problem: name variants, suffixes, rookies with
+      no prior-season row, players who changed teams. Every ingested row resolves to a canonical player
+      ID before it is stored. Rows that do not resolve are written to a rejections file <b>with a
+      reason and retained</b> — they are the input to extending the alias table, and they appear in
+      every run report. Nothing is silently dropped.</p>
+
+    <h2 id="licence">The licence split</h2>
+    <p>This repository is public on purpose. The primary rankings source is a paid subscriber product,
+      and a personal subscription licenses one subscriber to <em>use</em> those rankings — not to
+      republish them. Crediting the source does not change that: attribution is not a licence.</p>
+    <p>So the split runs along the licence boundary rather than the code/data boundary:</p>
+    <table>
+      <tr><th>Public</th><th>Private</th></tr>
+      <tr>
+        <td>Ingestion and normalization code, identity resolution, the tiering algorithm, this site,
+            the method, the governance</td>
+        <td>Raw captures, normalized rows, and the rendered board built from a paid source —
+            git-ignored, never committed</td>
+      </tr>
+    </table>
+    <p>The cheat-sheet page fetches its dataset at runtime. On this public site that file is absent and
+      the page falls back to a sample built from freely available consensus rankings. Run the same site
+      locally with your own file in place and it renders your real board. The public artifact and the
+      private artifact are the same code with different data — which is what makes the rule
+      enforceable rather than aspirational.</p>
+    <p>Full reasoning:
+      <a href="https://github.com/djjay0131/fantasy-sports/blob/main/llm/governance/adr/0001-public-tooling-private-source-data.md">ADR-0001</a>
+      and
+      <a href="https://github.com/djjay0131/fantasy-sports/blob/main/llm/governance/adr/0002-rankings-not-projections.md">ADR-0002</a>.</p>
+
+    <h2 id="limits">What this does not do</h2>
+    <ul>
+      <li>No point projections, and therefore no auction values or value-over-replacement — both need a
+        point scale.</li>
+      <li>No source weighting yet. Weights need history to justify them, and guessing them is worse
+        than not weighting at all.</li>
+      <li>No league management or platform syncing.</li>
+      <li>Information is genuinely lost at ingest: a source's view of <em>how much</em> better a player
+        is survives only as a tier break. That is the trade being made, not an oversight.</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    Rankings, not projections. Built by <a href="https://github.com/djjay0131">djjay0131</a> ·
+    governed by <a href="https://github.com/djjay0131/agentic-governance">agentic-governance</a> v0.3 ·
+    <a href="https://github.com/djjay0131/fantasy-sports">source</a>
+  </div>
+</footer>
+</body>
+</html>

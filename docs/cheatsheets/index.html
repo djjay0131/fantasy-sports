@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheat sheet — tiered draft board</title>
+<meta name="description" content="Positional tier board for fantasy football. Rankings, not projections.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap board-wrap">
+    <div class="brand"><a href="../index.html">fantasy<span class="dot">.</span>sports</a></div>
+    <nav class="site">
+      <a href="../index.html">Home</a>
+      <a href="index.html" aria-current="page">Cheat sheet</a>
+      <a href="../methodology.html">Method</a>
+      <a href="https://github.com/djjay0131/fantasy-sports">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap board-wrap">
+    <div class="board-bar">
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <span class="spacer"></span>
+      <input type="search" id="search" placeholder="Filter players…" aria-label="Filter players">
+      <label class="toggle"><input type="checkbox" id="hide-drafted"> Hide drafted</label>
+      <button class="tabs" id="clear-drafted" style="font:600 13px var(--sans);padding:8px 13px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--ink-2);cursor:pointer">Reset</button>
+    </div>
+
+    <div id="banner"></div>
+    <div class="meta" id="meta"></div>
+    <div class="tiers" id="tiers"></div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap board-wrap">
+    Rankings, not projections. Built by <a href="https://github.com/djjay0131">djjay0131</a> ·
+    governed by <a href="https://github.com/djjay0131/agentic-governance">agentic-governance</a> v0.3 ·
+    <a href="https://github.com/djjay0131/fantasy-sports">source</a>
+  </div>
+</footer>
+
+<script src="../assets/board.js"></script>
+</body>
+</html>

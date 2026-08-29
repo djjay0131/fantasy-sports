@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fantasy-sports — rankings and tiers, not projections</title>
+<meta name="description" content="A rankings-and-tiers decision support project for fantasy football drafts. Public method, private source data.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">fantasy<span class="dot">.</span>sports</a></div>
+    <nav class="site">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="cheatsheets/index.html"home>Cheat sheet</a>
+      <a href="methodology.html"home>Method</a>
+      <a href="https://github.com/djjay0131/fantasy-sports">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <div class="kicker">Fantasy football · 2026</div>
+      <h1>Where the cliffs are.</h1>
+      <p class="lede">A draft board is not a list of point estimates. It is an ordering, and a set of
+        cliffs in that ordering. This project ingests rankings from several sources, resolves them onto
+        one player identity, and computes where each position actually breaks — so the only question
+        left on the clock is <em>can I wait?</em></p>
+      <a class="btn" href="cheatsheets/index.html">Open the cheat sheet</a>
+      <a class="btn ghost" href="methodology.html">How the tiers are built</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section>
+      <h2>Two decisions shape everything here</h2>
+      <p class="sub">Both are recorded as ADRs in the repository, because a decision that only lives in
+        someone's head gets re-litigated every season.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Rankings, not projections</h3>
+          <p>A projection of 214.6 points invites arithmetic on a number whose real uncertainty is tens
+            of points wide. Where a source publishes only projections, we convert to a rank at ingest
+            and <em>discard the number</em> — so it can never leak back into a tie-break or a column.</p>
+        </div>
+        <div class="card">
+          <h3>Public method, private source data</h3>
+          <p>The primary source is a paid subscriber product. A subscription licenses one person to use
+            those rankings, not to republish them. So the code, the method, and the site are public;
+            the licensed rows are git-ignored and never leave the maintainer's machine.</p>
+        </div>
+        <div class="card">
+          <h3>Disagreement narrows a break</h3>
+          <p>If the sources cannot agree which of two players goes first, those players are
+            interchangeable and belong in one tier. A tier break survives only where the sources agree
+            there is a real step down.</p>
+        </div>
+        <div class="card">
+          <h3>Rejections are data</h3>
+          <p>Every row that fails to resolve to a canonical player — a name variant, a rookie, a
+            mid-season trade — is retained with a reason and surfaced in the run report. Nothing is
+            silently skipped.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The pipeline</h2>
+      <p class="sub">Five stages, each of which must be re-derivable from the immutable capture that
+        started it.</p>
+      <div class="prose">
+        <pre>capture  →  normalize  →  reconcile  →  tier  →  render
+ (raw)      (rows)        (consensus)   (breaks)  (board)</pre>
+        <table>
+          <tr><th>Stage</th><th>What it does</th><th>Where it lives</th></tr>
+          <tr><td>capture</td><td>Writes a timestamped, immutable artifact before anything is parsed</td><td><code>data/raw/</code> <em>(git-ignored)</em></td></tr>
+          <tr><td>normalize</td><td>One capture → canonical rows; format required, projections discarded</td><td><code>src/fantasy/sources/</code></td></tr>
+          <tr><td>reconcile</td><td>Resolves player identity, aggregates ranks, keeps the spread</td><td><code>src/fantasy/reconcile.mjs</code></td></tr>
+          <tr><td>tier</td><td>Computes breaks from the position's own separation distribution</td><td><code>src/fantasy/tiering.mjs</code></td></tr>
+          <tr><td>render</td><td>Static page, no build step, reads its dataset at runtime</td><td><code>docs/</code></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="note">
+        <strong>About the board you'll see.</strong> The public cheat sheet renders a sample dataset
+        built from freely available consensus rankings. The maintainer's real board — built from a paid
+        subscriber source — is deliberately absent from this site. Same page, same code, different file;
+        see <a href="methodology.html#licence">the licence split</a>.
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    Rankings, not projections. Built by <a href="https://github.com/djjay0131">djjay0131</a> ·
+    governed by <a href="https://github.com/djjay0131/agentic-governance">agentic-governance</a> v0.3 ·
+    <a href="https://github.com/djjay0131/fantasy-sports">source</a>
+  </div>
+</footer>
+</body>
+</html>

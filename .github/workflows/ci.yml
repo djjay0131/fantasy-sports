@@ -1,0 +1,94 @@
+name: ci
+on: [push, pull_request]
+
+jobs:
+  governance-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # the diff-based checks compare against the base ref
+
+      - name: Checkout canonical governance
+        uses: actions/checkout@v4
+        with:
+          repository: djjay0131/agentic-governance
+          path: .agentic-governance
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run governance convention checks
+        # --layout enforces the two-plane rule and the paths declared in
+        # llm/governance/governance-delta.md §Repository Layout on every
+        # run, not only at onboarding. The script runs against the repo
+        # containing the cwd, not the one holding the script.
+        run: node .agentic-governance/plugin/scripts/governance-checks.mjs --layout
+
+  licensed-data-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assert no licensed source data is tracked
+        # ADR-0001: data/ and docs/data/*.json are git-ignored. Only the
+        # sample dataset and its README may be tracked under docs/data/.
+        # A `git add -f` is the only way to defeat .gitignore, and this
+        # job is what catches it.
+        run: |
+          set -euo pipefail
+          bad=$(git ls-files 'data/**' 'data' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::Tracked files under data/ — see llm/governance/adr/0001-public-tooling-private-source-data.md"
+            echo "$bad"
+            exit 1
+          fi
+          bad=$(git ls-files 'docs/data/*' \
+                | grep -v -E '^docs/data/(rankings\.sample\.json|README\.md)$' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::Unexpected tracked file under docs/data/ — only rankings.sample.json and README.md are permitted (ADR-0001)"
+            echo "$bad"
+            exit 1
+          fi
+          echo "OK — no licensed source data tracked."
+
+      - name: Assert .gitignore still covers the private paths
+        run: |
+          set -euo pipefail
+          for p in data/raw/probe.html data/processed/probe.json docs/data/rankings.json; do
+            if ! git check-ignore -q "$p"; then
+              echo "::error::.gitignore no longer ignores $p (ADR-0001)"
+              exit 1
+            fi
+          done
+          echo "OK — .gitignore covers the private paths."
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Unit tests
+        run: node --test tests/*.test.mjs
+
+      - name: Sample board is reproducible
+        # The committed sample must be exactly what scripts/make-sample.mjs
+        # produces, so a hand-edited dataset cannot drift in unnoticed.
+        run: |
+          set -euo pipefail
+          node scripts/make-sample.mjs
+          if ! git diff --quiet -- docs/data/rankings.sample.json \
+               -- ':(exclude)docs/data/rankings.sample.json'; then :; fi
+          python3 - <<'EOF'
+          import json, subprocess
+          cur = json.loads(subprocess.run(['git','show','HEAD:docs/data/rankings.sample.json'],
+                                          capture_output=True, text=True).stdout)
+          new = json.load(open('docs/data/rankings.sample.json'))
+          cur.pop('generated_at', None); new.pop('generated_at', None)
+          assert cur == new, 'docs/data/rankings.sample.json is not what make-sample.mjs produces'
+          print('OK - sample board is reproducible.')
+          EOF

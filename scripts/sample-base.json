@@ -1,0 +1,83 @@
+{
+  "_note": "Illustrative base ordering for the public sample board. Generated for demonstration only — not sourced from any rankings provider, not draft advice. See scripts/make-sample.mjs and llm/governance/adr/0001-public-tooling-private-source-data.md.",
+  "season": 2026,
+  "positions": {
+    "QB": [
+      ["Josh Allen", "BUF", null], ["Lamar Jackson", "BAL", null], ["Jayden Daniels", "WAS", null],
+      ["Jalen Hurts", "PHI", null], ["Joe Burrow", "CIN", null], ["Patrick Mahomes", "KC", null],
+      ["Baker Mayfield", "TB", null], ["Bo Nix", "DEN", null], ["Justin Herbert", "LAC", null],
+      ["Caleb Williams", "CHI", null], ["C.J. Stroud", "HOU", null], ["Drake Maye", "NE", null],
+      ["Kyler Murray", "ARI", null], ["Brock Purdy", "SF", null], ["Dak Prescott", "DAL", null],
+      ["Jared Goff", "DET", null], ["Trevor Lawrence", "JAX", null], ["J.J. McCarthy", "MIN", null],
+      ["Michael Penix Jr.", "ATL", null], ["Tua Tagovailoa", "MIA", null],
+      ["Matthew Stafford", "LAR", null], ["Geno Smith", "LV", null],
+      ["Cam Ward", "TEN", null], ["Bryce Young", "CAR", null]
+    ],
+    "RB": [
+      ["Bijan Robinson", "ATL", null], ["Saquon Barkley", "PHI", null], ["Jahmyr Gibbs", "DET", null],
+      ["Ashton Jeanty", "LV", null], ["De'Von Achane", "MIA", null], ["Christian McCaffrey", "SF", null],
+      ["Derrick Henry", "BAL", null], ["Josh Jacobs", "GB", null], ["Bucky Irving", "TB", null],
+      ["Jonathan Taylor", "IND", null], ["Kyren Williams", "LAR", null], ["Chase Brown", "CIN", null],
+      ["Kenneth Walker III", "SEA", null], ["Breece Hall", "NYJ", null], ["James Cook", "BUF", null],
+      ["Omarion Hampton", "LAC", null], ["Chuba Hubbard", "CAR", null], ["Alvin Kamara", "NO", null],
+      ["TreVeyon Henderson", "NE", null], ["David Montgomery", "DET", null],
+      ["Tony Pollard", "TEN", null], ["Aaron Jones", "MIN", null], ["Quinshon Judkins", "CLE", null],
+      ["RJ Harvey", "DEN", null], ["Isiah Pacheco", "KC", null], ["Brian Robinson Jr.", "WAS", null],
+      ["Rhamondre Stevenson", "NE", null], ["Travis Etienne Jr.", "JAX", null],
+      ["Tyrone Tracy Jr.", "NYG", null], ["Jaylen Warren", "PIT", null],
+      ["Cam Skattebo", "NYG", null], ["Kaleb Johnson", "PIT", null], ["Najee Harris", "LAC", null],
+      ["Tyjae Spears", "TEN", null], ["Austin Ekeler", "WAS", null], ["Rachaad White", "TB", null],
+      ["Zach Charbonnet", "SEA", null], ["Jordan Mason", "MIN", null], ["Braelon Allen", "NYJ", null],
+      ["Trey Benson", "ARI", null], ["Bhayshul Tuten", "JAX", null], ["Jerome Ford", "CLE", null],
+      ["Blake Corum", "LAR", null], ["Roschon Johnson", "CHI", null], ["Ray Davis", "BUF", null]
+    ],
+    "WR": [
+      ["Ja'Marr Chase", "CIN", null], ["Justin Jefferson", "MIN", null], ["CeeDee Lamb", "DAL", null],
+      ["Puka Nacua", "LAR", null], ["Malik Nabers", "NYG", null], ["Amon-Ra St. Brown", "DET", null],
+      ["Nico Collins", "HOU", null], ["Brian Thomas Jr.", "JAX", null], ["A.J. Brown", "PHI", null],
+      ["Drake London", "ATL", null], ["Ladd McConkey", "LAC", null], ["Tee Higgins", "CIN", null],
+      ["Tyreek Hill", "MIA", null], ["Garrett Wilson", "NYJ", null], ["Marvin Harrison Jr.", "ARI", null],
+      ["Mike Evans", "TB", null], ["Terry McLaurin", "WAS", null], ["Rashee Rice", "KC", null],
+      ["Davante Adams", "LAR", null], ["Jaxon Smith-Njigba", "SEA", null],
+      ["DK Metcalf", "PIT", null], ["Zay Flowers", "BAL", null], ["Courtland Sutton", "DEN", null],
+      ["DJ Moore", "CHI", null], ["Xavier Worthy", "KC", null], ["Jaylen Waddle", "MIA", null],
+      ["Chris Olave", "NO", null], ["Jerry Jeudy", "CLE", null], ["Jameson Williams", "DET", null],
+      ["Rome Odunze", "CHI", null], ["Travis Hunter", "JAX", null], ["Tetairoa McMillan", "CAR", null],
+      ["Chris Godwin", "TB", null], ["George Pickens", "DAL", null], ["Ricky Pearsall", "SF", null],
+      ["Jordan Addison", "MIN", null], ["Deebo Samuel", "WAS", null], ["Khalil Shakir", "BUF", null],
+      ["Calvin Ridley", "TEN", null], ["Emeka Egbuka", "TB", null], ["Josh Downs", "IND", null],
+      ["Matthew Golden", "GB", null], ["Keon Coleman", "BUF", null], ["Stefon Diggs", "NE", null],
+      ["Jakobi Meyers", "LV", null], ["Cooper Kupp", "SEA", null], ["Michael Pittman Jr.", "IND", null],
+      ["Rashid Shaheed", "NO", null], ["Darnell Mooney", "ATL", null], ["Jayden Reed", "GB", null],
+      ["Marvin Mims Jr.", "DEN", null], ["Christian Kirk", "HOU", null], ["Luther Burden III", "CHI", null],
+      ["Wan'Dale Robinson", "NYG", null], ["Quentin Johnston", "LAC", null]
+    ],
+    "TE": [
+      ["Brock Bowers", "LV", null], ["Trey McBride", "ARI", null], ["George Kittle", "SF", null],
+      ["Sam LaPorta", "DET", null], ["T.J. Hockenson", "MIN", null], ["Travis Kelce", "KC", null],
+      ["Mark Andrews", "BAL", null], ["David Njoku", "CLE", null], ["Evan Engram", "DEN", null],
+      ["Tucker Kraft", "GB", null], ["Colston Loveland", "CHI", null], ["Dalton Kincaid", "BUF", null],
+      ["Tyler Warren", "IND", null], ["Jonnu Smith", "PIT", null], ["Dallas Goedert", "PHI", null],
+      ["Hunter Henry", "NE", null], ["Zach Ertz", "WAS", null], ["Isaiah Likely", "BAL", null],
+      ["Cade Otton", "TB", null], ["Kyle Pitts", "ATL", null]
+    ],
+    "K": [
+      ["Brandon Aubrey", "DAL", null], ["Cameron Dicker", "LAC", null], ["Chris Boswell", "PIT", null],
+      ["Jake Bates", "DET", null], ["Ka'imi Fairbairn", "HOU", null], ["Harrison Butker", "KC", null],
+      ["Tyler Bass", "BUF", null], ["Jason Sanders", "MIA", null], ["Chase McLaughlin", "TB", null],
+      ["Wil Lutz", "DEN", null], ["Younghoe Koo", "ATL", null], ["Jake Elliott", "PHI", null],
+      ["Evan McPherson", "CIN", null], ["Cairo Santos", "CHI", null], ["Matt Gay", "WAS", null],
+      ["Tyler Loop", "BAL", null], ["Joshua Karty", "LAR", null], ["Will Reichard", "MIN", null],
+      ["Jake Moody", "SF", null], ["Nick Folk", "NYJ", null]
+    ],
+    "DST": [
+      ["Denver Broncos", "DEN", null], ["Philadelphia Eagles", "PHI", null], ["Baltimore Ravens", "BAL", null],
+      ["Houston Texans", "HOU", null], ["Buffalo Bills", "BUF", null], ["Pittsburgh Steelers", "PIT", null],
+      ["Minnesota Vikings", "MIN", null], ["Detroit Lions", "DET", null], ["Green Bay Packers", "GB", null],
+      ["Kansas City Chiefs", "KC", null], ["Seattle Seahawks", "SEA", null], ["Los Angeles Chargers", "LAC", null],
+      ["Arizona Cardinals", "ARI", null], ["Washington Commanders", "WAS", null], ["San Francisco 49ers", "SF", null],
+      ["Tampa Bay Buccaneers", "TB", null], ["Los Angeles Rams", "LAR", null], ["Chicago Bears", "CHI", null],
+      ["New York Jets", "NYJ", null], ["Indianapolis Colts", "IND", null]
+    ]
+  }
+}

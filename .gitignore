@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------------------
+# Licensed source data never enters this public repository.
+# See llm/governance/adr/0001-public-tooling-private-source-data.md
+# ---------------------------------------------------------------------------
+data/
+docs/data/*.json
+!docs/data/rankings.sample.json
+!docs/data/README.md
+*.har
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+.npm/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Build
+dist/
+build/
+.cache/
