@@ -13,6 +13,7 @@ Files are named `NNNN-short-title.md`, numbered from `0001`.
 |---|---|---|
 | [0001](0001-public-tooling-private-source-data.md) | Public tooling, private source data | Accepted |
 | [0002](0002-rankings-not-projections.md) | Rankings, not projections | Accepted |
+| [0003](0003-source-tiers-are-authoritative.md) | A source's own tiers are authoritative over ours | Accepted |
 
 ## Lifecycle
 

@@ -10,7 +10,11 @@
     "sample": "node scripts/make-sample.mjs",
     "tier": "node scripts/tier.mjs",
     "ingest": "node scripts/ingest.mjs",
-    "serve": "python3 -m http.server -d docs 8080"
+    "serve": "python3 -m http.server -d docs 8080",
+    "refresh": "node scripts/refresh.mjs",
+    "board": "node scripts/refresh.mjs --watch --serve 8722"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

@@ -91,7 +91,19 @@ incidental:
 - Aggregation across sources is by average rank, with per-source rank and
   the spread retained so disagreement is visible rather than averaged away.
 
-**4. Tier.** Within a position, tier breaks are computed from the
+**4. Tier.** Tier precedence is settled by ADR-0003: a recorded human
+override, then **the source's own tiers** where a single source publishes
+them for every player at that position, then tiers computed here. The board
+states which of the three it is showing, per position — a computed tier is
+never presented as the ranker's. The first real source (Jeff Mans' Draft
+Guide) tiers QB/RB/WR/TE himself and leaves K/DST untiered, so a live board
+carries both kinds at once.
+
+The computed breaks are calculated and stored even when the source's tiers
+win, so the algorithm stays inspectable and comparable against an expert's
+judgement before anyone relies on it alone.
+
+Where tiers are computed: within a position, breaks come from the
 consensus rank sequence. The method is a gap-based cut: walk the ordered
 list and open a new tier where adjacent players are **separated** by more
 than the position's own distribution says is noise.
@@ -238,5 +250,6 @@ connectors and a position config, not a second pipeline. The sibling
 
 - `llm/governance/adr/0001-public-tooling-private-source-data.md`
 - `llm/governance/adr/0002-rankings-not-projections.md`
+- `llm/governance/adr/0003-source-tiers-are-authoritative.md`
 - `llm/governance/governance-delta.md`
 - `llm/plans/2026-08-29-fantasyguru-ingestion.md`

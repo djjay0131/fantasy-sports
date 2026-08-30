@@ -1,7 +1,7 @@
 {
   "schema": "fantasy-sports/board@1",
   "_sample": true,
-  "generated_at": "2026-08-29T15:46:21.598Z",
+  "generated_at": "2026-08-30T16:35:45.369Z",
   "format": {
     "id": "ppr-1qb-12",
     "label": "Full PPR / 1QB / 12-team",
@@ -33,6 +33,9 @@
             "panel-b": 1,
             "panel-c": 1
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 1,
           "sd": 0,
           "sources": 3,
@@ -52,6 +55,9 @@
             "panel-b": 2,
             "panel-c": 2
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2.333,
           "sd": 0.577,
           "sources": 3,
@@ -71,6 +77,9 @@
             "panel-b": 3,
             "panel-c": 3
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2.667,
           "sd": 0.577,
           "sources": 3,
@@ -90,6 +99,9 @@
             "panel-b": 4,
             "panel-c": 4
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 4.333,
           "sd": 0.577,
           "sources": 3,
@@ -109,6 +121,9 @@
             "panel-b": 5,
             "panel-c": 6
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 5,
           "sd": 1,
           "sources": 3,
@@ -128,6 +143,9 @@
             "panel-b": 6,
             "panel-c": 5
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 6.333,
           "sd": 1.528,
           "sources": 3,
@@ -147,6 +165,9 @@
             "panel-b": 7,
             "panel-c": 7
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 7,
           "sd": 0,
           "sources": 3,
@@ -166,6 +187,9 @@
             "panel-b": 8,
             "panel-c": 9
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 7.667,
           "sd": 1.528,
           "sources": 3,
@@ -185,6 +209,9 @@
             "panel-b": 10,
             "panel-c": 10
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.667,
           "sd": 0.577,
           "sources": 3,
@@ -204,6 +231,9 @@
             "panel-b": 9,
             "panel-c": 8
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.667,
           "sd": 2.082,
           "sources": 3,
@@ -223,6 +253,9 @@
             "panel-b": 11,
             "panel-c": 11
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 10.667,
           "sd": 0.577,
           "sources": 3,
@@ -242,6 +275,9 @@
             "panel-b": 12,
             "panel-c": 15
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12.667,
           "sd": 2.082,
           "sources": 3,
@@ -261,6 +297,9 @@
             "panel-b": 14,
             "panel-c": 12
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13.333,
           "sd": 1.155,
           "sources": 3,
@@ -280,6 +319,9 @@
             "panel-b": 15,
             "panel-c": 13
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13.667,
           "sd": 1.155,
           "sources": 3,
@@ -299,6 +341,9 @@
             "panel-b": 16,
             "panel-c": 16
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16,
           "sd": 0,
           "sources": 3,
@@ -318,6 +363,9 @@
             "panel-b": 13,
             "panel-c": 18
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16,
           "sd": 2.646,
           "sources": 3,
@@ -337,6 +385,9 @@
             "panel-b": 18,
             "panel-c": 20
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 17.667,
           "sd": 2.517,
           "sources": 3,
@@ -356,6 +407,9 @@
             "panel-b": 19,
             "panel-c": 14
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18,
           "sd": 3.606,
           "sources": 3,
@@ -375,6 +429,9 @@
             "panel-b": 20,
             "panel-c": 17
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18.667,
           "sd": 1.528,
           "sources": 3,
@@ -394,6 +451,9 @@
             "panel-b": 17,
             "panel-c": 19
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 19.333,
           "sd": 2.517,
           "sources": 3,
@@ -413,6 +473,9 @@
             "panel-b": 22,
             "panel-c": 21
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 20.333,
           "sd": 2.082,
           "sources": 3,
@@ -432,6 +495,9 @@
             "panel-b": 21,
             "panel-c": 22
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 22,
           "sd": 1,
           "sources": 3,
@@ -451,6 +517,9 @@
             "panel-b": 24,
             "panel-c": 24
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 22.667,
           "sd": 2.309,
           "sources": 3,
@@ -470,6 +539,9 @@
             "panel-b": 23,
             "panel-c": 23
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 23.333,
           "sd": 0.577,
           "sources": 3,
@@ -479,6 +551,8 @@
           "rank_position": 24
         }
       ],
+      "tier_source": "computed",
+      "source_breaks": null,
       "computed_breaks": [
         3,
         8,
@@ -529,6 +603,9 @@
             "panel-b": 2,
             "panel-c": 1
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 1.333,
           "sd": 0.577,
           "sources": 3,
@@ -548,6 +625,9 @@
             "panel-b": 1,
             "panel-c": 2
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2,
           "sd": 1,
           "sources": 3,
@@ -567,6 +647,9 @@
             "panel-b": 3,
             "panel-c": 3
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 3.333,
           "sd": 0.577,
           "sources": 3,
@@ -586,6 +669,9 @@
             "panel-b": 4,
             "panel-c": 5
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 3.667,
           "sd": 1.528,
           "sources": 3,
@@ -605,6 +691,9 @@
             "panel-b": 6,
             "panel-c": 4
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 5.333,
           "sd": 1.155,
           "sources": 3,
@@ -624,6 +713,9 @@
             "panel-b": 5,
             "panel-c": 7
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 5.667,
           "sd": 1.155,
           "sources": 3,
@@ -643,6 +735,9 @@
             "panel-b": 8,
             "panel-c": 6
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 7,
           "sd": 1,
           "sources": 3,
@@ -662,6 +757,9 @@
             "panel-b": 7,
             "panel-c": 9
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 8,
           "sd": 1,
           "sources": 3,
@@ -681,6 +779,9 @@
             "panel-b": 10,
             "panel-c": 8
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9,
           "sd": 1,
           "sources": 3,
@@ -700,6 +801,9 @@
             "panel-b": 12,
             "panel-c": 10
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 10.667,
           "sd": 1.155,
           "sources": 3,
@@ -719,6 +823,9 @@
             "panel-b": 9,
             "panel-c": 14
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 11.333,
           "sd": 2.517,
           "sources": 3,
@@ -738,6 +845,9 @@
             "panel-b": 11,
             "panel-c": 15
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12.667,
           "sd": 2.082,
           "sources": 3,
@@ -757,6 +867,9 @@
             "panel-b": 13,
             "panel-c": 13
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13,
           "sd": 0,
           "sources": 3,
@@ -776,6 +889,9 @@
             "panel-b": 14,
             "panel-c": 11
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13,
           "sd": 1.732,
           "sources": 3,
@@ -795,6 +911,9 @@
             "panel-b": 15,
             "panel-c": 12
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 15,
           "sd": 3,
           "sources": 3,
@@ -814,6 +933,9 @@
             "panel-b": 16,
             "panel-c": 17
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16,
           "sd": 1,
           "sources": 3,
@@ -833,6 +955,9 @@
             "panel-b": 17,
             "panel-c": 16
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.333,
           "sd": 0.577,
           "sources": 3,
@@ -852,6 +977,9 @@
             "panel-b": 20,
             "panel-c": 19
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18.667,
           "sd": 1.528,
           "sources": 3,
@@ -871,6 +999,9 @@
             "panel-b": 18,
             "panel-c": 21
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 20.333,
           "sd": 2.082,
           "sources": 3,
@@ -890,6 +1021,9 @@
             "panel-b": 19,
             "panel-c": 23
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 22,
           "sd": 2.646,
           "sources": 3,
@@ -909,6 +1043,9 @@
             "panel-b": 21,
             "panel-c": 18
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 22,
           "sd": 4.583,
           "sources": 3,
@@ -928,6 +1065,9 @@
             "panel-b": 24,
             "panel-c": 25
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 22.667,
           "sd": 3.215,
           "sources": 3,
@@ -947,6 +1087,9 @@
             "panel-b": 23,
             "panel-c": 27
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 23.333,
           "sd": 3.512,
           "sources": 3,
@@ -966,6 +1109,9 @@
             "panel-b": 27,
             "panel-c": 20
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 25,
           "sd": 4.359,
           "sources": 3,
@@ -985,6 +1131,9 @@
             "panel-b": 25,
             "panel-c": 26
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 25.333,
           "sd": 0.577,
           "sources": 3,
@@ -1004,6 +1153,9 @@
             "panel-b": 26,
             "panel-c": 30
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 26.333,
           "sd": 3.512,
           "sources": 3,
@@ -1023,6 +1175,9 @@
             "panel-b": 32,
             "panel-c": 28
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 27,
           "sd": 5.568,
           "sources": 3,
@@ -1042,6 +1197,9 @@
             "panel-b": 28,
             "panel-c": 22
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 27,
           "sd": 4.583,
           "sources": 3,
@@ -1061,6 +1219,9 @@
             "panel-b": 34,
             "panel-c": 24
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 28,
           "sd": 5.292,
           "sources": 3,
@@ -1080,6 +1241,9 @@
             "panel-b": 22,
             "panel-c": 33
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 29.333,
           "sd": 6.351,
           "sources": 3,
@@ -1099,6 +1263,9 @@
             "panel-b": 30,
             "panel-c": 34
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 31,
           "sd": 2.646,
           "sources": 3,
@@ -1118,6 +1285,9 @@
             "panel-b": 37,
             "panel-c": 29
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 32.667,
           "sd": 4.041,
           "sources": 3,
@@ -1137,6 +1307,9 @@
             "panel-b": 33,
             "panel-c": 31
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 34.333,
           "sd": 4.163,
           "sources": 3,
@@ -1156,6 +1329,9 @@
             "panel-b": 31,
             "panel-c": 32
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 34.333,
           "sd": 4.933,
           "sources": 3,
@@ -1175,6 +1351,9 @@
             "panel-b": 29,
             "panel-c": 35
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 35,
           "sd": 6,
           "sources": 3,
@@ -1194,6 +1373,9 @@
             "panel-b": 35,
             "panel-c": 42
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 35.667,
           "sd": 6.028,
           "sources": 3,
@@ -1213,6 +1395,9 @@
             "panel-b": 36,
             "panel-c": 37
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 36,
           "sd": 1,
           "sources": 3,
@@ -1232,6 +1417,9 @@
             "panel-b": 38,
             "panel-c": 39
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 37,
           "sd": 2.646,
           "sources": 3,
@@ -1251,6 +1439,9 @@
             "panel-b": 41,
             "panel-c": 36
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 38,
           "sd": 2.646,
           "sources": 3,
@@ -1270,6 +1461,9 @@
             "panel-b": 43,
             "panel-c": 38
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 39,
           "sd": 3.606,
           "sources": 3,
@@ -1289,6 +1483,9 @@
             "panel-b": 39,
             "panel-c": 40
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 39,
           "sd": 1,
           "sources": 3,
@@ -1308,6 +1505,9 @@
             "panel-b": 40,
             "panel-c": 41
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 41.333,
           "sd": 1.528,
           "sources": 3,
@@ -1327,6 +1527,9 @@
             "panel-b": 42,
             "panel-c": 45
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 43,
           "sd": 1.732,
           "sources": 3,
@@ -1346,6 +1549,9 @@
             "panel-b": 45,
             "panel-c": 43
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 44,
           "sd": 1,
           "sources": 3,
@@ -1365,6 +1571,9 @@
             "panel-b": 44,
             "panel-c": 44
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 44.333,
           "sd": 0.577,
           "sources": 3,
@@ -1374,6 +1583,8 @@
           "rank_position": 45
         }
       ],
+      "tier_source": "computed",
+      "source_breaks": null,
       "computed_breaks": [
         2,
         4,
@@ -1449,6 +1660,9 @@
             "panel-b": 1,
             "panel-c": 1
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 1,
           "sd": 0,
           "sources": 3,
@@ -1468,6 +1682,9 @@
             "panel-b": 2,
             "panel-c": 2
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2,
           "sd": 0,
           "sources": 3,
@@ -1487,6 +1704,9 @@
             "panel-b": 3,
             "panel-c": 4
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 3.333,
           "sd": 0.577,
           "sources": 3,
@@ -1506,6 +1726,9 @@
             "panel-b": 4,
             "panel-c": 3
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 3.667,
           "sd": 0.577,
           "sources": 3,
@@ -1525,6 +1748,9 @@
             "panel-b": 6,
             "panel-c": 5
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 6,
           "sd": 1,
           "sources": 3,
@@ -1544,6 +1770,9 @@
             "panel-b": 8,
             "panel-c": 6
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 6.667,
           "sd": 1.155,
           "sources": 3,
@@ -1563,6 +1792,9 @@
             "panel-b": 7,
             "panel-c": 9
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 7,
           "sd": 2,
           "sources": 3,
@@ -1582,6 +1814,9 @@
             "panel-b": 5,
             "panel-c": 8
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 7,
           "sd": 1.732,
           "sources": 3,
@@ -1601,6 +1836,9 @@
             "panel-b": 10,
             "panel-c": 7
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9,
           "sd": 1.732,
           "sources": 3,
@@ -1620,6 +1858,9 @@
             "panel-b": 9,
             "panel-c": 10
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.333,
           "sd": 0.577,
           "sources": 3,
@@ -1639,6 +1880,9 @@
             "panel-b": 11,
             "panel-c": 14
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12,
           "sd": 1.732,
           "sources": 3,
@@ -1658,6 +1902,9 @@
             "panel-b": 14,
             "panel-c": 11
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12.333,
           "sd": 1.528,
           "sources": 3,
@@ -1677,6 +1924,9 @@
             "panel-b": 13,
             "panel-c": 13
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13,
           "sd": 0,
           "sources": 3,
@@ -1696,6 +1946,9 @@
             "panel-b": 12,
             "panel-c": 16
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 14.333,
           "sd": 2.082,
           "sources": 3,
@@ -1715,6 +1968,9 @@
             "panel-b": 18,
             "panel-c": 12
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 15.333,
           "sd": 3.055,
           "sources": 3,
@@ -1734,6 +1990,9 @@
             "panel-b": 15,
             "panel-c": 15
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.667,
           "sd": 2.887,
           "sources": 3,
@@ -1753,6 +2012,9 @@
             "panel-b": 16,
             "panel-c": 21
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 17,
           "sd": 3.606,
           "sources": 3,
@@ -1772,6 +2034,9 @@
             "panel-b": 17,
             "panel-c": 18
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18,
           "sd": 1,
           "sources": 3,
@@ -1791,6 +2056,9 @@
             "panel-b": 19,
             "panel-c": 23
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 19.667,
           "sd": 3.055,
           "sources": 3,
@@ -1810,6 +2078,9 @@
             "panel-b": 22,
             "panel-c": 17
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 20.333,
           "sd": 2.887,
           "sources": 3,
@@ -1829,6 +2100,9 @@
             "panel-b": 21,
             "panel-c": 19
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 21.333,
           "sd": 2.517,
           "sources": 3,
@@ -1848,6 +2122,9 @@
             "panel-b": 27,
             "panel-c": 20
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 21.667,
           "sd": 4.726,
           "sources": 3,
@@ -1867,6 +2144,9 @@
             "panel-b": 30,
             "panel-c": 22
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 24.333,
           "sd": 4.933,
           "sources": 3,
@@ -1886,6 +2166,9 @@
             "panel-b": 24,
             "panel-c": 24
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 24.333,
           "sd": 0.577,
           "sources": 3,
@@ -1905,6 +2188,9 @@
             "panel-b": 20,
             "panel-c": 26
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 24.667,
           "sd": 4.163,
           "sources": 3,
@@ -1924,6 +2210,9 @@
             "panel-b": 28,
             "panel-c": 29
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 26.667,
           "sd": 3.215,
           "sources": 3,
@@ -1943,6 +2232,9 @@
             "panel-b": 26,
             "panel-c": 30
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 27.333,
           "sd": 2.309,
           "sources": 3,
@@ -1962,6 +2254,9 @@
             "panel-b": 25,
             "panel-c": 27
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 28,
           "sd": 3.606,
           "sources": 3,
@@ -1981,6 +2276,9 @@
             "panel-b": 23,
             "panel-c": 34
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 30,
           "sd": 6.083,
           "sources": 3,
@@ -2000,6 +2298,9 @@
             "panel-b": 31,
             "panel-c": 25
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 30.667,
           "sd": 5.508,
           "sources": 3,
@@ -2019,6 +2320,9 @@
             "panel-b": 29,
             "panel-c": 37
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 31,
           "sd": 5.292,
           "sources": 3,
@@ -2038,6 +2342,9 @@
             "panel-b": 36,
             "panel-c": 28
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 32.667,
           "sd": 4.163,
           "sources": 3,
@@ -2057,6 +2364,9 @@
             "panel-b": 40,
             "panel-c": 31
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 33.333,
           "sd": 5.859,
           "sources": 3,
@@ -2076,6 +2386,9 @@
             "panel-b": 35,
             "panel-c": 32
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 34,
           "sd": 1.732,
           "sources": 3,
@@ -2095,6 +2408,9 @@
             "panel-b": 38,
             "panel-c": 36
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 35,
           "sd": 3.606,
           "sources": 3,
@@ -2114,6 +2430,9 @@
             "panel-b": 32,
             "panel-c": 35
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 36.667,
           "sd": 5.686,
           "sources": 3,
@@ -2133,6 +2452,9 @@
             "panel-b": 44,
             "panel-c": 39
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 37.667,
           "sd": 7.095,
           "sources": 3,
@@ -2152,6 +2474,9 @@
             "panel-b": 33,
             "panel-c": 38
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 37.667,
           "sd": 4.509,
           "sources": 3,
@@ -2171,6 +2496,9 @@
             "panel-b": 37,
             "panel-c": 41
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 39,
           "sd": 2,
           "sources": 3,
@@ -2190,6 +2518,9 @@
             "panel-b": 46,
             "panel-c": 33
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 39.667,
           "sd": 6.506,
           "sources": 3,
@@ -2209,6 +2540,9 @@
             "panel-b": 43,
             "panel-c": 48
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 42.667,
           "sd": 5.508,
           "sources": 3,
@@ -2228,6 +2562,9 @@
             "panel-b": 34,
             "panel-c": 44
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 42.667,
           "sd": 8.083,
           "sources": 3,
@@ -2247,6 +2584,9 @@
             "panel-b": 48,
             "panel-c": 42
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 43.667,
           "sd": 3.786,
           "sources": 3,
@@ -2266,6 +2606,9 @@
             "panel-b": 39,
             "panel-c": 47
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 44,
           "sd": 4.359,
           "sources": 3,
@@ -2285,6 +2628,9 @@
             "panel-b": 41,
             "panel-c": 43
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 44,
           "sd": 3.606,
           "sources": 3,
@@ -2304,6 +2650,9 @@
             "panel-b": 42,
             "panel-c": 46
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 44.333,
           "sd": 2.082,
           "sources": 3,
@@ -2323,6 +2672,9 @@
             "panel-b": 49,
             "panel-c": 49
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 45.333,
           "sd": 6.351,
           "sources": 3,
@@ -2342,6 +2694,9 @@
             "panel-b": 52,
             "panel-c": 45
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 47,
           "sd": 4.359,
           "sources": 3,
@@ -2361,6 +2716,9 @@
             "panel-b": 53,
             "panel-c": 40
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 49.333,
           "sd": 8.145,
           "sources": 3,
@@ -2380,6 +2738,9 @@
             "panel-b": 50,
             "panel-c": 50
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 49.667,
           "sd": 0.577,
           "sources": 3,
@@ -2399,6 +2760,9 @@
             "panel-b": 47,
             "panel-c": 51
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 50,
           "sd": 2.646,
           "sources": 3,
@@ -2418,6 +2782,9 @@
             "panel-b": 45,
             "panel-c": 53
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 50.667,
           "sd": 4.933,
           "sources": 3,
@@ -2437,6 +2804,9 @@
             "panel-b": 55,
             "panel-c": 54
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 52,
           "sd": 4.359,
           "sources": 3,
@@ -2456,6 +2826,9 @@
             "panel-b": 51,
             "panel-c": 52
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 52,
           "sd": 1,
           "sources": 3,
@@ -2475,6 +2848,9 @@
             "panel-b": 54,
             "panel-c": 55
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 53.333,
           "sd": 2.082,
           "sources": 3,
@@ -2484,6 +2860,8 @@
           "rank_position": 55
         }
       ],
+      "tier_source": "computed",
+      "source_breaks": null,
       "computed_breaks": [
         2,
         4,
@@ -2572,6 +2950,9 @@
             "panel-b": 1,
             "panel-c": 1
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 1,
           "sd": 0,
           "sources": 3,
@@ -2591,6 +2972,9 @@
             "panel-b": 3,
             "panel-c": 2
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2.333,
           "sd": 0.577,
           "sources": 3,
@@ -2610,6 +2994,9 @@
             "panel-b": 2,
             "panel-c": 3
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2.667,
           "sd": 0.577,
           "sources": 3,
@@ -2629,6 +3016,9 @@
             "panel-b": 4,
             "panel-c": 4
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 4.333,
           "sd": 0.577,
           "sources": 3,
@@ -2648,6 +3038,9 @@
             "panel-b": 5,
             "panel-c": 5
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 5.333,
           "sd": 0.577,
           "sources": 3,
@@ -2667,6 +3060,9 @@
             "panel-b": 6,
             "panel-c": 7
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 5.667,
           "sd": 1.528,
           "sources": 3,
@@ -2686,6 +3082,9 @@
             "panel-b": 7,
             "panel-c": 9
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 8,
           "sd": 1,
           "sources": 3,
@@ -2705,6 +3104,9 @@
             "panel-b": 8,
             "panel-c": 6
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 8.333,
           "sd": 2.517,
           "sources": 3,
@@ -2724,6 +3126,9 @@
             "panel-b": 10,
             "panel-c": 12
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.667,
           "sd": 2.517,
           "sources": 3,
@@ -2743,6 +3148,9 @@
             "panel-b": 9,
             "panel-c": 8
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.667,
           "sd": 2.082,
           "sources": 3,
@@ -2762,6 +3170,9 @@
             "panel-b": 11,
             "panel-c": 10
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 10,
           "sd": 1,
           "sources": 3,
@@ -2781,6 +3192,9 @@
             "panel-b": 14,
             "panel-c": 16
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13.333,
           "sd": 3.055,
           "sources": 3,
@@ -2800,6 +3214,9 @@
             "panel-b": 13,
             "panel-c": 13
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13.333,
           "sd": 0.577,
           "sources": 3,
@@ -2819,6 +3236,9 @@
             "panel-b": 15,
             "panel-c": 11
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13.667,
           "sd": 2.309,
           "sources": 3,
@@ -2838,6 +3258,9 @@
             "panel-b": 17,
             "panel-c": 15
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 15,
           "sd": 2,
           "sources": 3,
@@ -2857,6 +3280,9 @@
             "panel-b": 16,
             "panel-c": 17
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.333,
           "sd": 0.577,
           "sources": 3,
@@ -2876,6 +3302,9 @@
             "panel-b": 12,
             "panel-c": 18
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.333,
           "sd": 3.786,
           "sources": 3,
@@ -2895,6 +3324,9 @@
             "panel-b": 18,
             "panel-c": 14
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.667,
           "sd": 2.309,
           "sources": 3,
@@ -2914,6 +3346,9 @@
             "panel-b": 19,
             "panel-c": 20
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18.667,
           "sd": 1.528,
           "sources": 3,
@@ -2933,6 +3368,9 @@
             "panel-b": 20,
             "panel-c": 19
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 19.667,
           "sd": 0.577,
           "sources": 3,
@@ -2942,6 +3380,8 @@
           "rank_position": 20
         }
       ],
+      "tier_source": "computed",
+      "source_breaks": null,
       "computed_breaks": [
         3,
         6,
@@ -2987,6 +3427,9 @@
             "panel-b": 1,
             "panel-c": 1
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 1,
           "sd": 0,
           "sources": 3,
@@ -3006,6 +3449,9 @@
             "panel-b": 2,
             "panel-c": 2
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2,
           "sd": 0,
           "sources": 3,
@@ -3025,6 +3471,9 @@
             "panel-b": 3,
             "panel-c": 4
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 3.333,
           "sd": 0.577,
           "sources": 3,
@@ -3044,6 +3493,9 @@
             "panel-b": 4,
             "panel-c": 3
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 3.667,
           "sd": 0.577,
           "sources": 3,
@@ -3063,6 +3515,9 @@
             "panel-b": 6,
             "panel-c": 5
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 5.333,
           "sd": 0.577,
           "sources": 3,
@@ -3082,6 +3537,9 @@
             "panel-b": 7,
             "panel-c": 6
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 6.667,
           "sd": 0.577,
           "sources": 3,
@@ -3101,6 +3559,9 @@
             "panel-b": 5,
             "panel-c": 7
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 6.667,
           "sd": 1.528,
           "sources": 3,
@@ -3120,6 +3581,9 @@
             "panel-b": 10,
             "panel-c": 9
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 8.333,
           "sd": 2.082,
           "sources": 3,
@@ -3139,6 +3603,9 @@
             "panel-b": 8,
             "panel-c": 8
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 8.667,
           "sd": 1.155,
           "sources": 3,
@@ -3158,6 +3625,9 @@
             "panel-b": 9,
             "panel-c": 10
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.333,
           "sd": 0.577,
           "sources": 3,
@@ -3177,6 +3647,9 @@
             "panel-b": 11,
             "panel-c": 13
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12,
           "sd": 1,
           "sources": 3,
@@ -3196,6 +3669,9 @@
             "panel-b": 12,
             "panel-c": 11
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12.333,
           "sd": 1.528,
           "sources": 3,
@@ -3215,6 +3691,9 @@
             "panel-b": 13,
             "panel-c": 14
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12.667,
           "sd": 1.528,
           "sources": 3,
@@ -3234,6 +3713,9 @@
             "panel-b": 15,
             "panel-c": 12
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 13.333,
           "sd": 1.528,
           "sources": 3,
@@ -3253,6 +3735,9 @@
             "panel-b": 16,
             "panel-c": 15
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 15.667,
           "sd": 0.577,
           "sources": 3,
@@ -3272,6 +3757,9 @@
             "panel-b": 14,
             "panel-c": 16
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.333,
           "sd": 2.517,
           "sources": 3,
@@ -3291,6 +3779,9 @@
             "panel-b": 17,
             "panel-c": 18
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.667,
           "sd": 1.528,
           "sources": 3,
@@ -3310,6 +3801,9 @@
             "panel-b": 19,
             "panel-c": 17
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18,
           "sd": 1,
           "sources": 3,
@@ -3329,6 +3823,9 @@
             "panel-b": 20,
             "panel-c": 20
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 19,
           "sd": 1.732,
           "sources": 3,
@@ -3348,6 +3845,9 @@
             "panel-b": 18,
             "panel-c": 19
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 19,
           "sd": 1,
           "sources": 3,
@@ -3357,6 +3857,8 @@
           "rank_position": 20
         }
       ],
+      "tier_source": "computed",
+      "source_breaks": null,
       "computed_breaks": [
         2,
         4,
@@ -3402,6 +3904,9 @@
             "panel-b": 3,
             "panel-c": 1
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 1.667,
           "sd": 1.155,
           "sources": 3,
@@ -3421,6 +3926,9 @@
             "panel-b": 1,
             "panel-c": 3
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2,
           "sd": 1,
           "sources": 3,
@@ -3440,6 +3948,9 @@
             "panel-b": 2,
             "panel-c": 2
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 2.333,
           "sd": 0.577,
           "sources": 3,
@@ -3459,6 +3970,9 @@
             "panel-b": 4,
             "panel-c": 4
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 4.333,
           "sd": 0.577,
           "sources": 3,
@@ -3478,6 +3992,9 @@
             "panel-b": 6,
             "panel-c": 7
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 5.667,
           "sd": 1.528,
           "sources": 3,
@@ -3497,6 +4014,9 @@
             "panel-b": 5,
             "panel-c": 5
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 6.333,
           "sd": 2.309,
           "sources": 3,
@@ -3516,6 +4036,9 @@
             "panel-b": 9,
             "panel-c": 6
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 7,
           "sd": 1.732,
           "sources": 3,
@@ -3535,6 +4058,9 @@
             "panel-b": 7,
             "panel-c": 9
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 7.667,
           "sd": 1.155,
           "sources": 3,
@@ -3554,6 +4080,9 @@
             "panel-b": 12,
             "panel-c": 8
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.333,
           "sd": 2.309,
           "sources": 3,
@@ -3573,6 +4102,9 @@
             "panel-b": 8,
             "panel-c": 10
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 9.333,
           "sd": 1.155,
           "sources": 3,
@@ -3592,6 +4124,9 @@
             "panel-b": 11,
             "panel-c": 12
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 11.667,
           "sd": 0.577,
           "sources": 3,
@@ -3611,6 +4146,9 @@
             "panel-b": 10,
             "panel-c": 11
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 11.667,
           "sd": 2.082,
           "sources": 3,
@@ -3630,6 +4168,9 @@
             "panel-b": 13,
             "panel-c": 13
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 12.333,
           "sd": 1.155,
           "sources": 3,
@@ -3649,6 +4190,9 @@
             "panel-b": 15,
             "panel-c": 17
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 15,
           "sd": 2,
           "sources": 3,
@@ -3668,6 +4212,9 @@
             "panel-b": 17,
             "panel-c": 16
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.333,
           "sd": 0.577,
           "sources": 3,
@@ -3687,6 +4234,9 @@
             "panel-b": 18,
             "panel-c": 15
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 16.667,
           "sd": 1.528,
           "sources": 3,
@@ -3706,6 +4256,9 @@
             "panel-b": 14,
             "panel-c": 20
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 17.333,
           "sd": 3.055,
           "sources": 3,
@@ -3725,6 +4278,9 @@
             "panel-b": 19,
             "panel-c": 14
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 17.333,
           "sd": 2.887,
           "sources": 3,
@@ -3744,6 +4300,9 @@
             "panel-b": 20,
             "panel-c": 19
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18,
           "sd": 2.646,
           "sources": 3,
@@ -3763,6 +4322,9 @@
             "panel-b": 16,
             "panel-c": 18
           },
+          "source_tiers": {},
+          "adp": null,
+          "sos": null,
           "mean": 18,
           "sd": 2,
           "sources": 3,
@@ -3772,6 +4334,8 @@
           "rank_position": 20
         }
       ],
+      "tier_source": "computed",
+      "source_breaks": null,
       "computed_breaks": [
         3,
         8,
