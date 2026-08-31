@@ -80,15 +80,14 @@ jobs:
         # produces, so a hand-edited dataset cannot drift in unnoticed.
         run: |
           set -euo pipefail
+          test -f docs/data/rankings.sample.json
+          cp docs/data/rankings.sample.json /tmp/committed.json
           node scripts/make-sample.mjs
-          if ! git diff --quiet -- docs/data/rankings.sample.json \
-               -- ':(exclude)docs/data/rankings.sample.json'; then :; fi
-          python3 - <<'EOF'
-          import json, subprocess
-          cur = json.loads(subprocess.run(['git','show','HEAD:docs/data/rankings.sample.json'],
-                                          capture_output=True, text=True).stdout)
-          new = json.load(open('docs/data/rankings.sample.json'))
-          cur.pop('generated_at', None); new.pop('generated_at', None)
-          assert cur == new, 'docs/data/rankings.sample.json is not what make-sample.mjs produces'
+          python3 - <<'PY'
+          import json
+          a = json.load(open('/tmp/committed.json'))
+          b = json.load(open('docs/data/rankings.sample.json'))
+          a.pop('generated_at', None); b.pop('generated_at', None)
+          assert a == b, 'docs/data/rankings.sample.json is not what scripts/make-sample.mjs produces'
           print('OK - sample board is reproducible.')
-          EOF
+          PY

@@ -123,19 +123,31 @@ deny llm/governance/adr/0000-template.md
 
 ## Platform Enforcement Reality
 
-Verified 2026-08-29 against `github.com/djjay0131/fantasy-sports` via the
-REST API.
+Verified 2026-08-29 against `github.com/djjay0131/fantasy-sports` via
+`gh api repos/djjay0131/fantasy-sports/branches/main/protection`. The repo is
+public, so the protection API is available on the free plan — unlike the
+private repos in this portfolio, where a 403 makes protection unavailable.
 
-- Branch protection on `main`: PENDING_VERIFICATION — recorded on first
-  establish run; see the report appended below when the API answer is in.
-- Required status checks: PENDING_VERIFICATION
+- **Branch protection on `main`: AVAILABLE and CONFIGURED.** Pull requests
+  required; 1 approving review; stale reviews dismissed on new pushes;
+  conversation resolution required; force pushes and branch deletion
+  disabled; `strict` (branch must be up to date before merging).
+- **Required status checks: AVAILABLE and CONFIGURED** — `governance-checks`,
+  `licensed-data-guard`, and `tests`, all from `.github/workflows/ci.yml`.
+- **`enforce_admins`: DISABLED.** The owner can bypass every rule above.
+  This is honest rather than aspirational: the owner is the only
+  maintainer, and an admin lockout with no second human is an outage, not a
+  control. It also means the protection above constrains agents and
+  contributors, not the owner.
 - Token/identity model: all agent sessions authenticate with the owner's
   token. Steward, auditor, and architect are **procedural roles, not
   distinct identities** — nothing at the platform layer distinguishes an
-  agent commit from the owner's.
-- Hardening path: a dedicated machine account for the steward plus required
-  status checks on `main` would convert convention into enforcement. Not
-  pursued while the steward is INACTIVE.
+  agent commit from the owner's. This is the binding constraint on any
+  future fast-track activation, not branch protection.
+- Hardening path: a dedicated machine account for the steward, plus
+  `enforce_admins` once a second human reviewer exists, would convert the
+  remaining convention into enforcement. Neither is pursued while the
+  steward is INACTIVE.
 
 ## Steward Activation Status
 

@@ -2,10 +2,11 @@
 # Licensed source data never enters this public repository.
 # See llm/governance/adr/0001-public-tooling-private-source-data.md
 # ---------------------------------------------------------------------------
-data/
+# Root-anchored: `data/` unanchored would also swallow docs/data/, and a
+# negation cannot re-include a file inside an excluded directory.
+/data/
 docs/data/*.json
 !docs/data/rankings.sample.json
-!docs/data/README.md
 *.har
 
 # Secrets
