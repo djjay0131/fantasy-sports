@@ -16,7 +16,10 @@
 (function () {
   'use strict';
 
-  const SRC = '../data/guillotine.json';
+  // Same shape as the PPR board (ADR-0001): the private dataset first, the
+  // committed sample second. On the published site only the sample exists.
+  const PRIVATE = '../data/guillotine.json';
+  const SAMPLE = '../data/guillotine.sample.json';
   const STARTERS = { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 2 };
 
   const el = (id) => document.getElementById(id);
@@ -174,11 +177,16 @@
   }
 
   async function init() {
-    try {
-      const r = await fetch(SRC, { cache: 'no-store' });
-      if (!r.ok) throw new Error(String(r.status));
-      board = await r.json();
-    } catch {
+    for (const [url, isPrivate] of [[PRIVATE, true], [SAMPLE, false]]) {
+      try {
+        const r = await fetch(url, { cache: 'no-store' });
+        if (!r.ok) continue;
+        board = await r.json();
+        board._private = isPrivate;
+        break;
+      } catch { /* try the next one */ }
+    }
+    if (!board) {
       ui.tiers.innerHTML = `<div class="empty"><p>No guillotine board found.</p>
         <p style="font-size:14px">Build one with<br>
         <code>node scripts/refresh.mjs &amp;&amp; node scripts/guillotine.mjs --teams 18</code></p>
@@ -187,7 +195,12 @@
       return;
     }
 
-    ui.banner.innerHTML = `<div class="note"><strong>Local board.</strong> ${esc(board.provenance)}</div>`;
+    ui.banner.innerHTML = board._private
+      ? `<div class="note"><strong>Local board.</strong> ${esc(board.provenance)}</div>`
+      : `<div class="note"><strong>This is the sample board.</strong> ${esc(board.provenance)}
+           The underlying ordering is an illustrative one generated for demonstration, not a real
+           ranker's — it is here to show what the guillotine adjustment does, not to be drafted from.
+           <a href="../methodology.html#licence">Why the real board is absent.</a></div>`;
     position = Object.keys(board.positions)[0];
     renderMeta(); renderTabs(); renderTiers(); renderRoster();
 

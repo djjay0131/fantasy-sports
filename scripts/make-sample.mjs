@@ -11,6 +11,7 @@
 //   node scripts/make-sample.mjs
 
 import fs from 'node:fs';
+import path from 'node:path';
 import { reconcile, groupByPosition } from '../src/fantasy/reconcile.mjs';
 import { tierPosition } from '../src/fantasy/tiering.mjs';
 import { parseFormat, POSITIONS } from '../src/fantasy/format.mjs';
@@ -79,6 +80,21 @@ const board = {
 const out = 'docs/data/rankings.sample.json';
 fs.writeFileSync(out, JSON.stringify(board, null, 2) + '\n');
 console.log(`Wrote ${out}`);
+
+// The guillotine page needs a public dataset too, or the published board shows
+// its empty state and demonstrates nothing (ADR-0001, ADR-0004). Derive it from
+// the sample by the same code path the real board uses.
+const { spawnSync } = await import('node:child_process');
+const os = await import('node:os');
+// Scratch goes to the OS temp dir, not into the published tree.
+const tmp = path.join(os.tmpdir(), `fs-sample-${process.pid}.json`);
+fs.writeFileSync(tmp, JSON.stringify(board));
+const g = spawnSync('node', ['scripts/guillotine.mjs', '--in', tmp,
+  '--out', 'docs/data/guillotine.sample.json', '--teams', '18'], { encoding: 'utf8' });
+fs.unlinkSync(tmp);
+if (g.status !== 0) { console.error(g.stderr); process.exit(1); }
+console.log('Wrote docs/data/guillotine.sample.json');
+
 for (const [pos, p] of Object.entries(positions)) {
   console.log(`  ${pos.padEnd(4)}: ${p.players.length} players, ${p.players.at(-1).tier} tiers  [${p.method}]`);
 }
