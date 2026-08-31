@@ -96,20 +96,47 @@ export function applyBreaks(players, breaks) {
 }
 
 /**
- * Tier one position end to end. `accepted` (a human override) is recorded
- * ALONGSIDE the computed value, never replacing it (Principle 6).
+ * Where every player carries the same source's own tier, that tiering IS the
+ * answer: the author is the expert and their tiers are the product being
+ * ranked (ADR-0003). Returns break indices derived from the source tiers, or
+ * null when the source publishes none (K and DST, typically).
  */
-export function tierPosition(players, { accepted = null, note = null, ...opts } = {}) {
+export function breaksFromSourceTiers(ordered, source) {
+  const tiers = ordered.map((p) => p.source_tiers?.[source]);
+  if (tiers.some((t) => t == null)) return null;
+  const breaks = [];
+  for (let i = 1; i < tiers.length; i++) if (tiers[i] !== tiers[i - 1]) breaks.push(i);
+  return breaks;
+}
+
+/**
+ * Tier one position end to end.
+ *
+ * Precedence: the source's own tiers > the computed breaks > a human
+ * override on top of either. An override is recorded ALONGSIDE what it
+ * replaced, never instead of it (Principle 6), and the board always says
+ * which of the three it is showing — a computed tier must never be mistaken
+ * for the author's.
+ */
+export function tierPosition(players, { accepted = null, note = null, sourceTiersFrom = null, ...opts } = {}) {
   const ordered = [...players].sort((a, b) => a.mean - b.mean);
   const { breaks, separations, threshold, method } = computeBreaks(ordered, opts);
-  const used = accepted ?? breaks;
+
+  const sourceBreaks = sourceTiersFrom ? breaksFromSourceTiers(ordered, sourceTiersFrom) : null;
+  const used = accepted ?? sourceBreaks ?? breaks;
+  const tierSource = accepted ? 'human override' : sourceBreaks ? sourceTiersFrom : 'computed';
+
   return {
     players: applyBreaks(ordered, used).map((p, i) => ({ ...p, rank_position: i + 1 })),
+    tier_source: tierSource,
+    source_breaks: sourceBreaks,
     computed_breaks: breaks,
     accepted_breaks: accepted,
     override_note: note,
     threshold: Number(threshold.toFixed(4)),
     separations: separations.map((s) => Number(s.toFixed(3))),
-    method,
+    method: sourceBreaks
+      ? `tiers published by ${sourceTiersFrom}`
+      : method,
   };
 }

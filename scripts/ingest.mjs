@@ -58,6 +58,12 @@ for (const p of parsed.players) {
     player: { id: r.id, name: p.name, team: p.team ?? null, bye: p.bye ?? null },
     rank_position: p.rank_position,
     rank_overall: p.rank_overall ?? null,
+    // The author's own tier, where the source publishes one. Carried
+    // through untouched: the expert's tiering is the product, and the
+    // local algorithm never overwrites it (ADR-0003).
+    source_tier: p.source_tier ?? null,
+    adp: p.adp ?? null,
+    sos: p.sos ?? null,
   });
 }
 

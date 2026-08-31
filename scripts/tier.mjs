@@ -56,16 +56,41 @@ const overrides = fs.existsSync(overridePath)
 
 const consensus = reconcile(rows);
 const byPos = groupByPosition(consensus);
+const sources = [...new Set(rows.map((r) => r.source))];
+
+// Where the source carries ADP, derive each player's positional rank BY ADP
+// and record how far the ranker sits from the field. Both are ordinal, so
+// the comparison is legitimate (ADR-0002): a positive `vs_adp` means this
+// source rates the player higher than the draft room does — a value — and a
+// negative one means the room likes him more than the source does.
+function annotateVsAdp(players) {
+  const withAdp = players.filter((p) => p.adp != null).sort((a, b) => a.adp - b.adp);
+  const adpRank = new Map(withAdp.map((p, i) => [p.id, i + 1]));
+  const byRank = [...players].sort((a, b) => a.mean - b.mean);
+  byRank.forEach((p, i) => {
+    const r = adpRank.get(p.id);
+    p.adp_position = r ?? null;
+    p.vs_adp = r == null ? null : r - (i + 1);
+  });
+  return players;
+}
 
 const positions = {};
 for (const pos of POSITIONS) {
   const players = byPos.get(pos);
   if (!players?.length) continue;
+  annotateVsAdp(players);
   const o = overrides[pos] || {};
-  positions[pos] = tierPosition(players, { accepted: o.accepted_breaks ?? null, note: o.note ?? null });
+  // With one source, that source's own tiers win where it publishes them
+  // (ADR-0003). With several, nobody's tiering is authoritative over the
+  // consensus, so the breaks are computed.
+  positions[pos] = tierPosition(players, {
+    accepted: o.accepted_breaks ?? null,
+    note: o.note ?? null,
+    sourceTiersFrom: sources.length === 1 ? sources[0] : null,
+  });
 }
 
-const sources = [...new Set(rows.map((r) => r.source))];
 const captured = rows.map((r) => r.captured_at).filter(Boolean).sort();
 
 const board = {
@@ -89,6 +114,5 @@ console.log(`  format   : ${format.label}`);
 console.log(`  sources  : ${sources.join(', ') || '(none)'}`);
 for (const [pos, p] of Object.entries(positions)) {
   const tiers = p.players.at(-1)?.tier ?? 0;
-  const ov = p.accepted_breaks ? ' (human override applied)' : '';
-  console.log(`  ${pos.padEnd(4)}: ${p.players.length} players, ${tiers} tiers${ov}  [${p.method}]`);
+  console.log(`  ${pos.padEnd(4)}: ${String(p.players.length).padStart(3)} players, ${String(tiers).padStart(2)} tiers  [${p.method}]`);
 }

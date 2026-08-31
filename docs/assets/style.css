@@ -144,7 +144,7 @@ footer.site {
 }
 .meta b { color: var(--ink-2); font-weight: 600; }
 
-.tiers { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
+.tiers { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); align-items: start; }
 .tier {
   background: var(--panel); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden; break-inside: avoid;
@@ -168,7 +168,7 @@ footer.site {
 .tier li .sd { font: 11px var(--mono); }
 .tier li.drafted { opacity: 0.38; }
 .tier li.drafted .nm { text-decoration: line-through; }
-.tier li[data-clickable] { cursor: pointer; }
+.tier li[data-clickable] { cursor: pointer; -webkit-user-select: none; user-select: none; }
 
 .risk-lo { color: var(--accent); }
 .risk-mid { color: var(--ink-3); }
@@ -189,4 +189,64 @@ footer.site {
   .tier { border: 1px solid #bbb; }
   .tier li { padding: 2px 8px; font-size: 11px; }
   .wrap { max-width: none; padding: 0; }
+}
+
+/* ---- guillotine board ---- */
+.strategy {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 20px; margin: 20px 0 4px;
+}
+.strategy > summary { cursor: pointer; font-size: 15px; color: var(--ink-2); }
+.strategy > summary b { color: var(--ink); }
+.strategy-grid {
+  display: grid; gap: 18px 26px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 16px;
+}
+.strategy-grid h4 { margin: 0 0 4px; font-size: 14px; }
+.strategy-grid p { margin: 0; font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+.src-note { margin: 16px 0 0; font-size: 12.5px; color: var(--ink-3); }
+
+.btn-sm {
+  font: 600 13px var(--sans); padding: 8px 13px; border-radius: 999px;
+  border: 1px solid var(--line-2); background: transparent; color: var(--ink-2); cursor: pointer;
+}
+.btn-sm:hover { color: var(--ink); border-color: var(--ink-3); }
+
+.myteam { margin: 4px 0 20px; }
+.myteam h2 { font-size: 15px; margin: 0 0 10px; }
+.muted { color: var(--ink-3); font-weight: 400; }
+.rosterpos { margin-bottom: 10px; font-size: 13px; line-height: 2; }
+.rosterpos > div { display: inline-flex; flex-wrap: wrap; gap: 6px; margin-left: 8px; }
+.chip {
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px;
+  padding: 3px 10px; font-size: 12.5px;
+}
+.chip em { font-style: normal; font-family: var(--mono); font-size: 11px; margin-left: 4px; }
+
+.byehead { font-size: 13px; margin: 18px 0 6px; font-weight: 600; }
+.byebar { display: flex; gap: 4px; align-items: flex-end; height: 72px; margin: 0 0 6px; }
+.byecol {
+  flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  height: 100%; position: relative;
+}
+.byecol .bar { width: 100%; background: var(--accent-soft); border: 1px solid var(--line-2); border-bottom: 0; border-radius: 3px 3px 0 0; }
+.byecol.warm .bar { background: var(--warn-soft); border-color: var(--warn); }
+.byecol.hot .bar { background: color-mix(in srgb, var(--warn) 45%, transparent); border-color: var(--warn); }
+.byecol .wk { font: 11px var(--mono); color: var(--ink-3); margin-top: 3px; }
+.byecol .ct { font: 600 11px var(--mono); color: var(--ink-2); margin-bottom: 2px; }
+.warn { color: var(--warn); font-size: 13.5px; }
+
+.tier li { grid-template-columns: 46px 1fr 26px 42px 40px; }
+.tier li .bye { font: 600 11px var(--mono); text-align: center; border-radius: 4px; padding: 1px 0; }
+.bye-early { color: var(--warn); background: var(--warn-soft); }
+.bye-mid   { color: var(--ink-2); }
+.bye-late  { color: var(--accent); background: var(--accent-soft); }
+.tier li .src { font: 11px var(--mono); color: var(--ink-3); text-align: right; }
+.tier li .mv { font: 600 11px var(--mono); text-align: right; }
+.mv-up { color: var(--accent); } .mv-down { color: var(--warn); } .mv-0 { color: var(--ink-3); }
+.tier li.is-mine { background: var(--accent-soft); opacity: 1; }
+.tier li.is-mine .nm { text-decoration: none; font-weight: 600; }
+
+@media print {
+  .strategy, .myteam { display: none !important; }
 }

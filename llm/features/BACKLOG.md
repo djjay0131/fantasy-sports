@@ -19,33 +19,50 @@ are L0-eligible; changing an item's text is semantic.
 
 ## Phase 1 — Ingestion
 
-- [ ] FantasyGuru Draft Guide connector (`llm/plans/2026-08-29-fantasyguru-ingestion.md`)
+- [x] FantasyGuru Draft Guide connector (`llm/plans/2026-08-29-fantasyguru-ingestion.md`)
 - [ ] Free consensus connector for the public sample dataset
-- [ ] Immutable timestamped raw capture for every source
-- [ ] Run report: rows in, rows rejected, format recorded
+- [x] Immutable timestamped raw capture for every source
+- [x] Run report: rows in, rows rejected, format recorded
 
 ## Phase 2 — Identity
 
-- [ ] Canonical player ID scheme
+- [x] Canonical player ID scheme
 - [ ] Alias table and resolver
-- [ ] Rejections retained with reasons and surfaced in the report
+- [x] Rejections retained with reasons and surfaced in the report
 - [ ] Rookie / team-change disambiguation
 
 ## Phase 3 — Tiering
 
-- [ ] Gap-based tier computation with per-position thresholds
+- [x] Source tiers take precedence over computed ones (ADR-0003)
+
+- [x] Gap-based tier computation with per-position thresholds
 - [ ] Cross-source disagreement narrows tier breaks (separation in units of spread)
-- [ ] Human override recorded alongside the computed value
+- [x] Human override recorded alongside the computed value
 - [ ] Clustering comparison (k-means / GMM) as an evaluation, not a default
 - [ ] Source weighting ADR
 
 ## Phase 4 — The board
 
-- [ ] Positional tier board, full PPR / 1QB / 12-team
+- [x] Live refresh: `scripts/refresh.mjs --watch` rebuilds on a new export; the page polls
+- [x] Rank vs. ADP on every row — where the ranker sits against the draft room
+- [ ] Direct pull from the source rather than watching for a manual download
+
+- [x] Positional tier board, full PPR / 1QB / 12-team
 - [ ] Additional formats (half-PPR, superflex)
-- [ ] Source and capture date visible on every row
+- [x] Source and capture date visible on every row
 - [ ] Print / one-page draft-day view
 - [ ] Search and position filter
+
+## Phase 4b — Guillotine
+
+- [x] Guillotine re-rank model with bye-week cover difficulty (ADR-0004)
+- [x] Tiers preserve the ranker's tier sizes, membership follows the adjustment
+- [x] Tiered guillotine cheat sheet with move-against-source on every row
+- [x] Live roster tracking with bye-exposure warning
+- [x] Human risk flags (`data/processed/guillotine-flags.json`)
+- [ ] Jeff's own overall board as the spine (needs the overall export)
+- [ ] Revisit bye weights if the league size changes materially
+- [ ] Early-season SOS, once the export's SOS polarity is documented
 
 ## Phase 5 — In season
 

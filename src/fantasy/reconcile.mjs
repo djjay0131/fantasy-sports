@@ -19,9 +19,16 @@ export function reconcile(rows) {
         position: r.position,
         bye: r.player.bye ?? null,
         ranks: {},
+        source_tiers: {},
+        adp: r.adp ?? null,
+        sos: r.sos ?? null,
       });
     }
-    byKey.get(key).ranks[r.source] = r.rank_position;
+    const acc = byKey.get(key);
+    acc.ranks[r.source] = r.rank_position;
+    if (r.source_tier != null) acc.source_tiers[r.source] = r.source_tier;
+    if (acc.adp == null && r.adp != null) acc.adp = r.adp;
+    if (acc.sos == null && r.sos != null) acc.sos = r.sos;
   }
 
   const out = [];
