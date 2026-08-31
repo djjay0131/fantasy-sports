@@ -12,7 +12,8 @@
     "ingest": "node scripts/ingest.mjs",
     "serve": "python3 -m http.server -d docs 8080",
     "refresh": "node scripts/refresh.mjs",
-    "board": "node scripts/refresh.mjs --watch --serve 8722"
+    "board": "node scripts/refresh.mjs --watch --serve 8722",
+    "guillotine": "node scripts/guillotine.mjs --teams 18"
   },
   "engines": {
     "node": ">=20"

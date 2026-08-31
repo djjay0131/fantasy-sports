@@ -13,6 +13,7 @@
     <nav class="site">
       <a href="index.html">Home</a>
       <a href="cheatsheets/index.html">Cheat sheet</a>
+      <a href="cheatsheets/guillotine.html">Guillotine</a>
       <a href="methodology.html" aria-current="page">Method</a>
       <a href="https://github.com/djjay0131/fantasy-sports">GitHub</a>
     </nav>
@@ -99,6 +100,30 @@
       <a href="https://github.com/djjay0131/fantasy-sports/blob/main/llm/governance/adr/0001-public-tooling-private-source-data.md">ADR-0001</a>
       and
       <a href="https://github.com/djjay0131/fantasy-sports/blob/main/llm/governance/adr/0002-rankings-not-projections.md">ADR-0002</a>.</p>
+
+    <h2 id="guillotine">The Guillotine board</h2>
+    <p>A guillotine league is a survival contest, not a scoring one: the lowest-scoring team each week is
+      eliminated and its whole roster returns to waivers, and there are no playoffs. A player who breaks
+      out in Week&nbsp;10 is worth nothing to a team eliminated in Week&nbsp;3.</p>
+    <p>The guillotine sheet is therefore a <b>derived re-rank of the ranker&rsquo;s board, not a second set
+      of rankings</b>. It shifts his ordering by a small number of terms that the data actually contains,
+      each expressed in <b>rank slots</b> so the whole model stays arguable:</p>
+    <ul>
+      <li><b>Bye-week cover difficulty.</b> Applied in full at the earliest bye in the data, decaying to
+        zero at the latest. With 18 teams and 14 roster spots, roughly 252 players are rostered on draft
+        day, so a Week&nbsp;5 bye is covered from an empty pool; each elimination returns a full roster, so
+        by Week&nbsp;13 cover is easy. Weights are ordered by how hard a position is to <em>replace</em>
+        (TE&nbsp;8, RB&nbsp;8, WR&nbsp;5, QB&nbsp;5, K/DST&nbsp;3), not by how valuable it is.</li>
+      <li><b>Human risk flags.</b> Entered by hand, with a note, both shown on the board.</li>
+    </ul>
+    <p>Tiers keep the <b>ranker&rsquo;s tier sizes</b> and let membership follow the adjusted order: how many
+      players are equivalent is his judgement, which ones they are is what the format changes. Every row
+      shows his original rank and the move against it &mdash; a re-rank you cannot audit is an assertion.</p>
+    <p>What it deliberately does <em>not</em> model: floor, ceiling, consistency, and injury risk, none of
+      which exist in the source; and strength of schedule, whose polarity in the export is undocumented, so
+      a sign error would silently invert it for every player. Those stay a human&rsquo;s job, and the board
+      says so. Full reasoning:
+      <a href="https://github.com/djjay0131/fantasy-sports/blob/main/llm/governance/adr/0004-guillotine-is-a-derived-board.md">ADR-0004</a>.</p>
 
     <h2 id="limits">What this does not do</h2>
     <ul>

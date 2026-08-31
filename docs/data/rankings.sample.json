@@ -1,7 +1,7 @@
 {
   "schema": "fantasy-sports/board@1",
   "_sample": true,
-  "generated_at": "2026-08-30T16:35:45.369Z",
+  "generated_at": "2026-08-31T03:39:11.705Z",
   "format": {
     "id": "ppr-1qb-12",
     "label": "Full PPR / 1QB / 12-team",
@@ -27,7 +27,7 @@
           "name": "Josh Allen",
           "team": "BUF",
           "position": "QB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 1,
             "panel-b": 1,
@@ -49,7 +49,7 @@
           "name": "Lamar Jackson",
           "team": "BAL",
           "position": "QB",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 3,
             "panel-b": 2,
@@ -71,7 +71,7 @@
           "name": "Jayden Daniels",
           "team": "WAS",
           "position": "QB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 2,
             "panel-b": 3,
@@ -93,7 +93,7 @@
           "name": "Jalen Hurts",
           "team": "PHI",
           "position": "QB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 5,
             "panel-b": 4,
@@ -115,7 +115,7 @@
           "name": "Joe Burrow",
           "team": "CIN",
           "position": "QB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 4,
             "panel-b": 5,
@@ -137,7 +137,7 @@
           "name": "Bo Nix",
           "team": "DEN",
           "position": "QB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 8,
             "panel-b": 6,
@@ -159,7 +159,7 @@
           "name": "Baker Mayfield",
           "team": "TB",
           "position": "QB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 7,
             "panel-b": 7,
@@ -181,7 +181,7 @@
           "name": "Patrick Mahomes",
           "team": "KC",
           "position": "QB",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 6,
             "panel-b": 8,
@@ -203,7 +203,7 @@
           "name": "C.J. Stroud",
           "team": "HOU",
           "position": "QB",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 9,
             "panel-b": 10,
@@ -225,7 +225,7 @@
           "name": "Justin Herbert",
           "team": "LAC",
           "position": "QB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 12,
             "panel-b": 9,
@@ -247,7 +247,7 @@
           "name": "Caleb Williams",
           "team": "CHI",
           "position": "QB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 10,
             "panel-b": 11,
@@ -269,7 +269,7 @@
           "name": "Kyler Murray",
           "team": "ARI",
           "position": "QB",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 11,
             "panel-b": 12,
@@ -291,7 +291,7 @@
           "name": "Drake Maye",
           "team": "NE",
           "position": "QB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 14,
             "panel-b": 14,
@@ -313,7 +313,7 @@
           "name": "Trevor Lawrence",
           "team": "JAX",
           "position": "QB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 13,
             "panel-b": 15,
@@ -335,7 +335,7 @@
           "name": "Brock Purdy",
           "team": "SF",
           "position": "QB",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 16,
             "panel-b": 16,
@@ -357,7 +357,7 @@
           "name": "Dak Prescott",
           "team": "DAL",
           "position": "QB",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 17,
             "panel-b": 13,
@@ -379,7 +379,7 @@
           "name": "Jared Goff",
           "team": "DET",
           "position": "QB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 15,
             "panel-b": 18,
@@ -401,7 +401,7 @@
           "name": "Tua Tagovailoa",
           "team": "MIA",
           "position": "QB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 21,
             "panel-b": 19,
@@ -423,7 +423,7 @@
           "name": "J.J. McCarthy",
           "team": "MIN",
           "position": "QB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 19,
             "panel-b": 20,
@@ -445,7 +445,7 @@
           "name": "Michael Penix Jr.",
           "team": "ATL",
           "position": "QB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 22,
             "panel-b": 17,
@@ -467,7 +467,7 @@
           "name": "Matthew Stafford",
           "team": "LAR",
           "position": "QB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 18,
             "panel-b": 22,
@@ -489,7 +489,7 @@
           "name": "Geno Smith",
           "team": "LV",
           "position": "QB",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 23,
             "panel-b": 21,
@@ -511,7 +511,7 @@
           "name": "Bryce Young",
           "team": "CAR",
           "position": "QB",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 20,
             "panel-b": 24,
@@ -533,7 +533,7 @@
           "name": "Cam Ward",
           "team": "TEN",
           "position": "QB",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 24,
             "panel-b": 23,
@@ -597,7 +597,7 @@
           "name": "Bijan Robinson",
           "team": "ATL",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 1,
             "panel-b": 2,
@@ -619,7 +619,7 @@
           "name": "Saquon Barkley",
           "team": "PHI",
           "position": "RB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 3,
             "panel-b": 1,
@@ -641,7 +641,7 @@
           "name": "Ashton Jeanty",
           "team": "LV",
           "position": "RB",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 4,
             "panel-b": 3,
@@ -663,7 +663,7 @@
           "name": "Jahmyr Gibbs",
           "team": "DET",
           "position": "RB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 2,
             "panel-b": 4,
@@ -685,7 +685,7 @@
           "name": "De'Von Achane",
           "team": "MIA",
           "position": "RB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 6,
             "panel-b": 6,
@@ -707,7 +707,7 @@
           "name": "Christian McCaffrey",
           "team": "SF",
           "position": "RB",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 5,
             "panel-b": 5,
@@ -729,7 +729,7 @@
           "name": "Derrick Henry",
           "team": "BAL",
           "position": "RB",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 7,
             "panel-b": 8,
@@ -751,7 +751,7 @@
           "name": "Josh Jacobs",
           "team": "GB",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 8,
             "panel-b": 7,
@@ -773,7 +773,7 @@
           "name": "Bucky Irving",
           "team": "TB",
           "position": "RB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 9,
             "panel-b": 10,
@@ -795,7 +795,7 @@
           "name": "Jonathan Taylor",
           "team": "IND",
           "position": "RB",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 10,
             "panel-b": 12,
@@ -817,7 +817,7 @@
           "name": "Chase Brown",
           "team": "CIN",
           "position": "RB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 11,
             "panel-b": 9,
@@ -839,7 +839,7 @@
           "name": "Kenneth Walker III",
           "team": "SEA",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 12,
             "panel-b": 11,
@@ -861,7 +861,7 @@
           "name": "James Cook",
           "team": "BUF",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 13,
             "panel-b": 13,
@@ -883,7 +883,7 @@
           "name": "Kyren Williams",
           "team": "LAR",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 14,
             "panel-b": 14,
@@ -905,7 +905,7 @@
           "name": "Breece Hall",
           "team": "NYJ",
           "position": "RB",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 18,
             "panel-b": 15,
@@ -927,7 +927,7 @@
           "name": "Chuba Hubbard",
           "team": "CAR",
           "position": "RB",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 15,
             "panel-b": 16,
@@ -949,7 +949,7 @@
           "name": "Omarion Hampton",
           "team": "LAC",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 16,
             "panel-b": 17,
@@ -971,7 +971,7 @@
           "name": "Alvin Kamara",
           "team": "NO",
           "position": "RB",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 17,
             "panel-b": 20,
@@ -993,7 +993,7 @@
           "name": "TreVeyon Henderson",
           "team": "NE",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 22,
             "panel-b": 18,
@@ -1015,7 +1015,7 @@
           "name": "David Montgomery",
           "team": "DET",
           "position": "RB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 24,
             "panel-b": 19,
@@ -1037,7 +1037,7 @@
           "name": "Quinshon Judkins",
           "team": "CLE",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 27,
             "panel-b": 21,
@@ -1059,7 +1059,7 @@
           "name": "Tony Pollard",
           "team": "TEN",
           "position": "RB",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 19,
             "panel-b": 24,
@@ -1081,7 +1081,7 @@
           "name": "Aaron Jones",
           "team": "MIN",
           "position": "RB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 20,
             "panel-b": 23,
@@ -1103,7 +1103,7 @@
           "name": "Isiah Pacheco",
           "team": "KC",
           "position": "RB",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 28,
             "panel-b": 27,
@@ -1125,7 +1125,7 @@
           "name": "Jaylen Warren",
           "team": "PIT",
           "position": "RB",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 25,
             "panel-b": 25,
@@ -1147,7 +1147,7 @@
           "name": "RJ Harvey",
           "team": "DEN",
           "position": "RB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 23,
             "panel-b": 26,
@@ -1169,7 +1169,7 @@
           "name": "Tyrone Tracy Jr.",
           "team": "NYG",
           "position": "RB",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 21,
             "panel-b": 32,
@@ -1191,7 +1191,7 @@
           "name": "Rhamondre Stevenson",
           "team": "NE",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 31,
             "panel-b": 28,
@@ -1213,7 +1213,7 @@
           "name": "Cam Skattebo",
           "team": "NYG",
           "position": "RB",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 26,
             "panel-b": 34,
@@ -1235,7 +1235,7 @@
           "name": "Brian Robinson Jr.",
           "team": "WAS",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 33,
             "panel-b": 22,
@@ -1257,7 +1257,7 @@
           "name": "Travis Etienne Jr.",
           "team": "JAX",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 29,
             "panel-b": 30,
@@ -1279,7 +1279,7 @@
           "name": "Kaleb Johnson",
           "team": "PIT",
           "position": "RB",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 32,
             "panel-b": 37,
@@ -1301,7 +1301,7 @@
           "name": "Trey Benson",
           "team": "ARI",
           "position": "RB",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 39,
             "panel-b": 33,
@@ -1323,7 +1323,7 @@
           "name": "Austin Ekeler",
           "team": "WAS",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 40,
             "panel-b": 31,
@@ -1345,7 +1345,7 @@
           "name": "Rachaad White",
           "team": "TB",
           "position": "RB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 41,
             "panel-b": 29,
@@ -1367,7 +1367,7 @@
           "name": "Tyjae Spears",
           "team": "TEN",
           "position": "RB",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 30,
             "panel-b": 35,
@@ -1389,7 +1389,7 @@
           "name": "Najee Harris",
           "team": "LAC",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 35,
             "panel-b": 36,
@@ -1411,7 +1411,7 @@
           "name": "Jordan Mason",
           "team": "MIN",
           "position": "RB",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 34,
             "panel-b": 38,
@@ -1433,7 +1433,7 @@
           "name": "Zach Charbonnet",
           "team": "SEA",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 37,
             "panel-b": 41,
@@ -1455,7 +1455,7 @@
           "name": "Braelon Allen",
           "team": "NYJ",
           "position": "RB",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 36,
             "panel-b": 43,
@@ -1477,7 +1477,7 @@
           "name": "Jerome Ford",
           "team": "CLE",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 38,
             "panel-b": 39,
@@ -1499,7 +1499,7 @@
           "name": "Bhayshul Tuten",
           "team": "JAX",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 43,
             "panel-b": 40,
@@ -1521,7 +1521,7 @@
           "name": "Ray Davis",
           "team": "BUF",
           "position": "RB",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 42,
             "panel-b": 42,
@@ -1543,7 +1543,7 @@
           "name": "Blake Corum",
           "team": "LAR",
           "position": "RB",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 44,
             "panel-b": 45,
@@ -1565,7 +1565,7 @@
           "name": "Roschon Johnson",
           "team": "CHI",
           "position": "RB",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 45,
             "panel-b": 44,
@@ -1654,7 +1654,7 @@
           "name": "Ja'Marr Chase",
           "team": "CIN",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 1,
             "panel-b": 1,
@@ -1676,7 +1676,7 @@
           "name": "Justin Jefferson",
           "team": "MIN",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 2,
             "panel-b": 2,
@@ -1698,7 +1698,7 @@
           "name": "CeeDee Lamb",
           "team": "DAL",
           "position": "WR",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 3,
             "panel-b": 3,
@@ -1720,7 +1720,7 @@
           "name": "Puka Nacua",
           "team": "LAR",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 4,
             "panel-b": 4,
@@ -1742,7 +1742,7 @@
           "name": "Malik Nabers",
           "team": "NYG",
           "position": "WR",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 7,
             "panel-b": 6,
@@ -1764,7 +1764,7 @@
           "name": "Nico Collins",
           "team": "HOU",
           "position": "WR",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 6,
             "panel-b": 8,
@@ -1786,7 +1786,7 @@
           "name": "Amon-Ra St. Brown",
           "team": "DET",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 5,
             "panel-b": 7,
@@ -1808,7 +1808,7 @@
           "name": "A.J. Brown",
           "team": "PHI",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 8,
             "panel-b": 5,
@@ -1830,7 +1830,7 @@
           "name": "Brian Thomas Jr.",
           "team": "JAX",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 10,
             "panel-b": 10,
@@ -1852,7 +1852,7 @@
           "name": "Drake London",
           "team": "ATL",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 9,
             "panel-b": 9,
@@ -1874,7 +1874,7 @@
           "name": "Tyreek Hill",
           "team": "MIA",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 11,
             "panel-b": 11,
@@ -1896,7 +1896,7 @@
           "name": "Tee Higgins",
           "team": "CIN",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 12,
             "panel-b": 14,
@@ -1918,7 +1918,7 @@
           "name": "Ladd McConkey",
           "team": "LAC",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 13,
             "panel-b": 13,
@@ -1940,7 +1940,7 @@
           "name": "Rashee Rice",
           "team": "KC",
           "position": "WR",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 15,
             "panel-b": 12,
@@ -1962,7 +1962,7 @@
           "name": "Garrett Wilson",
           "team": "NYJ",
           "position": "WR",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 16,
             "panel-b": 18,
@@ -1984,7 +1984,7 @@
           "name": "Marvin Harrison Jr.",
           "team": "ARI",
           "position": "WR",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 20,
             "panel-b": 15,
@@ -2006,7 +2006,7 @@
           "name": "Mike Evans",
           "team": "TB",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 14,
             "panel-b": 16,
@@ -2028,7 +2028,7 @@
           "name": "Terry McLaurin",
           "team": "WAS",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 19,
             "panel-b": 17,
@@ -2050,7 +2050,7 @@
           "name": "DK Metcalf",
           "team": "PIT",
           "position": "WR",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 17,
             "panel-b": 19,
@@ -2072,7 +2072,7 @@
           "name": "Jaxon Smith-Njigba",
           "team": "SEA",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 22,
             "panel-b": 22,
@@ -2094,7 +2094,7 @@
           "name": "Davante Adams",
           "team": "LAR",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 24,
             "panel-b": 21,
@@ -2116,7 +2116,7 @@
           "name": "Courtland Sutton",
           "team": "DEN",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 18,
             "panel-b": 27,
@@ -2138,7 +2138,7 @@
           "name": "DJ Moore",
           "team": "CHI",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 21,
             "panel-b": 30,
@@ -2160,7 +2160,7 @@
           "name": "Zay Flowers",
           "team": "BAL",
           "position": "WR",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 25,
             "panel-b": 24,
@@ -2182,7 +2182,7 @@
           "name": "Xavier Worthy",
           "team": "KC",
           "position": "WR",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 28,
             "panel-b": 20,
@@ -2204,7 +2204,7 @@
           "name": "Chris Olave",
           "team": "NO",
           "position": "WR",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 23,
             "panel-b": 28,
@@ -2226,7 +2226,7 @@
           "name": "Jameson Williams",
           "team": "DET",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 26,
             "panel-b": 26,
@@ -2248,7 +2248,7 @@
           "name": "Jaylen Waddle",
           "team": "MIA",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 32,
             "panel-b": 25,
@@ -2270,7 +2270,7 @@
           "name": "Rome Odunze",
           "team": "CHI",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 33,
             "panel-b": 23,
@@ -2292,7 +2292,7 @@
           "name": "Jerry Jeudy",
           "team": "CLE",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 36,
             "panel-b": 31,
@@ -2314,7 +2314,7 @@
           "name": "Ricky Pearsall",
           "team": "SF",
           "position": "WR",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 27,
             "panel-b": 29,
@@ -2336,7 +2336,7 @@
           "name": "Travis Hunter",
           "team": "JAX",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 34,
             "panel-b": 36,
@@ -2358,7 +2358,7 @@
           "name": "Tetairoa McMillan",
           "team": "CAR",
           "position": "WR",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 29,
             "panel-b": 40,
@@ -2380,7 +2380,7 @@
           "name": "George Pickens",
           "team": "DAL",
           "position": "WR",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 35,
             "panel-b": 35,
@@ -2402,7 +2402,7 @@
           "name": "Chris Godwin",
           "team": "TB",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 31,
             "panel-b": 38,
@@ -2424,7 +2424,7 @@
           "name": "Jordan Addison",
           "team": "MIN",
           "position": "WR",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 43,
             "panel-b": 32,
@@ -2446,7 +2446,7 @@
           "name": "Khalil Shakir",
           "team": "BUF",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 30,
             "panel-b": 44,
@@ -2468,7 +2468,7 @@
           "name": "Deebo Samuel",
           "team": "WAS",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 42,
             "panel-b": 33,
@@ -2490,7 +2490,7 @@
           "name": "Keon Coleman",
           "team": "BUF",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 39,
             "panel-b": 37,
@@ -2512,7 +2512,7 @@
           "name": "Calvin Ridley",
           "team": "TEN",
           "position": "WR",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 40,
             "panel-b": 46,
@@ -2534,7 +2534,7 @@
           "name": "Josh Downs",
           "team": "IND",
           "position": "WR",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 37,
             "panel-b": 43,
@@ -2556,7 +2556,7 @@
           "name": "Jakobi Meyers",
           "team": "LV",
           "position": "WR",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 50,
             "panel-b": 34,
@@ -2578,7 +2578,7 @@
           "name": "Luther Burden III",
           "team": "CHI",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 41,
             "panel-b": 48,
@@ -2600,7 +2600,7 @@
           "name": "Matthew Golden",
           "team": "GB",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 46,
             "panel-b": 39,
@@ -2622,7 +2622,7 @@
           "name": "Jayden Reed",
           "team": "GB",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 48,
             "panel-b": 41,
@@ -2644,7 +2644,7 @@
           "name": "Stefon Diggs",
           "team": "NE",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 45,
             "panel-b": 42,
@@ -2666,7 +2666,7 @@
           "name": "Emeka Egbuka",
           "team": "TB",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 38,
             "panel-b": 49,
@@ -2688,7 +2688,7 @@
           "name": "Christian Kirk",
           "team": "HOU",
           "position": "WR",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 44,
             "panel-b": 52,
@@ -2710,7 +2710,7 @@
           "name": "Marvin Mims Jr.",
           "team": "DEN",
           "position": "WR",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 55,
             "panel-b": 53,
@@ -2732,7 +2732,7 @@
           "name": "Michael Pittman Jr.",
           "team": "IND",
           "position": "WR",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 49,
             "panel-b": 50,
@@ -2754,7 +2754,7 @@
           "name": "Cooper Kupp",
           "team": "SEA",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 52,
             "panel-b": 47,
@@ -2776,7 +2776,7 @@
           "name": "Darnell Mooney",
           "team": "ATL",
           "position": "WR",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 54,
             "panel-b": 45,
@@ -2798,7 +2798,7 @@
           "name": "Wan'Dale Robinson",
           "team": "NYG",
           "position": "WR",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 47,
             "panel-b": 55,
@@ -2820,7 +2820,7 @@
           "name": "Rashid Shaheed",
           "team": "NO",
           "position": "WR",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 53,
             "panel-b": 51,
@@ -2842,7 +2842,7 @@
           "name": "Quentin Johnston",
           "team": "LAC",
           "position": "WR",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 51,
             "panel-b": 54,
@@ -2944,7 +2944,7 @@
           "name": "Brock Bowers",
           "team": "LV",
           "position": "TE",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 1,
             "panel-b": 1,
@@ -2966,7 +2966,7 @@
           "name": "George Kittle",
           "team": "SF",
           "position": "TE",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 2,
             "panel-b": 3,
@@ -2988,7 +2988,7 @@
           "name": "Trey McBride",
           "team": "ARI",
           "position": "TE",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 3,
             "panel-b": 2,
@@ -3010,7 +3010,7 @@
           "name": "Sam LaPorta",
           "team": "DET",
           "position": "TE",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 5,
             "panel-b": 4,
@@ -3032,7 +3032,7 @@
           "name": "Travis Kelce",
           "team": "KC",
           "position": "TE",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 6,
             "panel-b": 5,
@@ -3054,7 +3054,7 @@
           "name": "T.J. Hockenson",
           "team": "MIN",
           "position": "TE",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 4,
             "panel-b": 6,
@@ -3076,7 +3076,7 @@
           "name": "Mark Andrews",
           "team": "BAL",
           "position": "TE",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 8,
             "panel-b": 7,
@@ -3098,7 +3098,7 @@
           "name": "David Njoku",
           "team": "CLE",
           "position": "TE",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 11,
             "panel-b": 8,
@@ -3120,7 +3120,7 @@
           "name": "Tucker Kraft",
           "team": "GB",
           "position": "TE",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 7,
             "panel-b": 10,
@@ -3142,7 +3142,7 @@
           "name": "Evan Engram",
           "team": "DEN",
           "position": "TE",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 12,
             "panel-b": 9,
@@ -3164,7 +3164,7 @@
           "name": "Colston Loveland",
           "team": "CHI",
           "position": "TE",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 9,
             "panel-b": 11,
@@ -3186,7 +3186,7 @@
           "name": "Dalton Kincaid",
           "team": "BUF",
           "position": "TE",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 10,
             "panel-b": 14,
@@ -3208,7 +3208,7 @@
           "name": "Tyler Warren",
           "team": "IND",
           "position": "TE",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 14,
             "panel-b": 13,
@@ -3230,7 +3230,7 @@
           "name": "Jonnu Smith",
           "team": "PIT",
           "position": "TE",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 15,
             "panel-b": 15,
@@ -3252,7 +3252,7 @@
           "name": "Dallas Goedert",
           "team": "PHI",
           "position": "TE",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 13,
             "panel-b": 17,
@@ -3274,7 +3274,7 @@
           "name": "Cade Otton",
           "team": "TB",
           "position": "TE",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 16,
             "panel-b": 16,
@@ -3296,7 +3296,7 @@
           "name": "Zach Ertz",
           "team": "WAS",
           "position": "TE",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 19,
             "panel-b": 12,
@@ -3318,7 +3318,7 @@
           "name": "Hunter Henry",
           "team": "NE",
           "position": "TE",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 18,
             "panel-b": 18,
@@ -3340,7 +3340,7 @@
           "name": "Isaiah Likely",
           "team": "BAL",
           "position": "TE",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 17,
             "panel-b": 19,
@@ -3362,7 +3362,7 @@
           "name": "Kyle Pitts",
           "team": "ATL",
           "position": "TE",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 20,
             "panel-b": 20,
@@ -3421,7 +3421,7 @@
           "name": "Brandon Aubrey",
           "team": "DAL",
           "position": "K",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 1,
             "panel-b": 1,
@@ -3443,7 +3443,7 @@
           "name": "Cameron Dicker",
           "team": "LAC",
           "position": "K",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 2,
             "panel-b": 2,
@@ -3465,7 +3465,7 @@
           "name": "Chris Boswell",
           "team": "PIT",
           "position": "K",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 3,
             "panel-b": 3,
@@ -3487,7 +3487,7 @@
           "name": "Jake Bates",
           "team": "DET",
           "position": "K",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 4,
             "panel-b": 4,
@@ -3509,7 +3509,7 @@
           "name": "Ka'imi Fairbairn",
           "team": "HOU",
           "position": "K",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 5,
             "panel-b": 6,
@@ -3531,7 +3531,7 @@
           "name": "Tyler Bass",
           "team": "BUF",
           "position": "K",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 7,
             "panel-b": 7,
@@ -3553,7 +3553,7 @@
           "name": "Harrison Butker",
           "team": "KC",
           "position": "K",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 8,
             "panel-b": 5,
@@ -3575,7 +3575,7 @@
           "name": "Chase McLaughlin",
           "team": "TB",
           "position": "K",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 6,
             "panel-b": 10,
@@ -3597,7 +3597,7 @@
           "name": "Jason Sanders",
           "team": "MIA",
           "position": "K",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 10,
             "panel-b": 8,
@@ -3619,7 +3619,7 @@
           "name": "Wil Lutz",
           "team": "DEN",
           "position": "K",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 9,
             "panel-b": 9,
@@ -3641,7 +3641,7 @@
           "name": "Jake Elliott",
           "team": "PHI",
           "position": "K",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 12,
             "panel-b": 11,
@@ -3663,7 +3663,7 @@
           "name": "Evan McPherson",
           "team": "CIN",
           "position": "K",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 14,
             "panel-b": 12,
@@ -3685,7 +3685,7 @@
           "name": "Younghoe Koo",
           "team": "ATL",
           "position": "K",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 11,
             "panel-b": 13,
@@ -3707,7 +3707,7 @@
           "name": "Cairo Santos",
           "team": "CHI",
           "position": "K",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 13,
             "panel-b": 15,
@@ -3729,7 +3729,7 @@
           "name": "Tyler Loop",
           "team": "BAL",
           "position": "K",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 16,
             "panel-b": 16,
@@ -3751,7 +3751,7 @@
           "name": "Will Reichard",
           "team": "MIN",
           "position": "K",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 19,
             "panel-b": 14,
@@ -3773,7 +3773,7 @@
           "name": "Matt Gay",
           "team": "WAS",
           "position": "K",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 15,
             "panel-b": 17,
@@ -3795,7 +3795,7 @@
           "name": "Joshua Karty",
           "team": "LAR",
           "position": "K",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 18,
             "panel-b": 19,
@@ -3817,7 +3817,7 @@
           "name": "Jake Moody",
           "team": "SF",
           "position": "K",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 17,
             "panel-b": 20,
@@ -3839,7 +3839,7 @@
           "name": "Nick Folk",
           "team": "NYJ",
           "position": "K",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 20,
             "panel-b": 18,
@@ -3898,7 +3898,7 @@
           "name": "Denver Broncos",
           "team": "DEN",
           "position": "DST",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 1,
             "panel-b": 3,
@@ -3920,7 +3920,7 @@
           "name": "Philadelphia Eagles",
           "team": "PHI",
           "position": "DST",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 2,
             "panel-b": 1,
@@ -3942,7 +3942,7 @@
           "name": "Baltimore Ravens",
           "team": "BAL",
           "position": "DST",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 3,
             "panel-b": 2,
@@ -3964,7 +3964,7 @@
           "name": "Buffalo Bills",
           "team": "BUF",
           "position": "DST",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 5,
             "panel-b": 4,
@@ -3986,7 +3986,7 @@
           "name": "Houston Texans",
           "team": "HOU",
           "position": "DST",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 4,
             "panel-b": 6,
@@ -4008,7 +4008,7 @@
           "name": "Pittsburgh Steelers",
           "team": "PIT",
           "position": "DST",
-          "bye": null,
+          "bye": 9,
           "ranks": {
             "panel-a": 9,
             "panel-b": 5,
@@ -4030,7 +4030,7 @@
           "name": "Minnesota Vikings",
           "team": "MIN",
           "position": "DST",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 6,
             "panel-b": 9,
@@ -4052,7 +4052,7 @@
           "name": "Detroit Lions",
           "team": "DET",
           "position": "DST",
-          "bye": null,
+          "bye": 6,
           "ranks": {
             "panel-a": 7,
             "panel-b": 7,
@@ -4074,7 +4074,7 @@
           "name": "Kansas City Chiefs",
           "team": "KC",
           "position": "DST",
-          "bye": null,
+          "bye": 5,
           "ranks": {
             "panel-a": 8,
             "panel-b": 12,
@@ -4096,7 +4096,7 @@
           "name": "Green Bay Packers",
           "team": "GB",
           "position": "DST",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 10,
             "panel-b": 8,
@@ -4118,7 +4118,7 @@
           "name": "Seattle Seahawks",
           "team": "SEA",
           "position": "DST",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 12,
             "panel-b": 11,
@@ -4140,7 +4140,7 @@
           "name": "Los Angeles Chargers",
           "team": "LAC",
           "position": "DST",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 14,
             "panel-b": 10,
@@ -4162,7 +4162,7 @@
           "name": "Arizona Cardinals",
           "team": "ARI",
           "position": "DST",
-          "bye": null,
+          "bye": 14,
           "ranks": {
             "panel-a": 11,
             "panel-b": 13,
@@ -4184,7 +4184,7 @@
           "name": "San Francisco 49ers",
           "team": "SF",
           "position": "DST",
-          "bye": null,
+          "bye": 8,
           "ranks": {
             "panel-a": 13,
             "panel-b": 15,
@@ -4206,7 +4206,7 @@
           "name": "Washington Commanders",
           "team": "WAS",
           "position": "DST",
-          "bye": null,
+          "bye": 7,
           "ranks": {
             "panel-a": 16,
             "panel-b": 17,
@@ -4228,7 +4228,7 @@
           "name": "New York Jets",
           "team": "NYJ",
           "position": "DST",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 17,
             "panel-b": 18,
@@ -4250,7 +4250,7 @@
           "name": "Tampa Bay Buccaneers",
           "team": "TB",
           "position": "DST",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 18,
             "panel-b": 14,
@@ -4272,7 +4272,7 @@
           "name": "Los Angeles Rams",
           "team": "LAR",
           "position": "DST",
-          "bye": null,
+          "bye": 11,
           "ranks": {
             "panel-a": 19,
             "panel-b": 19,
@@ -4294,7 +4294,7 @@
           "name": "Chicago Bears",
           "team": "CHI",
           "position": "DST",
-          "bye": null,
+          "bye": 10,
           "ranks": {
             "panel-a": 15,
             "panel-b": 20,
@@ -4316,7 +4316,7 @@
           "name": "Indianapolis Colts",
           "team": "IND",
           "position": "DST",
-          "bye": null,
+          "bye": 13,
           "ranks": {
             "panel-a": 20,
             "panel-b": 16,

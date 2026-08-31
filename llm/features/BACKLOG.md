@@ -53,6 +53,17 @@ are L0-eligible; changing an item's text is semantic.
 - [ ] Print / one-page draft-day view
 - [ ] Search and position filter
 
+## Phase 4b — Guillotine
+
+- [x] Guillotine re-rank model with bye-week cover difficulty (ADR-0004)
+- [x] Tiers preserve the ranker's tier sizes, membership follows the adjustment
+- [x] Tiered guillotine cheat sheet with move-against-source on every row
+- [x] Live roster tracking with bye-exposure warning
+- [x] Human risk flags (`data/processed/guillotine-flags.json`)
+- [ ] Jeff's own overall board as the spine (needs the overall export)
+- [ ] Revisit bye weights if the league size changes materially
+- [ ] Early-season SOS, once the export's SOS polarity is documented
+
 ## Phase 5 — In season
 
 - [ ] Weekly rankings axis

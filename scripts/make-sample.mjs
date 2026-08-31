@@ -38,7 +38,10 @@ for (const [position, names] of Object.entries(BASE.positions)) {
     }).sort((a, b) => a.key - b.key);
 
     jittered.forEach(({ entry }, i) => {
-      const [name, team, bye] = entry;
+      const [name, team] = entry;
+      // Real 2026 bye weeks, keyed by team (BASE.byes) — a published schedule
+      // fact rather than part of anyone's rankings product.
+      const bye = BASE.byes?.[team] ?? null;
       rows.push({
         source,
         captured_at: CAPTURED,

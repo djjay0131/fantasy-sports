@@ -26,6 +26,11 @@ the first source connector is next.
   tiers outrank ours. `scripts/refresh.mjs --watch` rebuilds the board when a
   new export lands; the page polls every 45s.
 
+- 2026-08-30 — **Guillotine board added** for an 18-team league (1QB/2RB/2WR/1TE/2FLEX + 6 bench).
+  ADR-0004: it is a derived re-rank of the ranker's board, not a second ranking. Shifts are bye-week
+  cover difficulty (per-position weights) plus human risk flags; SOS is displayed but never computed
+  with, because the export's polarity is undocumented.
+
 ## Next
 
 - Find the URL behind the Draft Guide's Download button so `refresh.mjs` can
@@ -34,6 +39,9 @@ the first source connector is next.
   Claude in Chrome extension is not connected.
 - Re-export from fantasyguru.com — the capture in hand is from 2026-08-08 and
   the season starts soon.
+- Jeff's **overall** rankings export, so the guillotine board can be sequenced
+  on his board rather than per-position. The single-table export has no overall
+  column and the only overall ordering in the file is ADP.
 - Merge PR #1 (platform enforcement reality) — it also carries the
   `.gitignore` anchor fix without which the sample board is untracked.
 

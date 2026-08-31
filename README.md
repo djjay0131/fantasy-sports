@@ -57,6 +57,21 @@ reviewed by a human; the method is documented on the site and in
 
 Default league profile: **full PPR, 1QB, 12-team**.
 
+### Guillotine
+
+A guillotine league chops the lowest-scoring team every week and has no
+playoffs, so the board is re-ranked for survival: `scripts/guillotine.mjs`
+shifts the ranker's ordering by bye-week cover difficulty (in an 18-team
+league, an early bye is covered from an empty waiver pool and a late one from
+a dozen eliminated rosters) plus any human risk flags, keeps his tier *sizes*,
+and shows the move against his board on every row. It is a derived view, never
+a second set of rankings — see
+[`llm/governance/adr/0004-guillotine-is-a-derived-board.md`](llm/governance/adr/0004-guillotine-is-a-derived-board.md).
+
+```bash
+node scripts/refresh.mjs && node scripts/guillotine.mjs --teams 18
+```
+
 ## Site
 
 https://djjay0131.github.io/fantasy-sports/
