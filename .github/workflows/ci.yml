@@ -34,7 +34,7 @@ jobs:
 
       - name: Assert no licensed source data is tracked
         # ADR-0001: data/ and docs/data/*.json are git-ignored. Only the
-        # sample dataset and its README may be tracked under docs/data/.
+        # sample datasets and the README may be tracked under docs/data/.
         # A `git add -f` is the only way to defeat .gitignore, and this
         # job is what catches it.
         run: |
@@ -46,9 +46,9 @@ jobs:
             exit 1
           fi
           bad=$(git ls-files 'docs/data/*' \
-                | grep -v -E '^docs/data/(rankings\.sample\.json|README\.md)$' || true)
+                | grep -v -E '^docs/data/(rankings\.sample\.json|guillotine\.sample\.json|README\.md)$' || true)
           if [ -n "$bad" ]; then
-            echo "::error::Unexpected tracked file under docs/data/ — only rankings.sample.json and README.md are permitted (ADR-0001)"
+            echo "::error::Unexpected tracked file under docs/data/ — only the *.sample.json files and README.md are permitted (ADR-0001)"
             echo "$bad"
             exit 1
           fi
@@ -80,14 +80,20 @@ jobs:
         # produces, so a hand-edited dataset cannot drift in unnoticed.
         run: |
           set -euo pipefail
-          test -f docs/data/rankings.sample.json
-          cp docs/data/rankings.sample.json /tmp/committed.json
+          for f in rankings guillotine; do
+            test -f "docs/data/$f.sample.json"
+            cp "docs/data/$f.sample.json" "/tmp/committed-$f.json"
+          done
           node scripts/make-sample.mjs
           python3 - <<'PY'
           import json
-          a = json.load(open('/tmp/committed.json'))
-          b = json.load(open('docs/data/rankings.sample.json'))
-          a.pop('generated_at', None); b.pop('generated_at', None)
-          assert a == b, 'docs/data/rankings.sample.json is not what scripts/make-sample.mjs produces'
-          print('OK - sample board is reproducible.')
+          for f in ('rankings', 'guillotine'):
+              a = json.load(open(f'/tmp/committed-{f}.json'))
+              b = json.load(open(f'docs/data/{f}.sample.json'))
+              for k in ('generated_at',):
+                  a.pop(k, None); b.pop(k, None)
+              a.get('derived_from', {}).pop('generated_at', None)
+              b.get('derived_from', {}).pop('generated_at', None)
+              assert a == b, f'docs/data/{f}.sample.json is not what scripts/make-sample.mjs produces'
+              print(f'OK - {f}.sample.json is reproducible.')
           PY

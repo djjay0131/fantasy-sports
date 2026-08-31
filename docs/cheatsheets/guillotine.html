@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guillotine cheat sheet — survive first</title>
+<meta name="description" content="Tiered guillotine-league draft board: the ranker's tiers, re-ordered for bye-week survival.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap board-wrap">
+    <div class="brand"><a href="../index.html">fantasy<span class="dot">.</span>sports</a></div>
+    <nav class="site">
+      <a href="../index.html">Home</a>
+      <a href="index.html">Cheat sheet</a>
+      <a href="guillotine.html" aria-current="page">Guillotine</a>
+      <a href="../methodology.html">Method</a>
+      <a href="https://github.com/djjay0131/fantasy-sports">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap board-wrap">
+
+    <details class="strategy" open>
+      <summary><b>Guillotine is a survival game.</b> The rules that change the board &mdash; tap to collapse</summary>
+      <div class="strategy-grid">
+        <div>
+          <h4>Score early or die early</h4>
+          <p>The lowest-scoring team is chopped every week and its whole roster hits FAAB waivers. There
+            are no playoffs, so a player who breaks out in Week 10 is worth nothing if you were eliminated
+            in Week 3. Draft the best <em>Week 1</em> lineup, not the best season.</p>
+        </div>
+        <div>
+          <h4>Nothing speculative</h4>
+          <p>No stashing injured players, no snap-count ramps, no suspended players, no "he'll be great
+            after the bye." Consistent scorers over higher-variance breakout bets &mdash; you are trying to
+            avoid a floor, not chase a ceiling.</p>
+        </div>
+        <div>
+          <h4>Byes are the format's real killer</h4>
+          <p>Take late byes over early ones. With 18 teams roughly 252 players are rostered on draft day,
+            so a Week&nbsp;5 bye is covered from an empty waiver pool. By Week&nbsp;13 a dozen eliminated
+            rosters have come back and cover is easy. <b>This is what the board's adjustment encodes.</b></p>
+        </div>
+        <div>
+          <h4>Running backs first</h4>
+          <p>Far fewer RBs than WRs can post a usable week, and 18 teams drains the pool. Two RBs before a
+            second WR is defensible here even if it would be bad practice in redraft. Handcuffing your own
+            RB matters more than usual &mdash; a lost starter is not replaceable from waivers.</p>
+        </div>
+        <div>
+          <h4>QB: the sources disagree</h4>
+          <p>Fantasy Life says wait &mdash; take the value late and exploit early matchups. DraftSharks says
+            a top-tier QB is a weekly floor you can bank. Both are defensible; the board does not pick for
+            you, it just doesn't discount QBs the way a scarcity model would.</p>
+        </div>
+        <div>
+          <h4>FAAB: hold your budget</h4>
+          <p>Keep roughly <b>70&ndash;75%</b> for the genuine difference-makers that fall from eliminated
+            rosters, and <b>25&ndash;30%</b> for the weekly patching. Get aggressive late, once you are one
+            of the few teams left and every week is nearly a coin flip.</p>
+        </div>
+      </div>
+      <p class="src-note">Strategy from
+        <a href="https://www.fantasylife.com/articles/guillotine-leagues/guillotine-leagues-draft-strategy-for-2026-a-crash-course-for-fi">Fantasy Life</a>,
+        <a href="https://www.draftsharks.com/kb/best-guillotine-league-strategy">DraftSharks</a> and
+        <a href="https://www.rotowire.com/football/article/2026-guillotine-league-rankings-avoid-week-1-elimination-127870">RotoWire</a>.
+        Rankings are the ranker's own; only the ordering shifts are ours.</p>
+    </details>
+
+    <div class="board-bar">
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <span class="spacer"></span>
+      <input type="search" id="search" placeholder="Filter players…" aria-label="Filter players">
+      <label class="toggle"><input type="checkbox" id="hide-taken"> Hide taken</label>
+      <button class="btn-sm" id="reset">Reset</button>
+    </div>
+
+    <div id="banner"></div>
+    <div class="meta" id="meta"></div>
+
+    <section class="myteam">
+      <h2>Your roster <span class="muted">— shift-click to add</span></h2>
+      <div id="roster"></div>
+      <div id="byegrid"></div>
+    </section>
+
+    <div class="tiers" id="tiers"></div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap board-wrap">
+    Rankings, not projections. Built by <a href="https://github.com/djjay0131">djjay0131</a> ·
+    governed by <a href="https://github.com/djjay0131/agentic-governance">agentic-governance</a> v0.3 ·
+    <a href="https://github.com/djjay0131/fantasy-sports">source</a>
+  </div>
+</footer>
+
+<script src="../assets/guillotine.js"></script>
+</body>
+</html>
