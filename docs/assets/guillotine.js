@@ -195,6 +195,24 @@
       return;
     }
 
+    // A printable sheet exists only where the private board does. Probe for it
+    // rather than linking blind, so the published page never shows a dead link.
+    if (board._private) {
+      fetch('../print/guillotine-cheatsheet.pdf', { method: 'HEAD' })
+        .then((r) => {
+          if (!r.ok) return;
+          const bar = document.querySelector('.board-bar .spacer');
+          if (!bar) return;
+          const a = document.createElement('a');
+          a.className = 'btn-sm';
+          a.href = '../print/guillotine-cheatsheet.pdf';
+          a.textContent = '⤓ Print sheet (PDF)';
+          a.style.textDecoration = 'none';
+          bar.parentNode.insertBefore(a, bar.nextSibling);
+        })
+        .catch(() => { /* no sheet rendered yet */ });
+    }
+
     ui.banner.innerHTML = board._private
       ? `<div class="note"><strong>Local board.</strong> ${esc(board.provenance)}</div>`
       : `<div class="note"><strong>This is the sample board.</strong> ${esc(board.provenance)}
