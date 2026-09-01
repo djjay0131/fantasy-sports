@@ -8,6 +8,11 @@
 docs/data/*.json
 !docs/data/rankings.sample.json
 !docs/data/guillotine.sample.json
+
+# Printable sheets are rendered from the private board and are served locally
+# only. Nothing here is ever published.
+docs/print/*.pdf
+docs/print/*.html
 *.har
 
 # Secrets

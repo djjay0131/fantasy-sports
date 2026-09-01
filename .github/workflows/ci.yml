@@ -52,12 +52,19 @@ jobs:
             echo "$bad"
             exit 1
           fi
+          bad=$(git ls-files 'docs/print/*' \
+                | grep -v -E '^docs/print/README\.md$' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::Unexpected tracked file under docs/print/ — printable sheets are rendered from the private board and are never published (ADR-0001)"
+            echo "$bad"
+            exit 1
+          fi
           echo "OK — no licensed source data tracked."
 
       - name: Assert .gitignore still covers the private paths
         run: |
           set -euo pipefail
-          for p in data/raw/probe.html data/processed/probe.json docs/data/rankings.json; do
+          for p in data/raw/probe.html data/processed/probe.json docs/data/rankings.json docs/print/probe.pdf; do
             if ! git check-ignore -q "$p"; then
               echo "::error::.gitignore no longer ignores $p (ADR-0001)"
               exit 1
