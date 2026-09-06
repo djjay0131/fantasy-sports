@@ -94,7 +94,13 @@ export function tierBudget({ players, positionBudget, demand, decay = DEFAULT_TI
   const tiers = [...new Set(startable.map((p) => p.tier))].sort((a, b) => a - b);
   if (!tiers.length) return new Map();
 
-  const weights = tiers.map((_, i) => Math.pow(decay, i));
+  // Weight by the ranker's ABSOLUTE tier, not by position-among-what's-left.
+  // In a keeper league the top tiers are often gone before the auction
+  // starts; re-indexing from whoever is first available would hand tier-7
+  // money to tier-2 and erase the gap the ranker put between tiers 4 and 6.
+  // Anchoring to his tier numbers keeps his gaps; normalising to the pool
+  // still spends the money.
+  const weights = tiers.map((t) => Math.pow(decay, t - 1));
   const counts = tiers.map((t) => startable.filter((p) => p.tier === t).length);
   const totalWeight = weights.reduce((a, w, i) => a + w * counts[i], 0);
 
@@ -134,14 +140,32 @@ export function priceposition(players, { positionBudget, demand, budgetRemaining
  */
 export function priceBoard(board, league, you, taken = new Set()) {
   const { teams, budget, roster = DEFAULT_ROSTER, minBid = 1 } = league;
-  const demand = leagueDemand(roster, teams);
-  const leagueMoney = teams * budget;
   const out = {};
 
+  // Mid-draft, the market is what is LEFT, not what everyone started with.
+  // A league that has already spent $1,150 of $2,400 prices the remaining
+  // players against $1,250 and the spots still open — anything else is a
+  // pre-draft valuation wearing a draft-night label.
+  const leagueMoney = league.moneyRemaining ?? teams * budget;
+  const fullDemand = leagueDemand(roster, teams);
+  let demand = fullDemand;
+  if (league.spotsRemaining != null) {
+    const fullSpots = Object.values(fullDemand).reduce((a, b) => a + b, 0);
+    const scale = league.spotsRemaining / fullSpots;
+    demand = Object.fromEntries(Object.entries(fullDemand).map(([k, v]) => [k, Math.max(1, Math.round(v * scale))]));
+  }
+  // Money that will leave the room for positions this board does not rank
+  // (IDP, typically). It is not available to offense and must come off the top.
+  const offenseMoney = Math.max(0, leagueMoney - (league.unrankedReserve ?? 0));
+
   for (const [pos, block] of Object.entries(board.positions)) {
+    // A position the league does not roster is not on the board at all —
+    // pricing it would put a $20 defense in front of someone with no slot for it.
+    const flexable = ['RB', 'WR', 'TE'].includes(pos) && (roster.FLEX || 0) > 0;
+    if (!(roster[pos] > 0) && !flexable) continue;
     const available = block.players.filter((p) => !taken.has(p.id));
     const share = DEFAULT_POSITION_SHARE[pos] ?? 0.02;
-    const positionBudget = leagueMoney * STARTER_SHARE * share;
+    const positionBudget = offenseMoney * STARTER_SHARE * share;
     out[pos] = {
       ...block,
       demand: demand[pos] ?? 0,
@@ -156,5 +180,5 @@ export function priceBoard(board, league, you, taken = new Set()) {
       taken_count: block.players.length - available.length,
     };
   }
-  return { demand, leagueMoney, positions: out };
+  return { demand, leagueMoney, offenseMoney, positions: out };
 }
