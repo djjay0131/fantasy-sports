@@ -50,6 +50,14 @@ const you = { budgetRemaining: me.left, spotsRemaining: me.needed };
 
 const priced = priceBoard(board, league, you, taken);
 
+// Players you hold buy-back rights on are IN the pool — the room bids, you
+// match — so they are priced like anyone else, and flagged so the board can
+// say "this one you can guarantee".
+const matchNames = new Set((cfg.keeper_match?.players || []).map((n) => n.toLowerCase()));
+for (const block of Object.values(priced.positions)) {
+  for (const p of block.players) if (matchNames.has(p.name.toLowerCase())) p.match_right = true;
+}
+
 // --- the keeper-match scenario --------------------------------------------
 // A player you can take back at the room's high bid costs whatever the room
 // says. Show what is left at a few plausible prices so the rest of the night
@@ -59,6 +67,26 @@ const scenarios = (cfg.match_scenarios || []).map((price) => {
   const spots = me.needed - 1;
   return { price, left, spots, per_spot: spots ? Number((left / spots).toFixed(1)) : 0, hard_max: hardMax({ budgetRemaining: left, spotsRemaining: spots }) };
 });
+
+// Two buy-back rights: a grid of what is left if you match BOTH at each pair
+// of prices. Cells you cannot afford are marked, because the room will try
+// to find exactly that pair.
+let matchGrid = null;
+if (cfg.match_grid) {
+  const [nameA, nameB] = Object.keys(cfg.match_grid);
+  const rows = cfg.match_grid[nameA], cols = cfg.match_grid[nameB];
+  const spots = me.needed - 2;
+  matchGrid = {
+    a: nameA, b: nameB, rows, cols,
+    cells: rows.map((pa) => cols.map((pb) => {
+      const left = me.left - pa - pb;
+      const ok = left >= spots * (cfg.min_bid ?? 1);
+      return { a: pa, b: pb, left, spots, ok, hard_max: ok ? hardMax({ budgetRemaining: left, spotsRemaining: spots }) : 0 };
+    })),
+    // The single most useful number: the most the PAIR can cost you.
+    pair_ceiling: me.left - spots * (cfg.min_bid ?? 1),
+  };
+}
 
 // --- overall top-N by suggested dollars ------------------------------------
 // In an auction the cross-position ordering IS the dollar ordering.
@@ -82,7 +110,7 @@ const out = {
     idp_spots_est: idpSpots, idp_reserve_est: Math.round(unrankedReserve),
     offense_money: Math.round(priced.offenseMoney),
   },
-  you: { ...you, team: me.name, hard_max: hardMax(you), scenarios, keeper_match: cfg.keeper_match ?? null },
+  you: { ...you, team: me.name, hard_max: hardMax(you), scenarios, match_grid: matchGrid, keeper_match: cfg.keeper_match ?? null },
   taken: takenRows.length,
   teams: teams.map((t) => ({ ...t, hard_max: hardMax({ budgetRemaining: t.left, spotsRemaining: t.needed }) })),
   demand: priced.demand,
@@ -103,6 +131,11 @@ console.log(`  IDP est  : ${idpSpots} spots, ~$${Math.round(unrankedReserve)} re
 console.log(`  offense  : ~$${Math.round(priced.offenseMoney)} chasing ${Object.values(priced.demand).reduce((a,b)=>a+b,0)} starter slots`);
 console.log(`  you      : ${me.name} — $${me.left} / ${me.needed} spots, hard max $${hardMax(you)}`);
 for (const s of scenarios) console.log(`    if the match costs $${s.price}: $${s.left} for ${s.spots} spots ($${s.per_spot} each), hard max $${s.hard_max}`);
+if (matchGrid) {
+  console.log(`  matches  : ${matchGrid.a} + ${matchGrid.b} together can cost you at most $${matchGrid.pair_ceiling} (leaves $1 x ${matchGrid.cells[0][0].spots} spots)`);
+  console.log(`             ${''.padEnd(10)}${matchGrid.cols.map((c) => ('JSN $' + c).padStart(9)).join('')}`);
+  for (const row of matchGrid.cells) console.log(`             ${('Puka $' + row[0].a).padEnd(10)}${row.map((c) => (c.ok ? '$' + c.left + ' left' : '  X  ').padStart(9)).join('')}`);
+}
 console.log(`  taken    : ${takenRows.length} players off the board`);
 for (const [pos, b] of Object.entries(priced.positions)) {
   const top = b.players.slice(0, 4).map((p) => `${p.name.split(' ').at(-1)} $${p.max_bid_suggested}`).join(', ');

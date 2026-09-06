@@ -34,7 +34,20 @@
         <div><span class="k">Room</span><b>${$(m.money_remaining)} / ${m.spots_remaining} spots</b></div>
         <div><span class="k">Per spot</span><b>${$(m.per_spot)}</b></div>
       </div>`;
-    if (y.keeper_match && y.scenarios?.length) {
+    if (y.match_grid) {
+      const g = y.match_grid;
+      const short = (n) => n.split(' ').at(-1);
+      ui.scen.innerHTML = `
+        <h3 class="byehead">Buy-back rights on both — what's left if you match at…</h3>
+        <p class="muted" style="font-size:13px;margin:0 0 6px">The pair can cost you at most <b class="hard">${$(g.pair_ceiling)}</b> combined (leaves $1 for each of your other ${g.cells[0][0].spots} spots). Past that, one of them walks.</p>
+        <table class="scen grid">
+          <tr><th></th>${g.cols.map((c) => `<th>${esc(short(g.b))} ${$(c)}</th>`).join('')}</tr>
+          ${g.cells.map((row, i) => `<tr><th>${esc(short(g.a))} ${$(g.rows[i])}</th>${row.map((c) => c.ok
+            ? `<td title="hard max after both: ${$(c.hard_max)}"><b>${$(c.left)}</b> left</td>`
+            : `<td class="no">can't</td>`).join('')}</tr>`).join('')}
+        </table>
+        <p class="muted" style="font-size:12.5px;margin:6px 0 0">The room knows you'll match and will price-enforce. Decide your walk-away on each <em>before</em> either name is called.</p>`;
+    } else if (y.keeper_match && y.scenarios?.length) {
       ui.scen.innerHTML = `
         <h3 class="byehead">If you match on ${esc(y.keeper_match.player)} at…</h3>
         <table class="scen"><tr><th>match price</th><th>left</th><th>spots</th><th>per spot</th><th>new hard max</th></tr>
@@ -66,7 +79,7 @@
     const rk = showPos ? `${p.position}${p.rank_position}` : `${p.position}${p.rank_position}`;
     return `<li data-id="${esc(p.id)}" data-clickable class="${cls}">
       <span class="rk">${p.overall ? '#' + p.overall : rk}</span>
-      <span class="nm">${esc(p.name)}<span class="tm"> ${esc(p.team || '')} · ${p.overall ? rk + ' · ' : ''}T${p.tier}${p.bye ? ' · bye ' + p.bye : ''}</span></span>
+      <span class="nm">${p.match_right ? '<span class="mr" title="you hold buy-back rights — match the high bid and he is yours">★</span> ' : ''}${esc(p.name)}<span class="tm"> ${esc(p.team || '')} · ${p.overall ? rk + ' · ' : ''}T${p.tier}${p.bye ? ' · bye ' + p.bye : ''}</span></span>
       <span class="sugg ${p.above_demand_line ? 'dim' : ''}" title="suggested — a policy allocation of the room's remaining money across the ranker's tiers">${$(p.max_bid_suggested)}</span>
       <span class="hardc" title="hard max — the most you can bid and still fill your roster">${$(Math.min(hard, p.max_bid_hard))}</span>
     </li>`;
