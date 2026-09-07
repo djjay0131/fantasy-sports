@@ -1,15 +1,16 @@
-/* redraft.js — snake-draft board.
+/* redraft.js — snake-draft board on the ranker's tiers.
  *
- * What a snake draft actually needs that a ranking does not:
+ * This league drafts off tiers, not ADP, so ADP is not on this page. What is:
  *   - WHEN you pick next, and how many players go before then;
- *   - which of the players you like will survive to that pick (ADP), and
- *     which you must take now or lose;
+ *   - the ranker's tiers per position, and one cross-position view that
+ *     interleaves them so "best tier left on the board" is visible at a glance;
  *   - what your roster still needs.
  *
- * Jeff's positional tiers are the value order. ADP is the room's order. The
- * "By ADP" view lays the room's order out with Jeff's tier on every row and a
- * line where your next pick falls: above it is probably gone, below it is
- * probably there. Data is git-ignored (ADR-0001).
+ * The cross-position view is tier-first: every tier-1 player at every
+ * position, then tier 2, and so on. Within a tier, positions are ordered by
+ * how scarce a startable one is (RB, WR, TE, QB, K, DST), then by the ranker's
+ * own rank. The ranker's export has no overall board; this is the closest
+ * honest thing to one that uses only his numbers. Data is git-ignored.
  */
 (function () {
   'use strict';
@@ -19,7 +20,7 @@
                teams: el('teams'), slot: el('slot'), picks: el('picks'), roster: el('roster'), hide: el('hide-taken') };
 
   const LINEUP_DEFAULT = { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 1, K: 1, DST: 1, BENCH: 7 };
-  let board = null, view = 'ADP', query = '';
+  let board = null, view = 'TIERS', query = '';
   let st = load();
 
   function load() {
@@ -79,22 +80,21 @@
     ].join('');
   }
 
-  function hasAdp() { return all().some((p) => p.adp != null); }
+  const POS_ORDER = ['RB', 'WR', 'TE', 'QB', 'K', 'DST'];
+  const posRank = (p) => { const i = POS_ORDER.indexOf(p); return i < 0 ? 99 : i; };
 
   function renderTabs() {
-    const keys = [...(hasAdp() ? ['ADP'] : []), ...Object.keys(board.positions)];
-    ui.tabs.innerHTML = keys.map((k) => `<button role="tab" data-v="${k}" aria-selected="${k === view}">${k === 'ADP' ? 'By ADP' : k}</button>`).join('');
+    const keys = ['TIERS', ...Object.keys(board.positions)];
+    ui.tabs.innerHTML = keys.map((k) => `<button role="tab" data-v="${k}" aria-selected="${k === view}">${k === 'TIERS' ? 'All tiers' : k}</button>`).join('');
     ui.tabs.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => { view = b.dataset.v; renderTabs(); renderList(); }));
   }
 
   function row(p) {
     const taken = st.taken.includes(p.id), mine = st.mine.includes(p.id);
-    const v = p.vs_adp;
-    const vcls = v == null || v === 0 ? '' : v >= 8 ? 'risk-lo' : v <= -8 ? 'risk-hi' : 'risk-mid';
     return `<li data-id="${esc(p.id)}" data-clickable class="${mine ? 'is-mine' : taken ? 'drafted' : ''}">
-      <span class="rk">${p.adp != null && view === 'ADP' ? p.adp : p.position + p.rank_position}</span>
-      <span class="nm">${esc(p.name)}<span class="tm"> ${esc(p.team || '')} · ${view === 'ADP' ? p.position + p.rank_position + ' · ' : ''}T${p.tier}${p.bye ? ' · bye ' + p.bye : ''}</span></span>
-      <span class="sd ${vcls}" title="rank vs ADP">${v ? (v > 0 ? '+' : '') + v : ''}</span>
+      <span class="rk">${p.position}${p.rank_position}</span>
+      <span class="nm">${esc(p.name)}<span class="tm"> ${esc(p.team || '')}${p.bye ? ' · bye ' + p.bye : ''}</span></span>
+      <span class="sd" style="font:600 11px var(--mono);color:var(--ink-3)">T${p.tier}</span>
     </li>`;
   }
 
@@ -102,17 +102,12 @@
     const q = query.trim().toLowerCase();
     const filt = (p) => (!q || `${p.name} ${p.team || ''}`.toLowerCase().includes(q)) && !(ui.hide.checked && st.taken.includes(p.id));
     let html = '';
-    if (view === 'ADP') {
-      const list = all().filter((p) => p.adp != null).sort((a, b) => a.adp - b.adp).filter(filt);
-      const next = nextMyPick(), after = next ? myPicks(st.teams, st.slot).find((p) => p > next) : null;
-      let marked = false, marked2 = false, out = '';
-      for (const p of list) {
-        if (!marked && next && p.adp >= next) { out += `<li class="pickline"><span>▼ your next pick — #${next}</span></li>`; marked = true; }
-        if (!marked2 && after && p.adp >= after) { out += `<li class="pickline soft"><span>▼ the one after — #${after}</span></li>`; marked2 = true; }
-        out += row(p);
-      }
-      html = `<div class="tier tier-wide"><h3><span>The room's order (ADP) with Jeff's tier</span><span class="n">${list.length}</span></h3><ol>${out}</ol></div>
-        <div class="legend" style="grid-column:1/-1">Above the line is probably gone before you pick again; below it will probably be there. The right-hand number is Jeff's rank vs ADP — <b>+</b> means he likes the player more than the room does, so you can wait; <b>−</b> means the room will take him before Jeff would. <b>Click</b> = drafted by someone. <b>Shift-click</b> = yours.</div>`;
+    if (view === 'TIERS') {
+      const list = all().filter(filt).sort((a, b) => a.tier - b.tier || posRank(a.position) - posRank(b.position) || a.rank_position - b.rank_position);
+      const groups = new Map();
+      for (const p of list) { if (!groups.has(p.tier)) groups.set(p.tier, []); groups.get(p.tier).push(p); }
+      html = [...groups.entries()].map(([t, ps]) => `<div class="tier"><h3><span>Tier ${t} — every position</span><span class="n">${ps.length}</span></h3><ol>${ps.map(row).join('')}</ol></div>`).join('')
+        + `<div class="legend" style="grid-column:1/-1"><b>Tier-first, across positions.</b> Everyone the ranker put in tier 1, then tier 2, and so on — ordered within a tier by how scarce a startable one is (RB, WR, TE, QB), then by his rank. His export has no overall board; this uses only his tiers and ranks, nothing else. <b>Click</b> = gone. <b>Shift-click</b> = yours.</div>`;
     } else {
       const pos = board.positions[view];
       const groups = new Map();
@@ -121,7 +116,7 @@
         groups.get(p.tier).push(p);
       }
       html = [...groups.entries()].map(([t, ps]) => `<div class="tier"><h3><span>Tier ${t}</span><span class="n">${ps.length}</span></h3><ol>${ps.map(row).join('')}</ol></div>`).join('')
-        + `<div class="legend" style="grid-column:1/-1">${pos.tier_source && pos.tier_source !== 'computed' ? `<b>${esc(pos.tier_source)}'s own tiers.</b>` : '<b>Tiers computed here</b> — this source publishes none at this position.'} Right-hand number is rank vs ADP.</div>`;
+        + `<div class="legend" style="grid-column:1/-1">${pos.tier_source && pos.tier_source !== 'computed' ? `<b>${esc(pos.tier_source)}'s own tiers.</b>` : '<b>Tiers computed here</b> — this source publishes none at this position.'} Right-hand column is the tier.</div>`;
     }
     ui.list.innerHTML = html;
     ui.list.querySelectorAll('li[data-clickable]').forEach((li) => li.addEventListener('click', (ev) => {
@@ -149,7 +144,6 @@
     ui.hide.addEventListener('change', renderList);
     el('undo').addEventListener('click', () => { const last = st.taken.pop(); st.mine = st.mine.filter((x) => x !== last); save(); renderPicks(); renderRoster(); renderMeta(); renderList(); });
     el('reset').addEventListener('click', () => { st.taken = []; st.mine = []; save(); renderPicks(); renderRoster(); renderMeta(); renderList(); });
-    if (!hasAdp()) view = Object.keys(board.positions)[0];
     renderPicks(); renderRoster(); renderMeta(); renderTabs(); renderList();
   }
   init();
