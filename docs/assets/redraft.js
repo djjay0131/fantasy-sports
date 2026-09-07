@@ -14,12 +14,14 @@
  */
 (function () {
   'use strict';
-  const SRC = '../data/rankings.json', SAMPLE = '../data/rankings.sample.json';
+  const SRC = '../data/rankings.json', SAMPLE = '../data/rankings.sample.json', TOP = '../data/top200.json';
+  let top = null; // the ranker's own overall board, when a capture exists
   const el = (id) => document.getElementById(id);
   const ui = { tabs: el('tabs'), list: el('list'), meta: el('meta'), search: el('search'), banner: el('banner'),
                teams: el('teams'), slot: el('slot'), picks: el('picks'), roster: el('roster'), hide: el('hide-taken') };
 
-  const LINEUP_DEFAULT = { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 1, K: 1, DST: 1, BENCH: 7 };
+  // ESPN PPR Ins: 12 teams, 9 starters, 5 bench + 2 IR (read from league settings 2026-09-07).
+  const LINEUP_DEFAULT = { QB: 1, RB: 2, WR: 2, TE: 1, FLEX: 1, K: 1, DST: 1, BENCH: 5 };
   let board = null, view = 'TIERS', query = '';
   let st = load();
 
@@ -84,8 +86,9 @@
   const posRank = (p) => { const i = POS_ORDER.indexOf(p); return i < 0 ? 99 : i; };
 
   function renderTabs() {
-    const keys = ['TIERS', ...Object.keys(board.positions)];
-    ui.tabs.innerHTML = keys.map((k) => `<button role="tab" data-v="${k}" aria-selected="${k === view}">${k === 'TIERS' ? 'All tiers' : k}</button>`).join('');
+    const keys = [...(top ? ['TOP'] : []), 'TIERS', ...Object.keys(board.positions)];
+    const label = (k) => k === 'TOP' ? `Jeff's ${top.players.length}` : k === 'TIERS' ? 'All tiers' : k;
+    ui.tabs.innerHTML = keys.map((k) => `<button role="tab" data-v="${k}" aria-selected="${k === view}">${label(k)}</button>`).join('');
     ui.tabs.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => { view = b.dataset.v; renderTabs(); renderList(); }));
   }
 
@@ -102,7 +105,21 @@
     const q = query.trim().toLowerCase();
     const filt = (p) => (!q || `${p.name} ${p.team || ''}`.toLowerCase().includes(q)) && !(ui.hide.checked && st.taken.includes(p.id));
     let html = '';
-    if (view === 'TIERS') {
+    if (view === 'TOP') {
+      const mine = new Set(myPicks(st.teams, st.slot, 20));
+      const list = top.players.filter(filt);
+      const rounds = new Map();
+      for (const p of list) { const r = Math.ceil(p.overall / st.teams); if (!rounds.has(r)) rounds.set(r, []); rounds.get(r).push(p); }
+      html = [...rounds.entries()].map(([r, ps]) => `<div class="tier"><h3><span>Round ${r} <span class="n" style="text-transform:none;letter-spacing:0">· his #${(r - 1) * st.teams + 1}–${r * st.teams}</span></span><span class="n">${ps.length}</span></h3><ol>${ps.map((p) => {
+        const taken = st.taken.includes(p.id), isMine = st.mine.includes(p.id);
+        const yours = mine.has(p.overall);
+        return `<li data-id="${esc(p.id)}" data-clickable class="${isMine ? 'is-mine' : taken ? 'drafted' : ''} ${yours ? 'yourslot' : ''}">
+          <span class="rk">#${p.overall}</span>
+          <span class="nm">${esc(p.name)}<span class="tm"> ${esc(p.team || '')} · ${p.position ? p.position + p.rank_position : '?'}${p.bye ? ' · bye ' + p.bye : ''}${yours ? ' · <b>your pick</b>' : ''}</span></span>
+          <span class="sd" style="font:600 11px var(--mono);color:var(--ink-3)">${p.tier ? 'T' + p.tier : ''}</span>
+        </li>`; }).join('')}</ol></div>`).join('')
+        + `<div class="legend" style="grid-column:1/-1"><b>Jeff's own overall board</b>, captured ${esc(String(top.captured_at || '').slice(0, 10))}, grouped into rounds of ${st.teams} with his positional tier on every row. Rows marked <b>your pick</b> are where your slot falls <em>if the room drafted straight off his list</em> — it won't, but it tells you which tier you should be shopping in at each of your turns. <b>Click</b> = gone. <b>Shift-click</b> = yours.</div>`;
+    } else if (view === 'TIERS') {
       const list = all().filter(filt).sort((a, b) => a.tier - b.tier || posRank(a.position) - posRank(b.position) || a.rank_position - b.rank_position);
       const groups = new Map();
       for (const p of list) { if (!groups.has(p.tier)) groups.set(p.tier, []); groups.get(p.tier).push(p); }
@@ -134,6 +151,7 @@
       try { const r = await fetch(url, { cache: 'no-store' }); if (!r.ok) continue; board = await r.json(); board._private = priv; break; } catch {}
     }
     if (!board) { ui.list.innerHTML = '<div class="empty">No board data.</div>'; return; }
+    try { const r = await fetch(TOP, { cache: 'no-store' }); if (r.ok) { top = await r.json(); view = 'TOP'; } } catch {}
     ui.banner.innerHTML = board._private
       ? `<div class="note"><strong>Local board.</strong> ${esc((board.sources || []).join(', '))} · captured ${esc(String(board.captured_at?.last || '').slice(0, 10))}. Set your league size and slot, then click players as they go.</div>`
       : `<div class="note"><strong>Sample board.</strong> ${esc(board.provenance || '')}</div>`;

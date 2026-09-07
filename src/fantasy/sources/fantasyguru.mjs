@@ -179,8 +179,11 @@ const decode = (s) =>
 
 const up = (s) => (s == null || s === '' ? null : String(s).trim().toUpperCase());
 const num = (s) => {
-  if (s == null || String(s).trim() === '') return null;
-  const n = Number(String(s).replace(/[^\d.-]/g, ''));
+  if (s == null) return null;
+  // An em-dash or other placeholder is "no value", not zero.
+  const cleaned = String(s).replace(/[^\d.-]/g, '');
+  if (cleaned === '' || cleaned === '-' || cleaned === '.') return null;
+  const n = Number(cleaned);
   return Number.isFinite(n) ? n : null;
 };
 

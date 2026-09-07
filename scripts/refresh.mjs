@@ -118,6 +118,7 @@ function rebuild(capturePath) {
     // Each step is allowed to fail without taking the others down: a broken
     // PDF render should not cost you a rebuilt board minutes before a draft.
     for (const [label, argv] of [
+      ['overall top-200 join', ['scripts/top200.mjs']],
       ['guillotine board', ['scripts/guillotine.mjs', '--teams', TEAMS]],
       ['printable sheet', ['scripts/pdf.mjs']],
     ]) {
