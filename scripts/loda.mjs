@@ -53,9 +53,22 @@ const priced = priceBoard(board, league, you, taken);
 // Players you hold buy-back rights on are IN the pool — the room bids, you
 // match — so they are priced like anyone else, and flagged so the board can
 // say "this one you can guarantee".
-const matchNames = new Set((cfg.keeper_match?.players || []).map((n) => n.toLowerCase()));
+const rightsPath = arg('--rights', 'data/processed/loda-rights.json');
+const rights = fs.existsSync(rightsPath) ? JSON.parse(fs.readFileSync(rightsPath, 'utf8')) : {};
+const rightsByName = new Map(Object.entries(rights).map(([n, r]) => [n.toLowerCase(), r]));
+let rightsFlagged = 0;
 for (const block of Object.values(priced.positions)) {
-  for (const p of block.players) if (matchNames.has(p.name.toLowerCase())) p.match_right = true;
+  for (const p of block.players) {
+    const r = rightsByName.get(p.name.toLowerCase());
+    if (!r) continue;
+    rightsFlagged++;
+    // Whoever holds the rights can match the high bid. If that is you, he is
+    // yours to guarantee; if it is someone else, your bid may only be setting
+    // their price — and they may still let him go.
+    p.rights_owner = r.owner;
+    p.rights_prev = r.prev;
+    p.match_right = !!r.me;
+  }
 }
 
 // --- the keeper-match scenario --------------------------------------------
@@ -112,6 +125,7 @@ const out = {
   },
   you: { ...you, team: me.name, hard_max: hardMax(you), scenarios, match_grid: matchGrid, keeper_match: cfg.keeper_match ?? null },
   taken: takenRows.length,
+  rights_in_pool: rightsFlagged,
   teams: teams.map((t) => ({ ...t, hard_max: hardMax({ budgetRemaining: t.left, spotsRemaining: t.needed }) })),
   demand: priced.demand,
   positions: priced.positions,
@@ -136,7 +150,8 @@ if (matchGrid) {
   console.log(`             ${''.padEnd(10)}${matchGrid.cols.map((c) => ('JSN $' + c).padStart(9)).join('')}`);
   for (const row of matchGrid.cells) console.log(`             ${('Puka $' + row[0].a).padEnd(10)}${row.map((c) => (c.ok ? '$' + c.left + ' left' : '  X  ').padStart(9)).join('')}`);
 }
-console.log(`  taken    : ${takenRows.length} players off the board`);
+console.log(`  taken    : ${takenRows.length} rostered players off the board`);
+console.log(`  rights   : ${rightsFlagged} players IN the pool with a buy-back owner`);
 for (const [pos, b] of Object.entries(priced.positions)) {
   const top = b.players.slice(0, 4).map((p) => `${p.name.split(' ').at(-1)} $${p.max_bid_suggested}`).join(', ');
   console.log(`  ${pos.padEnd(4)}: ${String(b.players.length).padStart(3)} left (${b.taken_count} gone), pool $${b.position_budget}  | ${top}`);

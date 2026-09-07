@@ -62,7 +62,8 @@
     ui.meta.innerHTML = [
       `<span><b>Ranker</b> ${esc(board.sources.join(', '))}</span>`,
       `<span><b>Captured</b> ${esc(String(board.captured_at?.last || '').slice(0, 10))}</span>`,
-      `<span><b>Off the board</b> ${board.taken} rostered or kept</span>`,
+      `<span><b>Off the board</b> ${board.taken} rostered</span>`,
+      `<span><b>↩ Buy-back</b> ${board.rights_in_pool} in the pool, owner can match</span>`,
       `<span><b>IDP</b> ~${m.idp_spots_est} spots, ~${$(m.idp_reserve_est)} — <em>not ranked here</em></span>`,
     ].join('');
   }
@@ -79,7 +80,7 @@
     const rk = showPos ? `${p.position}${p.rank_position}` : `${p.position}${p.rank_position}`;
     return `<li data-id="${esc(p.id)}" data-clickable class="${cls}">
       <span class="rk">${p.overall ? '#' + p.overall : rk}</span>
-      <span class="nm">${p.match_right ? '<span class="mr" title="you hold buy-back rights — match the high bid and he is yours">★</span> ' : ''}${esc(p.name)}<span class="tm"> ${esc(p.team || '')} · ${p.overall ? rk + ' · ' : ''}T${p.tier}${p.bye ? ' · bye ' + p.bye : ''}</span></span>
+      <span class="nm">${p.match_right ? '<span class="mr" title="you hold buy-back rights — match the high bid and he is yours">★</span> ' : ''}${esc(p.name)}${p.rights_owner && !p.match_right ? ` <span class="ro" title="${esc(p.rights_owner)} can match the high bid (was $${p.rights_prev})">↩ ${esc(p.rights_owner)}</span>` : ''}<span class="tm"> ${esc(p.team || '')} · ${p.overall ? rk + ' · ' : ''}T${p.tier}${p.bye ? ' · bye ' + p.bye : ''}</span></span>
       <span class="sugg ${p.above_demand_line ? 'dim' : ''}" title="suggested — a policy allocation of the room's remaining money across the ranker's tiers">${$(p.max_bid_suggested)}</span>
       <span class="hardc" title="hard max — the most you can bid and still fill your roster">${$(Math.min(hard, p.max_bid_hard))}</span>
     </li>`;
