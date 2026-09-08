@@ -4,11 +4,11 @@
 //   node scripts/serve.mjs [--port 8722]
 //
 // GET  /...                 static files under docs/
-// POST /api/draft-live      {picks:[{n,round,teamId,playerId,name,pos,team}], me:<teamId>}
+// POST /api/draft-live      {picks:[{n,round,teamId,playerId,name,pos,team}], me:<teamId>, league?}
 //                           -> resolves names against the board, writes
-//                              docs/data/draft-live.json (git-ignored, ADR-0001)
+//                              docs/data/draft-live[.<league>].json (git-ignored, ADR-0001)
 //
-// The poster is a small loop injected into a logged-in ESPN tab; it uses the
+// The poster is a small loop injected into a logged-in league tab (ESPN, CBS); it uses the
 // browser's own session, so no credential is ever copied out of the browser.
 // CORS is open only because the caller is a page on another origin (ESPN)
 // talking to this machine; the endpoint writes one derived file and nothing
@@ -23,7 +23,7 @@ const args = process.argv.slice(2);
 const arg = (f, d) => { const i = args.indexOf(f); return i >= 0 ? args[i + 1] : d; };
 const PORT = Number(arg('--port', 8722));
 const ROOT = path.resolve('docs');
-const LIVE = path.join(ROOT, 'data', 'draft-live.json');
+const liveFile = (league) => path.join(ROOT, 'data', `draft-live${league && /^[a-z0-9-]+$/i.test(league) ? '.' + league : ''}.json`);
 const BOARD = path.join(ROOT, 'data', 'rankings.json');
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.pdf': 'application/pdf', '.png': 'image/png', '.svg': 'image/svg+xml', '.md': 'text/plain' };
@@ -72,10 +72,10 @@ const server = http.createServer((req, res) => {
         const picks = (data.picks || []).map((p) => {
           const hit = resolve(idx, p);
           if (!hit) unresolved++;
-          return { n: p.n, round: p.round, teamId: p.teamId, teamName: p.teamName || null, name: p.name, pos: p.pos, team: p.team, id: hit?.id || null, board: hit ? `${hit.position}${hit.rank_position}` : null, tier: hit?.tier ?? null, mine: p.teamId === data.me };
+          return { n: p.n, round: p.round, teamId: p.teamId, teamName: p.teamName || null, name: p.name, pos: p.pos, team: p.team, keeper: !!p.keeper, id: hit?.id || null, board: hit ? `${hit.position}${hit.rank_position}` : null, tier: hit?.tier ?? null, mine: p.teamId === data.me };
         });
-        const out = { updated: new Date().toISOString(), me: data.me, in_progress: !!data.in_progress, picks_made: picks.length, unresolved, picks };
-        fs.writeFileSync(LIVE, JSON.stringify(out, null, 1));
+        const out = { updated: new Date().toISOString(), league: data.league || null, me: data.me, in_progress: !!data.in_progress, picks_made: picks.length, unresolved, picks };
+        fs.writeFileSync(liveFile(data.league), JSON.stringify(out, null, 1));
         res.writeHead(200, { ...cors, 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ ok: true, picks: picks.length, unresolved }));
         const last = picks.at(-1);

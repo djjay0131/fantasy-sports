@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Redraft board — snake picks on the ranker's tiers</title>
+<title>Foxwoods keeper board — snake picks on the ranker's tiers, keepers pre-filled</title>
 <link rel="stylesheet" href="../assets/style.css">
 <style>
   .you-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px 14px; margin: 6px 0 12px; }
@@ -25,12 +25,12 @@
   .tier li.is-mine .nm { text-decoration: none; font-weight: 600; }
 </style>
 </head>
-<body>
+<body data-key="fs.foxwoods" data-draft="../data/foxwoods-draft.json" data-live="../data/draft-live.foxwoods.json" data-lineup='{"QB":1,"RB":2,"WR":2,"TE":1,"FLEX":1,"K":1,"DST":1,"BENCH":6}'>
 <header class="site"><div class="wrap board-wrap">
   <div class="brand"><a href="../index.html">fantasy<span class="dot">.</span>sports</a></div>
   <nav class="site">
-    <a href="../index.html">Home</a><a href="index.html">Cheat sheet</a><a href="redraft.html" aria-current="page">Redraft</a>
-    <a href="guillotine.html">Guillotine</a><a href="loda.html">L-O-D-A</a><a href="foxwoods.html">Foxwoods</a><a href="../methodology.html">Method</a>
+    <a href="../index.html">Home</a><a href="index.html">Cheat sheet</a><a href="redraft.html">Redraft</a>
+    <a href="guillotine.html">Guillotine</a><a href="loda.html">L-O-D-A</a><a href="foxwoods.html" aria-current="page">Foxwoods</a><a href="../methodology.html">Method</a>
   </nav>
 </div></header>
 <main><div class="wrap board-wrap">
@@ -40,7 +40,7 @@
       <label>Teams <input type="number" id="teams" min="2" max="20"></label>
       <label>Your slot <input type="number" id="slot" min="1" max="20"></label>
       <button class="btn-sm" id="undo">Undo last</button>
-      <button class="btn-sm" id="reset">Reset draft</button>
+      <button class="btn-sm" id="reset">Reset picks (keeps keepers)</button>
     </div>
     <div id="live" style="margin:0 0 8px;font-size:13px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"></div>
     <div id="picks"></div>

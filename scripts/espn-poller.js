@@ -4,7 +4,7 @@
 // and POSTs the picks to the local board server, which resolves them against
 // the ranker's board and writes docs/data/draft-live.json. Nothing here reads
 // or copies a credential; the browser attaches its cookies as it would for
-// any page fetch. Injected by scripts/espn-inject.sh via AppleScript.
+// any page fetch. Injected by scripts/draft-arm.sh via AppleScript.
 (function () {
   if (window.__fsLive && window.__fsLive.timer) { clearInterval(window.__fsLive.timer); }
   var LEAGUE = 334829, SEASON = 2026, ME = 24;
@@ -39,7 +39,7 @@
       });
       var sig = picks.length + ':' + (picks.length ? picks[picks.length - 1].playerId : 0);
       // Chrome blocks a public page from POSTing to localhost, so the tab only
-      // HOLDS the payload; scripts/espn-bridge.sh pulls it out via AppleScript
+      // HOLDS the payload; scripts/draft-bridge.sh pulls it out via AppleScript
       // and posts it from the shell.
       S.payload = JSON.stringify({ picks: picks, me: ME, in_progress: !!dd.inProgress, sig: sig });
       S.last = sig;
