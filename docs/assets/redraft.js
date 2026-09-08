@@ -14,7 +14,8 @@
  */
 (function () {
   'use strict';
-  const SRC = '../data/rankings.json', SAMPLE = '../data/rankings.sample.json', TOP = '../data/top200.json';
+  const SRC = '../data/rankings.json', SAMPLE = '../data/rankings.sample.json', TOP = '../data/top200.json', LIVE = '../data/draft-live.json';
+  let live = null; // picks pushed by the ESPN poller, when the draft is on
   let top = null; // the ranker's own overall board, when a capture exists
   const el = (id) => document.getElementById(id);
   const ui = { tabs: el('tabs'), list: el('list'), meta: el('meta'), search: el('search'), banner: el('banner'),
@@ -41,6 +42,37 @@
     return out;
   }
   function currentPick() { return st.taken.length + 1; }
+
+  async function pollLive() {
+    try {
+      const r = await fetch(LIVE, { cache: 'no-store' });
+      if (!r.ok) return;
+      const data = await r.json();
+      const changed = !live || data.updated !== live.updated;
+      live = data;
+      if (!changed) return;
+      const t = new Set(st.taken), m = new Set(st.mine);
+      for (const p of data.picks || []) {
+        if (!p.id) continue;
+        t.add(p.id);
+        if (p.mine) m.add(p.id);
+      }
+      st.taken = [...t]; st.mine = [...m]; save();
+      renderPicks(); renderRoster(); renderMeta(); renderList(); renderLive();
+    } catch { /* no live file yet */ }
+  }
+
+  function renderLive() {
+    const el2 = el('live');
+    if (!el2) return;
+    if (!live || !live.picks?.length) { el2.innerHTML = live ? '<span class="livepill">LIVE · waiting for pick 1</span>' : ''; return; }
+    const last = live.picks.at(-1);
+    const age = Math.round((Date.now() - new Date(live.updated).getTime()) / 1000);
+    const stale = age > 90;
+    el2.innerHTML = `<span class="livepill ${stale ? 'stale' : ''}">${stale ? 'STALE ' + age + 's' : 'LIVE'}</span>
+      <span class="muted">last: #${last.n} ${esc(last.name)} <em>${esc(last.board || last.pos || '')}</em>${last.mine ? ' — <b>you</b>' : last.teamName ? ' — ' + esc(last.teamName) : ''}</span>
+      ${live.unresolved ? `<span class="muted"> · ${live.unresolved} not matched to the board</span>` : ''}`;
+  }
   function nextMyPick() { const cur = currentPick(); return myPicks(st.teams, st.slot).find((p) => p >= cur) ?? null; }
 
   function renderPicks() {
@@ -163,6 +195,7 @@
     el('undo').addEventListener('click', () => { const last = st.taken.pop(); st.mine = st.mine.filter((x) => x !== last); save(); renderPicks(); renderRoster(); renderMeta(); renderList(); });
     el('reset').addEventListener('click', () => { st.taken = []; st.mine = []; save(); renderPicks(); renderRoster(); renderMeta(); renderList(); });
     renderPicks(); renderRoster(); renderMeta(); renderTabs(); renderList();
+    pollLive(); setInterval(pollLive, 12000);
   }
   init();
 })();

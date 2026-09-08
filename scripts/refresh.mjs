@@ -137,7 +137,7 @@ rebuild(newestCapture());
 // --- serve -----------------------------------------------------------------
 const port = arg('--serve', null);
 if (port) {
-  const srv = spawn('python3', ['-m', 'http.server', '-d', 'docs', port], { stdio: 'ignore' });
+  const srv = spawn('node', ['scripts/serve.mjs', '--port', String(port)], { stdio: 'inherit' });
   process.on('exit', () => srv.kill());
   log(`serving docs/ at http://localhost:${port}/cheatsheets/`);
 }
