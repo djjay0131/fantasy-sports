@@ -5,6 +5,8 @@
 //
 //   node scripts/print-draft.mjs --draft docs/data/foxwoods-draft.json
 //   node scripts/print-draft.mjs --draft ... --live docs/data/draft-live.foxwoods.json --out docs/print/foxwoods-cheatsheet.pdf
+//   node scripts/print-draft.mjs --draft ... --sections positions      # just the tiered position sheets
+//                                          (--sections top,positions,card is the default)
 //
 // Pages: the ranker's overall top 200 (3 columns, round bands), then one tiered
 // sheet per position, then a one-page draft card (roster, order, scoring in
@@ -28,6 +30,7 @@ const board = JSON.parse(fs.readFileSync('docs/data/rankings.json', 'utf8'));
 const top = fs.existsSync('docs/data/top200.json') ? JSON.parse(fs.readFileSync('docs/data/top200.json', 'utf8')) : null;
 const outPdf = arg('--out', `docs/print/${draft.league}-cheatsheet.pdf`);
 const pageSize = arg('--page', 'letter portrait');
+const SECTIONS = new Set(arg('--sections', 'top,positions,card').split(',').map((x) => x.trim()));
 const tpl = fs.readFileSync('scripts/templates/print-board.html', 'utf8');
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -133,7 +136,11 @@ function draftCard() {
 }
 
 const ORDER = ['RB', 'WR', 'QB', 'TE', 'K', 'DST'];
-const sheets = [overallSheet(), ...ORDER.filter((p) => board.positions[p]).map((p) => positionSheet(p, board.positions[p])), draftCard()].join('\n');
+const sheets = [
+  ...(SECTIONS.has('top') ? [overallSheet()] : []),
+  ...(SECTIONS.has('positions') ? ORDER.filter((p) => board.positions[p]).map((p) => positionSheet(p, board.positions[p])) : []),
+  ...(SECTIONS.has('card') ? [draftCard()] : []),
+].join('\n');
 const extraCss = `<style>
   tr.gone .nm { text-decoration: line-through; text-decoration-thickness: 1.2pt; color: #8a8a8a; font-weight: 500; }
   tr.gone td { color: #9a9a9a; }
