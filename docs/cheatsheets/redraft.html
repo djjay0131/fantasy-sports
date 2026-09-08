@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redraft board — snake picks on the ranker's tiers</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .you-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px 14px; margin: 6px 0 12px; }
+  .you-grid div { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; }
+  .you-grid .k { display: block; font: 600 10.5px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+  .you-grid b { font-size: 17px; }
+  .mono-sm { font: 600 12px var(--mono) !important; }
+  .cfg { display: inline-flex; gap: 10px; align-items: center; font-size: 13px; color: var(--ink-2); }
+  .cfg input { width: 54px; font: 14px var(--sans); padding: 6px 8px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--panel); color: var(--ink); }
+  .chip.need { border-color: var(--warn); color: var(--warn); background: var(--warn-soft); }
+  .tier-wide { grid-column: 1 / -1; }
+  .tier-wide ol { column-count: 3; column-gap: 0; }
+  .tier-wide li { break-inside: avoid; }
+  .tier li.pickline { display: block; padding: 6px 14px; background: var(--accent-soft); color: var(--accent); font: 700 11.5px var(--mono); letter-spacing: .05em; text-transform: uppercase; break-inside: avoid; }
+  .tier li.pickline.soft { background: var(--panel-2); color: var(--ink-3); }
+  .livepill { font: 700 10.5px var(--mono); letter-spacing: .08em; padding: 3px 8px; border-radius: 999px; background: var(--accent); color: #fff; }
+  .livepill.stale { background: var(--warn); }
+  .tier li.yourslot { box-shadow: inset 3px 0 0 var(--accent); }
+  .tier li.is-mine { background: var(--accent-soft); opacity: 1; }
+  .tier li.is-mine .nm { text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap board-wrap">
+  <div class="brand"><a href="../index.html">fantasy<span class="dot">.</span>sports</a></div>
+  <nav class="site">
+    <a href="../index.html">Home</a><a href="index.html">Cheat sheet</a><a href="redraft.html" aria-current="page">Redraft</a>
+    <a href="guillotine.html">Guillotine</a><a href="loda.html">L-O-D-A</a><a href="foxwoods.html">Foxwoods</a><a href="../methodology.html">Method</a>
+  </nav>
+</div></header>
+<main><div class="wrap board-wrap">
+  <div id="banner" style="margin-top:14px"></div>
+  <section class="myteam">
+    <div class="cfg" style="margin-bottom:8px">
+      <label>Teams <input type="number" id="teams" min="2" max="20"></label>
+      <label>Your slot <input type="number" id="slot" min="1" max="20"></label>
+      <button class="btn-sm" id="undo">Undo last</button>
+      <button class="btn-sm" id="reset">Reset draft</button>
+    </div>
+    <div id="live" style="margin:0 0 8px;font-size:13px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"></div>
+    <div id="picks"></div>
+    <div id="roster"></div>
+  </section>
+  <div class="board-bar">
+    <div class="tabs" id="tabs" role="tablist"></div><span class="spacer"></span>
+    <input type="search" id="search" placeholder="Filter players…" aria-label="Filter players">
+    <label class="toggle"><input type="checkbox" id="hide-taken"> Hide gone</label>
+  </div>
+  <div class="meta" id="meta"></div>
+  <div class="tiers" id="list"></div>
+</div></main>
+<footer class="site"><div class="wrap board-wrap">Rankings, not projections. Built by <a href="https://github.com/djjay0131">djjay0131</a> · <a href="https://github.com/djjay0131/fantasy-sports">source</a></div></footer>
+<script src="../assets/redraft.js"></script>
+</body></html>

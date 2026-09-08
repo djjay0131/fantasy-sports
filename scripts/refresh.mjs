@@ -25,6 +25,10 @@ const args = process.argv.slice(2);
 const arg = (f, d = null) => { const i = args.indexOf(f); return i >= 0 ? args[i + 1] : d; };
 
 const SOURCE = arg('--source', 'fantasyguru');
+// --full carries the rebuild all the way through: PPR board -> guillotine
+// re-rank -> printable PDF. One download, everything current.
+const FULL = args.includes('--full');
+const TEAMS = arg('--teams', '18');
 const FORMAT = arg('--format', 'ppr-1qb-12');
 const WATCH_DIR = arg('--from', path.join(os.homedir(), 'Downloads'));
 const EXPORT_MATCH = new RegExp(arg('--match', '^Jeff_Rankings.*\\.(xls|xlsx|html?)$'), 'i');
@@ -109,6 +113,19 @@ function rebuild(capturePath) {
   }
   run('node', ['scripts/tier.mjs', '--in', ROWS, '--out', BOARD, '--format', FORMAT]);
   log(`board rebuilt from ${rows.length} rows -> ${BOARD}`);
+
+  if (FULL) {
+    // Each step is allowed to fail without taking the others down: a broken
+    // PDF render should not cost you a rebuilt board minutes before a draft.
+    for (const [label, argv] of [
+      ['overall top-200 join', ['scripts/top200.mjs']],
+      ['guillotine board', ['scripts/guillotine.mjs', '--teams', TEAMS]],
+      ['printable sheet', ['scripts/pdf.mjs']],
+    ]) {
+      try { run('node', argv); log(`${label} rebuilt`); }
+      catch (e) { log(`${label} FAILED: ${e.message}`); }
+    }
+  }
   return true;
 }
 
@@ -120,7 +137,7 @@ rebuild(newestCapture());
 // --- serve -----------------------------------------------------------------
 const port = arg('--serve', null);
 if (port) {
-  const srv = spawn('python3', ['-m', 'http.server', '-d', 'docs', port], { stdio: 'ignore' });
+  const srv = spawn('node', ['scripts/serve.mjs', '--port', String(port)], { stdio: 'inherit' });
   process.on('exit', () => srv.kill());
   log(`serving docs/ at http://localhost:${port}/cheatsheets/`);
 }
