@@ -1,8 +1,8 @@
 # Governance Delta: fantasy-sports
 
 Status: Active
-Last updated: 2026-08-29
-Governance: agentic-governance v0.3
+Last updated: 2026-09-10
+Governance: agentic-governance v0.5
 
 This file localizes the canonical governance in
 [`agentic-governance`](https://github.com/djjay0131/agentic-governance) for
@@ -81,9 +81,33 @@ is not a violation, an undeclared path is.
 - Memory-bank path: `llm/memory_bank/`
 - Artifacts directory (the data plane): `docs/`
 
-This repo declares no constitution directory: the executive role charters
-are the canonical ones in agentic-governance `llm/constitution/`, adopted
-without adjustment (see §Constitution Adjustments).
+Slots deliberately not declared: **Constitution** and **Sprints**.
+
+- **Constitution.** The executive role charters are the canonical ones in
+  agentic-governance `llm/constitution/`, adopted without adjustment (see
+  §Constitution Adjustments).
+- **Sprints.** The slot exists as of agentic-governance v0.5.0 and this repo
+  has no sprint content in any tree — work here runs as issue-scoped
+  branches, and the execution record lives in the memory bank and the
+  backlog rather than in sprint documents. An absent slot is not a
+  violation; the slot is declared before any `llm/sprints/` directory is
+  created.
+
+Two path classes in this tree sit outside the slot table, and are named here
+rather than left silent:
+
+- `.claude/` — Claude Code's project settings and the README explaining
+  them. Control plane by role, but a tool-contract path in nature, since the
+  directory name is fixed by the tool and not chosen here. It is **not** in
+  the closed exemption class in agentic-governance
+  `llm/governance/project-operating-system.md` §Repository Areas, which
+  names `.github/`, `.claude-plugin/`, the plugin payload root and the
+  root-convention files, so it is declared here instead of being treated as
+  exempt.
+- `src/`, `scripts/`, `tests/` — the ingestion and tiering library, its
+  runnable entry points, and the test suite. These are the "existing
+  structure the artifact plainly belongs to" case in §Repository Areas, and
+  hold no governed document class.
 
 ## Roadmap
 
@@ -123,8 +147,11 @@ deny llm/governance/adr/0000-template.md
 
 ## Platform Enforcement Reality
 
-Verified 2026-08-29 against `github.com/djjay0131/fantasy-sports` via
-`gh api repos/djjay0131/fantasy-sports/branches/main/protection`. The repo is
+Verified 2026-08-29 and re-verified 2026-09-10 against
+`github.com/djjay0131/fantasy-sports` via
+`gh api repos/djjay0131/fantasy-sports/branches/main/protection`; every
+statement below is what the API returned, unchanged between the two
+readings. The repo is
 public, so the protection API is available on the free plan — unlike the
 private repos in this portfolio, where a 403 makes protection unavailable.
 

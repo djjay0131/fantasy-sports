@@ -1,6 +1,6 @@
 # Active Context
 
-Last updated: 2026-08-29
+Last updated: 2026-09-10
 
 ## Now
 
@@ -9,6 +9,14 @@ the first source connector is next.
 
 ## Recently done
 
+- 2026-09-10 — **Upgraded onto agentic-governance v0.5** (was v0.3). No
+  content moved: the two-plane layout was already correct. The delta now
+  states the **Sprints** slot decision (absent — no sprint content in any
+  tree; slot added in canon 0.5.0), names `.claude/`, `src/`, `scripts/`
+  and `tests/` as paths outside the slot table, and re-verifies
+  §Platform Enforcement Reality against the GitHub API. `CONTRIBUTING.md`
+  step 4 picks up canon 0.5.2 — opening the draft PR is an author
+  responsibility, not the owner's.
 - 2026-08-29 — Repository created and **adopted onto agentic-governance
   v0.3**. Delta at `llm/governance/governance-delta.md`; layout declared
   (`llm/` control plane, `docs/` data plane); routing rule installed in
