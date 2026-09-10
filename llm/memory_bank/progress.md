@@ -1,10 +1,10 @@
 # Progress
 
-Last updated: 2026-08-29
+Last updated: 2026-09-10
 
 ## Works
 
-- Repository scaffold, governance adoption (agentic-governance v0.3),
+- Repository scaffold, governance adoption (agentic-governance v0.5),
   ADR system, GitHub surface, CI wiring.
 - Static board renders positional tiers from a JSON dataset with no build
   step; falls back to the committed sample when no private dataset is
@@ -27,3 +27,4 @@ Last updated: 2026-08-29
 | 2026-08-29 | Rankings, not projections | ADR-0002 |
 | 2026-08-29 | Adopted agentic-governance v0.3; steward INACTIVE | `llm/governance/governance-delta.md` |
 | 2026-08-29 | Branch protection configured on `main`; `enforce_admins` deliberately off (single maintainer) | `llm/governance/governance-delta.md` §Platform Enforcement Reality |
+| 2026-09-10 | Upgraded the pin to agentic-governance v0.5; Sprints and Constitution slots declared absent with reasons | `llm/governance/governance-delta.md` §Repository Layout |
