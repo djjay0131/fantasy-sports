@@ -2,7 +2,7 @@
 
 Status: Active
 Last updated: 2026-09-10
-Governance: agentic-governance v0.7
+Governance: agentic-governance v0.8
 
 This file localizes the canonical governance in
 [`agentic-governance`](https://github.com/djjay0131/agentic-governance) for
