@@ -146,14 +146,14 @@ Preferred, when the governance plugin is loaded:
 node "${CLAUDE_PLUGIN_ROOT}/scripts/governance-checks.mjs" --layout
 ```
 
-Fallback, from a plain shell, using the path declared in §Canon Location:
+From a plain shell, the same script — `plugin/scripts/governance-checks.mjs
+--layout` — under the `Canon checkout` declared in §Canon Location above. The
+checkout path is deliberately **not** expanded here: the machine-specific value
+must appear in exactly one place per repo, and twenty lines below the
+declaration is still a second place.
 
-```
-node ~/code/agentic-governance/plugin/scripts/governance-checks.mjs --layout
-```
-
-Both invoke the same script; neither is a bare machine path beyond the single
-declaration above. `--layout` is required, not optional: it asserts that every
+Both forms invoke the same script, and both reach canon through that single
+declaration. `--layout` is required, not optional: it asserts that every
 path declared in §Repository Layout exists and that no source of truth sits
 under the declared artifacts directory.
 
