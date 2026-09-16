@@ -1,14 +1,14 @@
 # fantasy-sports
 
 Status: Active
-Last updated: 2026-08-29
+Last updated: 2026-09-10
 
 Research, data tooling, and draft-day decision support for fantasy football.
 Rankings-first: this project ranks and **tiers** players, it does not publish
 point projections.
 
 Governance: [agentic-governance](https://github.com/djjay0131/agentic-governance)
-v0.3 — project specifics in
+v0.5 — project specifics in
 [`llm/governance/governance-delta.md`](llm/governance/governance-delta.md).
 
 ## What is here
