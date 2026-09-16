@@ -15,6 +15,7 @@ Files are named `NNNN-short-title.md`, numbered from `0001`.
 | [0002](0002-rankings-not-projections.md) | Rankings, not projections | Accepted |
 | [0003](0003-source-tiers-are-authoritative.md) | A source's own tiers are authoritative over ours | Accepted |
 | [0004](0004-guillotine-is-a-derived-board.md) | The Guillotine board is a derived re-rank, not a second ranking | Accepted |
+| [0005](0005-keeper-draft-is-slot-state-not-a-reranking.md) | A keeper draft is slot state on the ranker's board, not a re-ranking | Accepted |
 
 ## Lifecycle
 
