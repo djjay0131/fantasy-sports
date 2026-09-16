@@ -1,8 +1,8 @@
 # Governance Delta: fantasy-sports
 
 Status: Active
-Last updated: 2026-09-10
-Governance: agentic-governance v0.8
+Last updated: 2026-09-16
+Governance: agentic-governance v0.9
 
 This file localizes the canonical governance in
 [`agentic-governance`](https://github.com/djjay0131/agentic-governance) for
@@ -161,6 +161,15 @@ In CI the canonical repo is checked out alongside this one (into
 `.agentic-governance/`) and the same script is invoked from this repo's root
 (`.github/workflows/ci.yml`).
 
+**The CI checkout is not pinned.** That step passes no `ref:`, so it resolves
+canon's default branch on every run and a canon change reaches this repo the
+moment it lands on canon's `main` — with no commit here. The `Governance:` line
+at the top of this file therefore records *the canon version in use*, not a pin
+this repo enforces; it is updated to match reality rather than to authorize an
+upgrade. A deliberate-upgrade contract would need `ref:` set to a commit SHA
+(the shape `website` uses). Changing the mechanism is its own decision and has
+not been made.
+
 ## L0 Path Allowlist
 
 The fenced block below is an instance of the canonical rule set in
@@ -187,11 +196,12 @@ deny llm/governance/adr/0000-template.md
 
 ## Platform Enforcement Reality
 
-Verified 2026-08-29 and re-verified 2026-09-10 against
+Verified 2026-08-29, re-verified 2026-09-10 and again 2026-09-16 against
 `github.com/djjay0131/fantasy-sports` via
-`gh api repos/djjay0131/fantasy-sports/branches/main/protection`; every
-statement below is what the API returned, unchanged between the two
-readings. The repo is
+`gh api repos/djjay0131/fantasy-sports/branches/main/protection` and
+`gh api repos/djjay0131/fantasy-sports`; every
+statement below is what the API returned, unchanged across the
+readings except where a date says otherwise. The repo is
 public, so the protection API is available on the free plan — unlike the
 private repos in this portfolio, where a 403 makes protection unavailable.
 
@@ -201,6 +211,16 @@ private repos in this portfolio, where a 403 makes protection unavailable.
   disabled; `strict` (branch must be up to date before merging).
 - **Required status checks: AVAILABLE and CONFIGURED** — `governance-checks`,
   `licensed-data-guard`, and `tests`, all from `.github/workflows/ci.yml`.
+- **`delete_branch_on_merge`: TRUE.** Verified 2026-09-16
+  (`gh api repos/djjay0131/fantasy-sports -q .delete_branch_on_merge` returned
+  `true`). The head branch of a merged pull request is deleted by the platform,
+  so the PR lifecycle's closing clause — "Branch deleted post-merge" — no longer
+  depends on whoever merges remembering `--delete-branch`
+  (agentic-governance `llm/governance/branch-protection.md` §Branch Cleanup).
+  This is a **repository setting, not branch protection**, so it is available on
+  every plan, including the private-repo-on-a-free-plan case where the
+  protection API 403s. It is therefore the one enforcement fact in this section
+  that does not depend on the repo being public.
 - **`enforce_admins`: DISABLED.** The owner can bypass every rule above.
   This is honest rather than aspirational: the owner is the only
   maintainer, and an admin lockout with no second human is an outage, not a
