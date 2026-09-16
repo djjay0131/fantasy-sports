@@ -1,6 +1,6 @@
 # Project Brief
 
-Last updated: 2026-08-29
+Last updated: 2026-09-10
 
 **fantasy-sports** is a rankings-and-tiers decision-support project for
 fantasy football drafts and in-season roster moves.
@@ -8,7 +8,7 @@ fantasy football drafts and in-season roster moves.
 - **Owner:** djjay0131
 - **Repo:** https://github.com/djjay0131/fantasy-sports (public)
 - **Site:** https://djjay0131.github.io/fantasy-sports/
-- **Governance:** agentic-governance v0.3 — `llm/governance/governance-delta.md`
+- **Governance:** agentic-governance v0.5 — `llm/governance/governance-delta.md`
 - **Design authority:** `llm/specs/2026-08-29-fantasy-sports-platform-design.md`
 
 ## The one-sentence version

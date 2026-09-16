@@ -1,8 +1,8 @@
 # Governance Delta: fantasy-sports
 
 Status: Active
-Last updated: 2026-08-29
-Governance: agentic-governance v0.3
+Last updated: 2026-09-16
+Governance: agentic-governance v0.9
 
 This file localizes the canonical governance in
 [`agentic-governance`](https://github.com/djjay0131/agentic-governance) for
@@ -81,21 +81,94 @@ is not a violation, an undeclared path is.
 - Memory-bank path: `llm/memory_bank/`
 - Artifacts directory (the data plane): `docs/`
 
-This repo declares no constitution directory: the executive role charters
-are the canonical ones in agentic-governance `llm/constitution/`, adopted
-without adjustment (see §Constitution Adjustments).
+Slots deliberately not declared: **Constitution** and **Sprints**.
+
+- **Constitution.** The executive role charters are the canonical ones in
+  agentic-governance `llm/constitution/`, adopted without adjustment (see
+  §Constitution Adjustments).
+- **Sprints.** The slot exists as of agentic-governance v0.5.0 and this repo
+  has no sprint content in any tree — work here runs as issue-scoped
+  branches, and the execution record lives in the memory bank and the
+  backlog rather than in sprint documents. An absent slot is not a
+  violation; the slot is declared before any `llm/sprints/` directory is
+  created.
+
+Two path classes in this tree sit outside the slot table, and are named here
+rather than left silent:
+
+- `.claude/` — Claude Code's project settings and the README explaining
+  them. Control plane by role, but a tool-contract path in nature, since the
+  directory name is fixed by the tool and not chosen here. It is **not** in
+  the closed exemption class in agentic-governance
+  `llm/governance/project-operating-system.md` §Repository Areas, which
+  names `.github/`, `.claude-plugin/`, the plugin payload root and the
+  root-convention files, so it is declared here instead of being treated as
+  exempt.
+- `src/`, `scripts/`, `tests/` — the ingestion and tiering library, its
+  runnable entry points, and the test suite. These are the "existing
+  structure the artifact plainly belongs to" case in §Repository Areas, and
+  hold no governed document class.
 
 ## Roadmap
 
 Path: `llm/features/BACKLOG.md`
 
+## Canon Location
+
+Where the canonical `agentic-governance` repo lives, declared once. **This is
+the only machine-specific path this repo is permitted to contain** — every
+canon citation in `CLAUDE.md`, `AGENTS.md` and the check command below resolves
+against it, so it changes in one place instead of a dozen.
+
+- Canon checkout: `~/code/agentic-governance`
+- Canon repository: `https://github.com/djjay0131/agentic-governance`
+- Plugin registered: `repo` (`.claude/settings.json`) — the
+  `agentic-governance` marketplace is registered by git URL and
+  `governance@agentic-governance` is enabled, so the `/governance:*` skills
+  are invokable here.
+
+Skills and agents running as the installed plugin resolve canon from
+`${CLAUDE_PLUGIN_ROOT}/..` and need none of this; the declaration exists for
+everything that is read *without* the plugin loaded — static instructions in
+`CLAUDE.md`, and a check command run from a plain shell.
+
+**Deliberately not verified by `--layout`.** A canon checkout is
+environment-specific: CI fetches canon into a runner temp directory and has no
+such path, so asserting it would fail every CI run for a repo whose local
+declaration is perfectly correct. Verify it yourself when you change it —
+`ls <canon checkout>/VERSION`.
+
 ## Governance Check Command
 
-`node ~/code/agentic-governance/plugin/scripts/governance-checks.mjs --layout`
+Preferred, when the governance plugin is loaded:
 
-In CI the canonical repo is checked out alongside this one and the same
-script is invoked from this repo's root
+```
+node "${CLAUDE_PLUGIN_ROOT}/scripts/governance-checks.mjs" --layout
+```
+
+From a plain shell, the same script — `plugin/scripts/governance-checks.mjs
+--layout` — under the `Canon checkout` declared in §Canon Location above. The
+checkout path is deliberately **not** expanded here: the machine-specific value
+must appear in exactly one place per repo, and twenty lines below the
+declaration is still a second place.
+
+Both forms invoke the same script, and both reach canon through that single
+declaration. `--layout` is required, not optional: it asserts that every
+path declared in §Repository Layout exists and that no source of truth sits
+under the declared artifacts directory.
+
+In CI the canonical repo is checked out alongside this one (into
+`.agentic-governance/`) and the same script is invoked from this repo's root
 (`.github/workflows/ci.yml`).
+
+**The CI checkout is not pinned.** That step passes no `ref:`, so it resolves
+canon's default branch on every run and a canon change reaches this repo the
+moment it lands on canon's `main` — with no commit here. The `Governance:` line
+at the top of this file therefore records *the canon version in use*, not a pin
+this repo enforces; it is updated to match reality rather than to authorize an
+upgrade. A deliberate-upgrade contract would need `ref:` set to a commit SHA
+(the shape `website` uses). Changing the mechanism is its own decision and has
+not been made.
 
 ## L0 Path Allowlist
 
@@ -123,8 +196,12 @@ deny llm/governance/adr/0000-template.md
 
 ## Platform Enforcement Reality
 
-Verified 2026-08-29 against `github.com/djjay0131/fantasy-sports` via
-`gh api repos/djjay0131/fantasy-sports/branches/main/protection`. The repo is
+Verified 2026-08-29, re-verified 2026-09-10 and again 2026-09-16 against
+`github.com/djjay0131/fantasy-sports` via
+`gh api repos/djjay0131/fantasy-sports/branches/main/protection` and
+`gh api repos/djjay0131/fantasy-sports`; every
+statement below is what the API returned, unchanged across the
+readings except where a date says otherwise. The repo is
 public, so the protection API is available on the free plan — unlike the
 private repos in this portfolio, where a 403 makes protection unavailable.
 
@@ -134,6 +211,16 @@ private repos in this portfolio, where a 403 makes protection unavailable.
   disabled; `strict` (branch must be up to date before merging).
 - **Required status checks: AVAILABLE and CONFIGURED** — `governance-checks`,
   `licensed-data-guard`, and `tests`, all from `.github/workflows/ci.yml`.
+- **`delete_branch_on_merge`: TRUE.** Verified 2026-09-16
+  (`gh api repos/djjay0131/fantasy-sports -q .delete_branch_on_merge` returned
+  `true`). The head branch of a merged pull request is deleted by the platform,
+  so the PR lifecycle's closing clause — "Branch deleted post-merge" — no longer
+  depends on whoever merges remembering `--delete-branch`
+  (agentic-governance `llm/governance/branch-protection.md` §Branch Cleanup).
+  This is a **repository setting, not branch protection**, so it is available on
+  every plan, including the private-repo-on-a-free-plan case where the
+  protection API 403s. It is therefore the one enforcement fact in this section
+  that does not depend on the repo being public.
 - **`enforce_admins`: DISABLED.** The owner can bypass every rule above.
   This is honest rather than aspirational: the owner is the only
   maintainer, and an admin lockout with no second human is an outage, not a
